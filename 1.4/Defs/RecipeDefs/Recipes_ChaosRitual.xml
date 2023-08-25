@@ -6,7 +6,7 @@
     <RecipeDef Name="RitualRecipeBase" Abstract="True">
         <jobString>Performing ritual.</jobString>
         <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
-        <workAmount>500</workAmount>
+        <workAmount>1000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cremate</effectWorking>
         <soundWorking>Recipe_Cremate</soundWorking>
@@ -209,7 +209,7 @@
     <RecipeDef Name="DPRitualRecipeBase" Abstract="True">
         <jobString>Performing ritual.</jobString>
         <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
-        <workAmount>1000</workAmount>
+        <workAmount>2000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cremate</effectWorking>
         <soundWorking>Recipe_Cremate</soundWorking>

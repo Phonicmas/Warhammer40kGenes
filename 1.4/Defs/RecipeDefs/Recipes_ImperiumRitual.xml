@@ -6,7 +6,7 @@
     <RecipeDef Name="AscendRecipeBase" Abstract="True">
         <jobString>Communing with the God Emperor</jobString>
         <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
-        <workAmount>500</workAmount>
+        <workAmount>1200</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cremate</effectWorking>
         <soundWorking>Recipe_Cremate</soundWorking>

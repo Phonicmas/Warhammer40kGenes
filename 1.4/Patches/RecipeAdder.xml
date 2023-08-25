@@ -20,6 +20,19 @@
                     <li>BEWH_PrimarisPack</li>
                 </value>
             </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes</xpath>
+                <value>
+                    <li>BEWH_SpaceMarineGeneseed</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes</xpath>
+                <value>
+                    <li>BEWH_PrimarisMarineGeneseed</li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>
