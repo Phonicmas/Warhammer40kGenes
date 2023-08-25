@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ===== ALWAYS RUN ON MOD ===== -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Big and Small + Prerequisites Framework</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors</xpath>
+                    <value>
+                        <SM_BodySizeMultiplier>1.2</SM_BodySizeMultiplier>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statFactors</xpath>
+                    <value>
+                        <SM_BodySizeMultiplier>1.1</SM_BodySizeMultiplier>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/modExtensions</xpath>
+                    <value>
+                        <modExtensions>
+                            <li Class="VanillaGenesExpanded.GeneExtension">
+                                <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                <caravanCarryingFactor>3</caravanCarryingFactor>
+                                <noSkillLoss>Melee</noSkillLoss>
+                            </li>
+                        </modExtensions>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/statFactors</xpath>
+                    <value>
+                        <SM_BodySizeMultiplier>1.27</SM_BodySizeMultiplier>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/modExtensions</xpath>
+                    <value>
+                        <modExtensions>
+                            <li Class="VanillaGenesExpanded.GeneExtension">
+                                <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                <caravanCarryingFactor>5</caravanCarryingFactor>
+                                <noSkillLoss>Melee</noSkillLoss>
+                            </li>
+                        </modExtensions>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/statFactors</xpath>
+                    <value>
+                        <SM_BodySizeMultiplier>1.35</SM_BodySizeMultiplier>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions</xpath>
+                    <value>
+                        <modExtensions>
+                            <li Class="VanillaGenesExpanded.GeneExtension">
+                                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                                <hediffToWholeBody>BEWH_DaemonPrince</hediffToWholeBody>
+                            </li>
+                        </modExtensions>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/statFactors</xpath>
+                    <value>
+                        <SM_BodySizeMultiplier>1.29</SM_BodySizeMultiplier>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- ===== TOGGLABLE PATCH ===== -->
+
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>Warhammer 40k - Genes and Psycasts</li>
+        </mods>
+        <label>Remove Gene Size Increase:</label>
+        <operations>
+
+            <!-- IF Big and small is used -->
+            <li Class="PatchOperationFindMod">
+                <mods>
+                    <li>Big and Small + Prerequisites Framework</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <operations>
+
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions</xpath>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName =
+                                "BEWH_Ossmodula"]/statFactors/SM_BodySizeMultiplier</xpath>
+                        </li>
+
+
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions</xpath>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName =
+                                "BEWH_Magnificat"]/statFactors/SM_BodySizeMultiplier</xpath>
+                        </li>
+
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                        <caravanCarryingFactor>3</caravanCarryingFactor>
+                                        <noSkillLoss>Melee</noSkillLoss>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName =
+                                "BEWH_Custodes"]/statFactors/SM_BodySizeMultiplier</xpath>
+                        </li>
+
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                        <caravanCarryingFactor>5</caravanCarryingFactor>
+                                        <noSkillLoss>Melee</noSkillLoss>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName =
+                                "BEWH_Primarch"]/statFactors/SM_BodySizeMultiplier</xpath>
+                        </li>
+
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <backgroundPathXenogenes>
+                                            UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                                        <hediffToWholeBody>BEWH_DaemonPrince</hediffToWholeBody>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName =
+                                "BEWH_DaemonMutation"]/statFactors/SM_BodySizeMultiplier</xpath>
+                        </li>
+                    </operations>
+                    
+                </match>
+
+
+
+                <nomatch Class="PatchOperationSequence">
+                    <operations>
+
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions</xpath>
+                        </li>
+
+                        <li Class="PatchOperationRemove">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions</xpath>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                        <caravanCarryingFactor>3</caravanCarryingFactor>
+                                        <noSkillLoss>Melee</noSkillLoss>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <diseaseProgressionFactor>0</diseaseProgressionFactor>
+                                        <caravanCarryingFactor>5</caravanCarryingFactor>
+                                        <noSkillLoss>Melee</noSkillLoss>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions</xpath>
+                            <value>
+                                <modExtensions>
+                                    <li Class="VanillaGenesExpanded.GeneExtension">
+                                        <backgroundPathXenogenes>
+                                            UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                                        <hediffToWholeBody>BEWH_DaemonPrince</hediffToWholeBody>
+                                    </li>
+                                </modExtensions>
+                            </value>
+                        </li>
+
+                    </operations>
+                </nomatch>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>

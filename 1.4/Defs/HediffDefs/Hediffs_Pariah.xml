@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Sigma Pariah -->
+
+    <HediffDef>
+        <defName>BEWH_SigmaPariah</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Sigma Pariah</label>
+        <labelNoun>Sigma Pariah</labelNoun>
+        <description>Sigma Pariah</description>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <stages>
+            <li>
+                <label>Sigma Pariah</label>
+                <becomeVisible>False</becomeVisible>
+            </li>
+        </stages>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="Genes40k.HediffCompProperties_Aura">
+                <radius>20</radius>
+                <hediff>BEWH_SigmaPariahEffecter</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Upsilon Pariah -->
+
+    <HediffDef>
+        <defName>BEWH_UpsilonPariah</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Upsilon Pariah</label>
+        <labelNoun>Upsilon Pariah</labelNoun>
+        <description>Upsilon Pariah</description>
+        <everCurableByItem>false</everCurableByItem>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <stages>
+            <li>
+                <label>Upsilon Pariah</label>
+                <becomeVisible>False</becomeVisible>
+            </li>
+        </stages>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="Genes40k.HediffCompProperties_Aura">
+                <radius>20</radius>
+                <hediff>BEWH_UpsilonPariahEffecter</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Omega Pariah -->
+
+    <HediffDef>
+        <defName>BEWH_OmegaPariah</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Omega Pariah</label>
+        <labelNoun>Omega Pariah</labelNoun>
+        <description>Omega Pariah</description>
+        <everCurableByItem>false</everCurableByItem>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <stages>
+            <li>
+                <label>Omega Pariah</label>
+                <becomeVisible>False</becomeVisible>
+            </li>
+        </stages>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="Genes40k.HediffCompProperties_Aura">
+                <radius>20</radius>
+                <hediff>BEWH_OmegaPariahEffecter</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Sigma Pariah Effecter -->
+
+    <HediffDef>
+        <defName>BEWH_SigmaPariahEffecter</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Sigma Pariah</label>
+        <labelNoun>Sigma Pariah</labelNoun>
+        <description>Sigma Pariah nearby</description>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <makesSickThought>true</makesSickThought>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <label>Sigma Pariah nearby</label>
+                <becomeVisible>False</becomeVisible>
+                <statFactors>
+                    <PsychicSensitivity>0.55</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0.55</PsychicEntropyRecoveryRate>
+                </statFactors>
+                <painOffset>0.1</painOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-48</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Upsilon Pariah Effecter-->
+
+    <HediffDef>
+        <defName>BEWH_UpsilonPariahEffecter</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Upsilon Pariah</label>
+        <labelNoun>Upsilon Pariah</labelNoun>
+        <description>Upsilon Pariah nearby</description>
+        <everCurableByItem>false</everCurableByItem>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <makesSickThought>true</makesSickThought>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <label>Upsilon Pariah nearby</label>
+                <becomeVisible>False</becomeVisible>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <PsychicSensitivity>0.3</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0.3</PsychicEntropyRecoveryRate>
+                </statFactors>
+                <painOffset>0.2</painOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-48</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Omega Pariah Effecter-->
+
+    <HediffDef>
+        <defName>BEWH_OmegaPariahEffecter</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Omega Pariah</label>
+        <labelNoun>Omega Pariah</labelNoun>
+        <description>Omega Pariah nearby</description>
+        <everCurableByItem>false</everCurableByItem>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <makesSickThought>true</makesSickThought>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <label>Omega Pariah nearby</label>
+                <becomeVisible>False</becomeVisible>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
+                </statFactors>
+                <painOffset>0.4</painOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-48</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

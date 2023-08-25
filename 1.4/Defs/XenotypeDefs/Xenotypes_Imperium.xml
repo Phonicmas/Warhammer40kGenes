@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Space Marine Base -->
+
+  <XenotypeDef Name="SpaceMarineBase" Abstract="True">
+    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>1.5</combatPowerFactor>
+    <genes>
+      <li>BEWH_SecondaryHeart</li>
+      <li>BEWH_Ossmodula</li>
+      <li>BEWH_Biscopea</li>
+      <li>BEWH_Haemastamen</li>
+      <li>BEWH_LarramansOrgan</li>
+      <li>BEWH_CatalepseanNode</li>
+      <li>BEWH_Preomnor</li>
+      <li>BEWH_Omophagea</li>
+      <li>BEWH_MultiLung</li>
+      <li>BEWH_Occulobe</li>
+      <li>BEWH_LymansEar</li>
+      <li>BEWH_SusAnMembrane</li>
+      <li>BEWH_Melanochrome</li>
+      <li>BEWH_OoliticKidney</li>
+      <li>BEWH_Neuroglottis</li>
+      <li>BEWH_Mucranoid</li>
+      <li>BEWH_BetchersGland</li>
+      <li>BEWH_ProgenoidGlands</li>
+      <li>BEWH_BlackCarapace</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Space Marine -->
+
+  <XenotypeDef ParentName="SpaceMarineBase">
+    <defName>BEWH_SpaceMarine</defName>
+    <label>space marine</label>
+    <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day.</description>
+    <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification.</descriptionShort>
+    <iconPath>UI/Xenotypes/SpaceMarineXenoIcon</iconPath>
+    <combatPowerFactor>1.25</combatPowerFactor>
+  </XenotypeDef>
+
+  <!-- Primaris Space Marine -->
+
+  <XenotypeDef ParentName="SpaceMarineBase">
+    <defName>BEWH_PrimarisSpaceMarine</defName>
+    <label>primaris space marine</label>
+    <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These primaris stand above and are stronger than the standard space marine.</description>
+    <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These primaris stand above and are stronger than the standard space marine.</descriptionShort>
+    <iconPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</iconPath>
+    <combatPowerFactor>1.5</combatPowerFactor>
+    <genes>
+      <li>BEWH_SinewCoil</li>
+      <li>BEWH_Magnificat</li>
+      <li>BEWH_BelisarianFurnace</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Space Marine Psyker -->
+
+  <XenotypeDef ParentName="SpaceMarineBase">
+    <defName>BEWH_SpaceMarinePsyker</defName>
+    <label>space marine psyker</label>
+    <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These space marine carries the psyker gene giving them unatural abilities.</description>
+    <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These space marine carries the psyker gene giving them unatural abilities.</descriptionShort>
+    <iconPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</iconPath>
+    <combatPowerFactor>1.5</combatPowerFactor>
+    <genes>
+      <li>BEWH_Psyker</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Custodes -->
+
+  <XenotypeDef>
+    <defName>BEWH_Custodes</defName>
+    <label>custodes</label>
+    <description>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</description>
+    <descriptionShort>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</descriptionShort>
+    <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>4</combatPowerFactor>
+    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <genes>
+      <li>BEWH_Custodes</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Primarch -->
+
+  <XenotypeDef>
+    <defName>BEWH_Primarch</defName>
+    <label>primarch</label>
+    <description>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</description>
+    <descriptionShort>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</descriptionShort>
+    <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>8</combatPowerFactor>
+    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <genes>
+      <li>BEWH_Primarch</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pariah -->
+
+  <XenotypeDef>
+    <defName>BEWH_Pariah</defName>
+    <label>pariah</label>
+    <description>With no presence in the warp these beings are resistant to psychic attack.</description>
+    <descriptionShort>With no presence in the warp these beings are resistant to psychic attack.</descriptionShort>
+    <iconPath>UI/Xenotypes/PariahXenoIcon</iconPath>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>1.2</combatPowerFactor>
+    <genes>
+      <li>BEWH_UpsilonPariah</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Add more of each such that every gene can occur??? -->
+
+</Defs>

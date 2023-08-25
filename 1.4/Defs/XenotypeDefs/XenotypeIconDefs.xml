@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Chaos</defName>
+        <texPath>UI/Xenotypes/SpaceMarineChaosXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Khorne</defName>
+        <texPath>UI/Xenotypes/SpaceMarineKhorneXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Nurgle</defName>
+        <texPath>UI/Xenotypes/SpaceMarineNurgleXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Slaanesh</defName>
+        <texPath>UI/Xenotypes/SpaceMarineSlaaneshXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Tzeentch</defName>
+        <texPath>UI/Xenotypes/SpaceMarineTzeentchXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Astartes</defName>
+        <texPath>UI/Xenotypes/SpaceMarineXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Psyker</defName>
+        <texPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Primaris</defName>
+        <texPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Custodes</defName>
+        <texPath>UI/Xenotypes/CustodesXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Primarch</defName>
+        <texPath>UI/Xenotypes/PrimarchXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_Pariah</defName>
+        <texPath>UI/Xenotypes/PariahXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_DPUndivided</defName>
+        <texPath>UI/Xenotypes/DaemonPrinceUndividedXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_DPKhorne</defName>
+        <texPath>UI/Xenotypes/DaemonPrinceKhorneXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_DPNurgle</defName>
+        <texPath>UI/Xenotypes/DaemonPrinceNurgleXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_DPSlaanesh</defName>
+        <texPath>UI/Xenotypes/DaemonPrinceSlaaneshXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_DPTzeentch</defName>
+        <texPath>UI/Xenotypes/DaemonPrinceTzeentchXenoIcon</texPath>
+    </XenotypeIconDef>
+
+
+</Defs>

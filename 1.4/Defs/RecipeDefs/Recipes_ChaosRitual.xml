@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Recipe Base -->
+
+    <RecipeDef Name="RitualRecipeBase" Abstract="True">
+        <jobString>Performing ritual.</jobString>
+        <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
+        <workAmount>500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+    </RecipeDef>
+
+    <!-- Undivided -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_UndividedRitual</defName>
+        <label>Undivided ritual</label>
+        <description>Pledge yourself to the great undivided</description>
+        <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>3</Melee>
+            <Shooting>3</Shooting>
+            <Intellectual>3</Intellectual>
+            <Crafting>3</Crafting>
+            <Social>3</Social>
+            <Artistic>3</Artistic>
+            <Plants>3</Plants>
+            <Mining>3</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_UndividedMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Khorne -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_KhorneRitual</defName>
+        <label>Khorne ritual</label>
+        <description>Pledge yourself to Khorne</description>
+        <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>5</Melee>
+            <Shooting>5</Shooting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_KhorneMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Tzeentch -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_TzeentchRitual</defName>
+        <label>Tzeentch ritual</label>
+        <description>Pledge yourself to Tzeentch</description>
+        <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Intellectual>5</Intellectual>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_TzeentchMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Nurgle -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_NurgleRitual</defName>
+        <label>Nurgle ritual</label>
+        <description>Pledge yourself to Nurgle</description>
+        <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Plants>5</Plants>
+            <Mining>5</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_NurgleMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Slaanesh -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_SlaaneshRitual</defName>
+        <label>Slaanesh ritual</label>
+        <description>Pledge yourself to Slaanesh</description>
+        <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Social>5</Social>
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_SlaaneshMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+
+    <!-- Recipe Base Daemon Prince-->
+
+    <RecipeDef Name="DPRitualRecipeBase" Abstract="True">
+        <jobString>Performing ritual.</jobString>
+        <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+    </RecipeDef>
+
+    <!-- Daemon Prince Undivided -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPUndividedRitual</defName>
+        <label>Undivided daemon ritual</label>
+        <description>Become a daemon prince of the great Undivided</description>
+        <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>10</Melee>
+            <Shooting>10</Shooting>
+            <Intellectual>10</Intellectual>
+            <Crafting>10</Crafting>
+            <Social>10</Social>
+            <Artistic>10</Artistic>
+            <Plants>10</Plants>
+            <Mining>10</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_UndividedColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_UndividedMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Khorne -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPKhorneRitual</defName>
+        <label>Khorne daemon ritual</label>
+        <description>Become a daemon prince of Khorne</description>
+        <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>14</Melee>
+            <Shooting>14</Shooting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_KhorneColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_KhorneMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Tzeentch -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPTzeentchRitual</defName>
+        <label>Tzeentch daemon ritual</label>
+        <description>Become a daemon prince of Tzeentch</description>
+        <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Intellectual>14</Intellectual>
+            <Crafting>14</Crafting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_TzeencthColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_TzeentchMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Nurgle -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPNurgleRitual</defName>
+        <label>Nurgle daemon ritual</label>
+        <description>Become a daemon prince of Nurgle</description>
+        <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Plants>14</Plants>
+            <Mining>14</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_NurgleColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_NurgleMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Slaanesh -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPSlaaneshRitual</defName>
+        <label>Slaanesh daemon ritual</label>
+        <description>Become a daemon prince of Slaanesh</description>
+        <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Social>14</Social>
+            <Artistic>14</Artistic>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_SlaaneshColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_SlaaneshMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+
+    <!-- Psyker -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_PsykerRitual</defName>
+        <label>Become a Psyker</label>
+        <description>Become a Psyker and wield powerful psychic abilities.</description>
+        <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_IotaPsyker</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_Psyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_SigmaPariah</li>
+                    <li>BEWH_UpsilonPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

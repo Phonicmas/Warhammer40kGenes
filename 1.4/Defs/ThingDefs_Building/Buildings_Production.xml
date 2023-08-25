@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Parent ritual spot -->
+
+    <DesignatorDropdownGroupDef>
+        <defName>RitualSpots</defName>
+    </DesignatorDropdownGroupDef>
+
+    <ThingDef Name="RitualBase" ParentName="BuildingBase" Abstract="True">
+        <thingClass>Building_WorkTable</thingClass>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+            <WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <passability>Standable</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+            <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+            <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                </linkableFacilities>
+            </li>
+            <li>
+                <compClass>CompReportWorkSpeed</compClass>
+            </li>
+        </comps>
+        <designationHotKey>Misc1</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <designatorDropdown>RitualSpots</designatorDropdown>
+    </ThingDef>
+
+    <!-- Undivided -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_UndividedRitualSpot</defName>
+        <label>Undivided ritual spot</label>
+        <description>A place for dedicating yourself to the great undivided.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/UndividedIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_UndividedRitual</li>
+            <li>BEWH_DPUndividedRitual</li>
+            <li>BEWH_PsykerRitual</li>
+        </recipes>
+    </ThingDef>
+
+    <!-- Khorne -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_KhorneRitualSpot</defName>
+        <label>Khorne ritual spot</label>
+        <description>A place for dedicating yourself to Khorne.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/KhorneIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_KhorneRitual</li>
+            <li>BEWH_DPKhorneRitual</li>
+        </recipes>
+    </ThingDef>
+
+    <!-- Tzeentch -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_TzeentchRitualSpot</defName>
+        <label>Tzeentch ritual spot</label>
+        <description>A place for dedicating yourself to Tzeentch.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/TzeentchIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_TzeentchRitual</li>
+            <li>BEWH_DPTzeentchRitual</li>
+        </recipes>
+    </ThingDef>
+
+    <!-- Nurgle -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_NurgleRitualSpot</defName>
+        <label>Nurgle ritual spot</label>
+        <description>A place for dedicating yourself to Nurgle.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/NurgleIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_NurgleRitual</li>
+            <li>BEWH_DPNurgleRitual</li>
+        </recipes>
+    </ThingDef>
+
+    <!-- Slaanesh -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_SlaaneshRitualSpot</defName>
+        <label>Slaanesh ritual spot</label>
+        <description>A place for dedicating yourself to Slaanesh.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/SlaaneshIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_SlaaneshRitual</li>
+            <li>BEWH_DPSlaaneshRitual</li>
+        </recipes>
+    </ThingDef>
+
+
+    <!-- Imperium -->
+
+    <ThingDef ParentName="RitualBase">
+        <defName>BEWH_ImperiumSpot</defName>
+        <label>Imperium ascension spot</label>
+        <description>A place to ascend.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/ImperiumIcon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <recipes>
+            <li>BEWH_CustodesAscend</li>
+            <li>BEWH_PrimarchAscend</li>
+            <li>BEWH_PariahAscend</li>
+        </recipes>
+    </ThingDef>
+
+</Defs>

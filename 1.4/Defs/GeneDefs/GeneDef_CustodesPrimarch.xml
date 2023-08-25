@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Gene Category -->
+
+    <GeneCategoryDef>
+        <defName>BEWHMankindsFinest</defName>
+        <label>mandkinds finest</label>
+        <displayPriorityInXenotype>539</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!-- Custodes Genes -->
+
+    <!-- Custodes -->
+
+    <GeneDef>
+        <defName>BEWH_Custodes</defName>
+        <label>custodes</label>
+        <description>FINESTCODE1234567890Created by the Master of Mankind personally, these beings
+            are what primarch are to a space marine, beings of immense power and skill.</description>        <!--
+        FINESTCODE1234567890 IS REQUIRED NO MATTER WHAT TRANSLATIONS -->
+        <customEffectDescriptions>
+            <li>CUSTOMSTART12345Considerably boosts most aspects of the pawnCUSTOMEND67890</li>            <!--
+            CUSTOMSTART12345 AND CUSTOMEND67890 IS REQUIRED NO MATTER WHAT TRANSLATIONS, WRITE
+            BETWEEN THEM -->
+        </customEffectDescriptions>
+        <displayCategory>BEWHMankindsFinest</displayCategory>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <biostatCpx>50</biostatCpx>
+        <biostatMet>15</biostatMet>
+        <biostatArc>10</biostatArc>
+        <iconPath>UI/Icons/Genes/CustodesIcon</iconPath>
+        <bodyType>Hulk</bodyType>
+        <geneClass>Gene_Clotting</geneClass>
+        <dontMindRawFood>true</dontMindRawFood>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <painFactor>0.15</painFactor>
+        <sterilize>true</sterilize>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <selectionWeight>0.1</selectionWeight>
+
+        <statOffsets>
+            <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.9</ArmorRating_Heat>
+            <CarryingCapacity>500</CarryingCapacity>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+            <MentalBreakThreshold>-1</MentalBreakThreshold>
+            <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+            <ComfyTemperatureMax>200</ComfyTemperatureMax>
+            <MeleeDodgeChance>20</MeleeDodgeChance>
+        </statOffsets>
+
+        <statFactors>
+            <PsychicSensitivity>0</PsychicSensitivity>
+            <Fertility>0</Fertility>
+            <LeatherAmount>1.45</LeatherAmount>
+            <MeatAmount>1.45</MeatAmount>
+            <Mass>1.45</Mass>
+            <InjuryHealingFactor>12</InjuryHealingFactor>
+            <MoveSpeed>1.8</MoveSpeed>
+            <RestFallRateFactor>0.15</RestFallRateFactor>
+            <MeleeDamageFactor>4</MeleeDamageFactor>
+            <AimingDelayFactor>0.6</AimingDelayFactor>
+            <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.6</RangedCooldownFactor>
+            <MeleeHitChance>1.8</MeleeHitChance>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <IncomingDamageFactor>0.55</IncomingDamageFactor>
+            <RawNutritionFactor>4</RawNutritionFactor>
+            <GlobalLearningFactor>2</GlobalLearningFactor>
+            <ImmunityGainSpeed>8</ImmunityGainSpeed>
+        </statFactors>
+
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>2</postFactor>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+        </capMods>
+
+        <suppressedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits>
+
+        <aptitudes>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+            <Intellectual>10</Intellectual>
+        </aptitudes>
+
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+            <li>WoundInfection</li>
+            <li>LungRot</li>
+            <li>GutWorms</li>
+            <li>MuscleParasites</li>
+            <li>LungRotExposure</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+            <li>Cirrhosis</li>
+            <li>DrugOverdose</li>
+        </hediffGiversCannotGive>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+
+        <marketValueFactor>20</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
+                <caravanCarryingFactor>3</caravanCarryingFactor>
+                <noSkillLoss>Melee</noSkillLoss>
+                <bodyScaleFactor>(1.22, 1.22)</bodyScaleFactor>
+                <headScaleFactor>(1.22, 1.22)</headScaleFactor>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeImperial</li>
+            <li>SM1</li>
+            <li>SM2</li>
+            <li>SM3</li>
+            <li>SM4</li>
+            <li>SM5</li>
+            <li>SM6</li>
+            <li>SM7</li>
+            <li>SM8</li>
+            <li>SM9</li>
+            <li>SM10</li>
+            <li>SM11</li>
+            <li>SM12</li>
+            <li>SM13</li>
+            <li>SM14</li>
+            <li>SM15</li>
+            <li>SM16</li>
+            <li>SM17</li>
+            <li>SM18</li>
+            <li>SM19</li>
+            <li>PM1</li>
+            <li>PM2</li>
+            <li>PM3</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Primarch Genes -->
+
+    <!-- Primarch -->
+
+    <GeneDef>
+        <defName>BEWH_Primarch</defName>
+        <label>primarch</label>
+        <description>FINESTCODE1234567890Bred to be perfect generals, warriors and statesmen;
+            larger, stronger, faster, and smarter than any normal Human could ever hope to be. They
+            possessed a potent charisma and martial prowess that made them like the mythical gods of
+            old, untouchable by disease, old age or supposedly the petty failings of lesser men.</description>        <!--
+        FINESTCODE1234567890 IS REQUIRED NO MATTER WHAT TRANSLATIONS -->
+        <customEffectDescriptions>
+            <li>CUSTOMSTART12345Massively boosts most aspects of the pawnCUSTOMEND67890</li>            <!--
+            CUSTOMSTART12345 AND CUSTOMEND67890 IS REQUIRED NO MATTER WHAT TRANSLATIONS, WRITE
+            BETWEEN THEM -->
+        </customEffectDescriptions>
+        <displayCategory>BEWHMankindsFinest</displayCategory>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <biostatCpx>70</biostatCpx>
+        <biostatMet>15</biostatMet>
+        <biostatArc>20</biostatArc>
+        <iconPath>UI/Icons/Genes/PrimarchIcon</iconPath>
+        <bodyType>Hulk</bodyType>
+        <geneClass>Gene_Clotting</geneClass>
+        <dontMindRawFood>true</dontMindRawFood>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <painFactor>0</painFactor>
+        <sterilize>true</sterilize>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <selectionWeight>0</selectionWeight>
+
+        <statOffsets>
+            <PsychicSensitivity>3</PsychicSensitivity>
+            <ArmorRating_Blunt>1.50</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.50</ArmorRating_Sharp>
+            <ArmorRating_Heat>1.50</ArmorRating_Heat>
+            <CarryingCapacity>1000</CarryingCapacity>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+            <MentalBreakThreshold>-1</MentalBreakThreshold>
+            <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+            <ComfyTemperatureMax>200</ComfyTemperatureMax>
+            <MeleeDodgeChance>50</MeleeDodgeChance>
+        </statOffsets>
+
+        <statFactors>
+            <Fertility>0</Fertility>
+            <Mass>2</Mass>
+            <LeatherAmount>2</LeatherAmount>
+            <MeatAmount>2</MeatAmount>
+            <InjuryHealingFactor>24</InjuryHealingFactor>
+            <MoveSpeed>2.4</MoveSpeed>
+            <RestFallRateFactor>0.05</RestFallRateFactor>
+            <MeleeDamageFactor>10</MeleeDamageFactor>
+            <AimingDelayFactor>0.35</AimingDelayFactor>
+            <MeleeWeapon_CooldownMultiplier>0.35</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.35</RangedCooldownFactor>
+            <MeleeHitChance>2.5</MeleeHitChance>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <IncomingDamageFactor>0.3</IncomingDamageFactor>
+            <RawNutritionFactor>4</RawNutritionFactor>
+            <GlobalLearningFactor>3</GlobalLearningFactor>
+            <ImmunityGainSpeed>12</ImmunityGainSpeed>
+        </statFactors>
+
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>5</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>5</postFactor>
+            </li>
+        </capMods>
+
+        <suppressedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits>
+
+        <aptitudes>
+            <Shooting>15</Shooting>
+            <Melee>15</Melee>
+            <Social>10</Social>
+            <Intellectual>15</Intellectual>
+        </aptitudes>
+
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+            <li>WoundInfection</li>
+            <li>LungRot</li>
+            <li>GutWorms</li>
+            <li>MuscleParasites</li>
+            <li>LungRotExposure</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+            <li>Cirrhosis</li>
+            <li>DrugOverdose</li>
+        </hediffGiversCannotGive>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+
+        <marketValueFactor>50</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
+                <caravanCarryingFactor>5</caravanCarryingFactor>
+                <noSkillLoss>Melee</noSkillLoss>
+                <bodyScaleFactor>(1.3, 1.3)</bodyScaleFactor>
+                <headScaleFactor>(1.3, 1.3)</headScaleFactor>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeImperial</li>
+            <li>SM1</li>
+            <li>SM2</li>
+            <li>SM3</li>
+            <li>SM4</li>
+            <li>SM5</li>
+            <li>SM6</li>
+            <li>SM7</li>
+            <li>SM8</li>
+            <li>SM9</li>
+            <li>SM10</li>
+            <li>SM11</li>
+            <li>SM12</li>
+            <li>SM13</li>
+            <li>SM14</li>
+            <li>SM15</li>
+            <li>SM16</li>
+            <li>SM17</li>
+            <li>SM18</li>
+            <li>SM19</li>
+            <li>PM1</li>
+            <li>PM2</li>
+            <li>PM3</li>
+        </exclusionTags>
+    </GeneDef>
+
+</Defs>
