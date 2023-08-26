@@ -78,7 +78,6 @@
     <targetRequired>False</targetRequired>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/CatalepseanNodeUnsleeping</iconPath>
-    <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -92,7 +91,7 @@
     </statBases>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>0.5</warmupTime>
+      <warmupTime>2</warmupTime>
       <range>0</range>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
@@ -130,7 +129,6 @@
     <targetRequired>False</targetRequired>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/StasisIcon</iconPath>
-    <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -141,7 +139,7 @@
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>0.5</warmupTime>
+      <warmupTime>1</warmupTime>
       <range>0</range>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
@@ -178,7 +176,6 @@
     <jobDef>CastAbilityOnThing</jobDef>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/OmophageaRemembrance</iconPath>
-    <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
     <showPsycastEffects>False</showPsycastEffects>
     <groupDef>BEWH_OPA</groupDef>
     <category>SpaceMarine</category>
@@ -186,7 +183,7 @@
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>2</warmupTime>
+      <warmupTime>3</warmupTime>
       <range>3</range>
       <drawAimPie>True</drawAimPie>
       <requireLineOfSight>True</requireLineOfSight>
@@ -221,7 +218,6 @@
     <targetRequired>False</targetRequired>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/BelisarianFurnaceBoost</iconPath>
-    <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -235,7 +231,7 @@
     </statBases>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>0.5</warmupTime>
+      <warmupTime>1</warmupTime>
       <range>0</range>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
