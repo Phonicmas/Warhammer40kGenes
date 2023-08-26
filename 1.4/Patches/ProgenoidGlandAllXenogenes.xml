@@ -5,7 +5,7 @@
         <mods>
             <li>Warhammer 40k - Genes</li>
         </mods>
-        <label>Progenoid Glands copy all xenogenes too:</label>
+        <label>Progenoid Glands copies all xenogenes from pawn:</label>
         <operations>
             <li Class="PatchOperationReplace">
                 <xpath>Defs/RecipeDef[defName = "BEWH_AstartesPack"]/workerClass</xpath>

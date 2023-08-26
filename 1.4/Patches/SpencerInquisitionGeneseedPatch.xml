@@ -1,64 +1,63 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>False</enabled>
+	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Warhammer 40k - Genes</li>
 			<li>The Inquisition (Warhammer 40k) Unofficial 1.4</li>
 		</mods>
-		<label>Change Inquisition Marine Geneseed:</label>
-		<operations>
-			<!-- Death Watch Space Marine -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[@Name = "DWSpaceMarineBase"]/techHediffsRequired</xpath>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[@Name = "DWSpaceMarineBase"]</xpath>
-				<value>
-					<xenotypeSet>
-						<xenotypeChances>
-							<BEWH_SpaceMarine>1</BEWH_SpaceMarine>
-						</xenotypeChances>
-					</xenotypeSet>
-				</value>
-			</li>
-			<!-- Death Watch Space Marine Leader -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[defName = "DWCaptain"]/techHediffsRequired</xpath>
-			</li>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Death Watch Space Marine -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[@Name = "DWSpaceMarineBase"]/techHediffsRequired</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[@Name = "DWSpaceMarineBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- Death Watch Space Marine Leader -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[defName = "DWCaptain"]/techHediffsRequired</xpath>
+				</li>
 
-			<!-- Grey Knight Space Marine -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[@Name = "GKSpaceMarineBase"]/techHediffsRequired</xpath>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[@Name = "GKSpaceMarineBase"]</xpath>
-				<value>
-					<xenotypeSet>
-						<xenotypeChances>
-							<BEWH_SpaceMarinePsyker>1</BEWH_SpaceMarinePsyker>
-						</xenotypeChances>
-					</xenotypeSet>
-				</value>
-			</li>
-			<!-- Grey Knight Terminator Marine -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[@Name = "GKTerminatorBase"]/techHediffsRequired</xpath>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[@Name = "GKTerminatorBase"]</xpath>
-				<value>
-					<xenotypeSet>
-						<xenotypeChances>
-							<BEWH_SpaceMarinePsyker>1</BEWH_SpaceMarinePsyker>
-						</xenotypeChances>
-					</xenotypeSet>
-				</value>
-			</li>
-			<!-- Grey Knight Space Marine Leader -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[defName = "GKCaptain"]/techHediffsRequired</xpath>
-			</li>
-		</operations>
+				<!-- Grey Knight Space Marine -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[@Name = "GKSpaceMarineBase"]/techHediffsRequired</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[@Name = "GKSpaceMarineBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_SpaceMarinePsyker>1</BEWH_SpaceMarinePsyker>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- Grey Knight Terminator Marine -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[@Name = "GKTerminatorBase"]/techHediffsRequired</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[@Name = "GKTerminatorBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_SpaceMarinePsyker>1</BEWH_SpaceMarinePsyker>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- Grey Knight Space Marine Leader -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[defName = "GKCaptain"]/techHediffsRequired</xpath>
+				</li>
+			</operations>
+		</match>
 	</Operation>
 </Patch>

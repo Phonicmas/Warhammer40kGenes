@@ -5,7 +5,7 @@
         <mods>
             <li>Warhammer 40k - Genes</li>
         </mods>
-        <label>Remove Forced Body Type:</label>
+        <label>Disable forced body type:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/bodyType</xpath>

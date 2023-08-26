@@ -5,7 +5,7 @@
         <mods>
             <li>Warhammer 40k - Genes</li>
         </mods>
-        <label>Force male on gene-seeds:</label>
+        <label>Force male on geneseeds:</label>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_SecondaryHeart"]</xpath>

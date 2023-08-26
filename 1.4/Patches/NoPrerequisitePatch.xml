@@ -5,7 +5,7 @@
         <mods>
             <li>Warhammer 40k - Genes</li>
         </mods>
-        <label>No gene prerequisites:</label>
+        <label>Genes have no prerequisites:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/prerequisite</xpath>
