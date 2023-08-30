@@ -69,11 +69,11 @@ namespace Genes40k
             Xenogerm xenogerm = (Xenogerm)ThingMaker.MakeThing(ThingDefOf.Xenogerm);
             if (IsPrimaris(pawn))
             {
-                xenogerm.Initialize(genepacks, "Primaris Space Marine", Genes40kDefOf.BEWH_Primaris);
+                xenogerm.Initialize(genepacks, "Primaris Space Marine", Genes40kDefOf.BEWH_PrimarisIcon);
             }
             else
             {
-                xenogerm.Initialize(genepacks, "Space Marine", Genes40kDefOf.BEWH_Astartes);
+                xenogerm.Initialize(genepacks, "Space Marine", Genes40kDefOf.BEWH_AstartesIcon);
             }
 
             ClearQueue(pawn);

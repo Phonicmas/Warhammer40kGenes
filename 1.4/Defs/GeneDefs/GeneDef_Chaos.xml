@@ -170,7 +170,7 @@
             <MentalBreakThreshold>-0.1</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-            <MoveSpeed>1.6</MoveSpeed>
+            <MoveSpeed>1.4</MoveSpeed>
         </statFactors>
         <abilities>
             <li>BEWH_SlaaneshSummon</li>
@@ -392,7 +392,7 @@
             <CarryingCapacity>200</CarryingCapacity>
         </statOffsets>
         <statFactors>
-            <MoveSpeed>1.4</MoveSpeed>
+            <MoveSpeed>1.05</MoveSpeed>
         </statFactors>
         <graphicData>
             <drawLoc>Tailbone</drawLoc>

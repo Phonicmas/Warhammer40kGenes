@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ResearchNotCompleted>Does not have required research: {0}</ResearchNotCompleted>
+  <GeneElevationComplete>{0} has been elevated to {1}</GeneElevationComplete>
+  <GeneElevationProgress>{0} has moved one step close to being a {1}</GeneElevationProgress>
+  <CurrentlyElevatingTo>{0} is being elavated to {1}</CurrentlyElevatingTo>
+  <ElevatingPausedNoPower>Building has no power, elevating has been paused</ElevatingPausedNoPower>
+  <NotEnoughFuelPresent>Building needs {0} amount of geneseed capsules to operate on {1}</NotEnoughFuelPresent>
+  <GenesCannotBeElevated>{0}'s genes cannot be elevated any more.</GenesCannotBeElevated>
+
+  <InsertPersonGeneseedGenetorDesc>Insert a person into the automated genetor. It will use genetic material from provided geneseed capsules to slowly elevate the pawns genes.</InsertPersonGeneseedGenetorDesc>
+</LanguageData>

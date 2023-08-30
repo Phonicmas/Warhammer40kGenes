@@ -57,8 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_GeneseedGenetor.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
-    <Compile Include="DefModExtension_Ritual.cs" />
     <Compile Include="Verb_CastAbility_SlaaneshSummon.cs" />
     <Compile Include="Verb_CastAbility_NurgleSummon.cs" />
     <Compile Include="Verb_CastAbility_TzeentchSummon.cs" />

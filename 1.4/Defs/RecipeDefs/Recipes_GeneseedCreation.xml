@@ -12,7 +12,7 @@
         <soundWorking>Recipe_Cremate</soundWorking>
     </RecipeDef>
 
-    <!-- Space Marine Geneseed -->
+    <!-- Space Marine Geneseed - OUTDATED -->
 
     <RecipeDef ParentName="GeneseedFabricationBase">
         <defName>BEWH_SpaceMarineGeneseed</defName>
@@ -101,12 +101,12 @@
                     <li>BEWH_BlackCarapace</li>
                 </givesGenes>
                 <xenogermName>Space Marine</xenogermName>
-                <xenotypeIcon>BEWH_Astartes</xenotypeIcon>
+                <xenotypeIcon>BEWH_AstartesIcon</xenotypeIcon>
             </li>
         </modExtensions>
     </RecipeDef>
 
-    <!-- Primaris Marine Geneseed -->
+    <!-- Primaris Marine Geneseed - OUTDATED -->
 
     <RecipeDef ParentName="GeneseedFabricationBase">
         <defName>BEWH_PrimarisMarineGeneseed</defName>
@@ -198,9 +198,84 @@
                     <li>BEWH_BelisarianFurnace</li>
                 </givesGenes>
                 <xenogermName>Primaris Marine</xenogermName>
-                <xenotypeIcon>BEWH_Primaris</xenotypeIcon>
+                <xenotypeIcon>BEWH_PrimarisIcon</xenotypeIcon>
             </li>
         </modExtensions>
+    </RecipeDef>
+
+    <!-- Geneseed Capsules -->
+
+    <RecipeDef>
+        <defName>BEWH_MakeGeneseedCapsule</defName>
+        <label>make geneseed capsule</label>
+        <description>Make a geneseed capsule.</description>
+        <jobString>Making geneseed capsule.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>7000</workAmount>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <researchPrerequisite>BEWH_GeneseedGenetor</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_GeneseedCapsules>1</BEWH_GeneseedCapsules>
+        </products>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+            <Intellectual>12</Intellectual>
+            <Crafting>10</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
     </RecipeDef>
 
 </Defs>

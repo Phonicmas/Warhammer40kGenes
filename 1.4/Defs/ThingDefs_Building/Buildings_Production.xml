@@ -155,8 +155,6 @@
             <drawSize>(1,1)</drawSize>
         </graphicData>
         <recipes>
-            <li>BEWH_CustodesAscend</li>
-            <li>BEWH_PrimarchAscend</li>
             <li>BEWH_PariahAscend</li>
         </recipes>
     </ThingDef>

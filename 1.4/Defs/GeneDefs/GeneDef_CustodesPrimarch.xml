@@ -62,7 +62,6 @@
             <MeatAmount>1.45</MeatAmount>
             <Mass>1.45</Mass>
             <InjuryHealingFactor>12</InjuryHealingFactor>
-            <MoveSpeed>1.8</MoveSpeed>
             <RestFallRateFactor>0.15</RestFallRateFactor>
             <MeleeDamageFactor>4</MeleeDamageFactor>
             <AimingDelayFactor>0.6</AimingDelayFactor>
@@ -289,7 +288,6 @@
             <LeatherAmount>2</LeatherAmount>
             <MeatAmount>2</MeatAmount>
             <InjuryHealingFactor>24</InjuryHealingFactor>
-            <MoveSpeed>2.4</MoveSpeed>
             <RestFallRateFactor>0.05</RestFallRateFactor>
             <MeleeDamageFactor>10</MeleeDamageFactor>
             <AimingDelayFactor>0.35</AimingDelayFactor>

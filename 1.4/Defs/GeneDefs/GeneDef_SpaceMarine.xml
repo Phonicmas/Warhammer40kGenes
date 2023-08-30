@@ -193,9 +193,6 @@
         <iconPath>UI/Icons/Genes/HaemastamenIcon</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
-        <statFactors>
-            <MoveSpeed>1.25</MoveSpeed>
-        </statFactors>
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>

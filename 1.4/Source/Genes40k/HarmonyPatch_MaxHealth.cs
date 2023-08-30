@@ -7,7 +7,7 @@ namespace Genes40k
     [HarmonyPatch(typeof(BodyPartDef), "GetMaxHealth")]
     public class GetMaxHealthPatch
     {
-        private static void Postfix(BodyPartDef __instance, Pawn pawn, ref float __result)
+        public static void Postfix(Pawn pawn, ref float __result)
         {
             float amount = 1;
             if (pawn.genes != null)
