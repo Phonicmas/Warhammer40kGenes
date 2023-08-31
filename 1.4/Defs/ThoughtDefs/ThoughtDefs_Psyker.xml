@@ -13,7 +13,7 @@
             <li>
                 <label>Iota Psyker</label>
                 <description>I can feel the warp...</description>
-                <baseMoodEffect>-4</baseMoodEffect>
+                <baseMoodEffect>-2</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -30,7 +30,7 @@
             <li>
                 <label>Epsilon Psyker</label>
                 <description>I can feel the warp...</description>
-                <baseMoodEffect>-8</baseMoodEffect>
+                <baseMoodEffect>-4</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -48,7 +48,7 @@
             <li>
                 <label>Delta Psyker</label>
                 <description>I can feel the warp...</description>
-                <baseMoodEffect>-14</baseMoodEffect>
+                <baseMoodEffect>-8</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -66,7 +66,7 @@
             <li>
                 <label>Beta Psyker</label>
                 <description>I can feel the warp...</description>
-                <baseMoodEffect>-20</baseMoodEffect>
+                <baseMoodEffect>-14</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
