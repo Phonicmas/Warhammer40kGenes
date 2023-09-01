@@ -115,8 +115,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_TzeentchMark</defName>
         <label>Mark of Tzeentch</label>
-        <description>This pawn has been genetically modified as a result of being marked by
-            Tzeentch.</description>
+        <description>This pawn has been genetically modified as a result of being marked by Tzeentch.</description>
         <iconPath>UI/Icons/Genes/TzeentchIcon</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <statOffsets>
@@ -161,8 +160,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_SlaaneshMark</defName>
         <label>Mark of Slaanesh</label>
-        <description>This pawn has been genetically modified as a result of being marked by
-            Slaanesh.</description>
+        <description>This pawn has been genetically modified as a result of being marked by Slaanesh.</description>
         <iconPath>UI/Icons/Genes/SlaaneshIcon</iconPath>
         <displayOrderInCategory>7</displayOrderInCategory>
         <statOffsets>
@@ -199,8 +197,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_UndividedMark</defName>
         <label>Mark of Chaos</label>
-        <description>This pawn has been genetically modified as a result of being marked by the
-            chaos gods.</description>
+        <description>This pawn has been genetically modified as a result of being marked by the chaos gods.</description>
         <iconPath>UI/Icons/Genes/UndividedIcon</iconPath>
         <displayOrderInCategory>9</displayOrderInCategory>
         <statOffsets>
@@ -255,8 +252,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_DaemonMutation</defName>
         <label>Daemon Mutation</label>
-        <description>This pawn has been genetically modified beyond their human shell as a result of
-            their chaos dedication.</description>
+        <description>This pawn has been genetically modified beyond their human shell as a result of their chaos dedication.</description>
         <iconPath>UI/Icons/Genes/DaemonicMutationIcon</iconPath>
         <marketValueFactor>2</marketValueFactor>
         <displayOrderInCategory>11</displayOrderInCategory>
@@ -348,8 +344,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_DaemonHide</defName>
         <label>Daemon Hide</label>
-        <description>This pawn have been awarded with tough hiide for their servitude, able to
-            withstand even the hardest blows.</description>
+        <description>This pawn have been awarded with tough hiide for their servitude, able to withstand even the hardest blows.</description>
         <iconPath>UI/Icons/Genes/DaemonicHideIcon</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
@@ -380,8 +375,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_DaemonWings</defName>
         <label>Daemon Wings</label>
-        <description>This pawn have been awarded with wings for their servitude, used to fly vast
-            distances in a split second.</description>
+        <description>This pawn have been awarded with wings for their servitude, used to fly vast distances in a split second.</description>
         <iconPath>UI/Icons/Genes/DaemonicWingIcon</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
@@ -417,8 +411,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_DaemonTail</defName>
         <label>Daemon Tail</label>
-        <description>This pawn have been awarded with a tail for their servitude, used to manipulate
-            certain thing but can also be used as a weapon.</description>
+        <description>This pawn have been awarded with a tail for their servitude, used to manipulate certain thing but can also be used as a weapon.</description>
         <iconPath>UI/Icons/Genes/DaemonicTailIcon</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
@@ -467,8 +460,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_DaemonHorns</defName>
         <label>Daemon Horns</label>
-        <description>This pawn have been awarded with horns for their servitude, not only for show
-            as it can be used as a deadly weapon.</description>
+        <description>This pawn have been awarded with horns for their servitude, not only for show as it can be used as a deadly weapon.</description>
         <iconPath>UI/Icons/Genes/DaemonicHornIcon</iconPath>
         <displayOrderInCategory>15</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
@@ -547,8 +539,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_KhorneColor</defName>
         <label>khorne mutation</label>
-        <description>This pawn's pigment and body have been mutated to better reflect their patron
-            god.</description>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
         <iconPath>UI/Icons/Genes/BodyTypeKhorne</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <skinColorOverride>(151, 21, 21)</skinColorOverride>
@@ -565,8 +556,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_NurgleColor</defName>
         <label>nurgle mutation</label>
-        <description>This pawn's pigment and body have been mutated to better reflect their patron
-            god.</description>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
         <iconPath>UI/Icons/Genes/BodyTypeNurgle</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <skinColorOverride>(98, 140, 22)</skinColorOverride>
@@ -583,8 +573,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_TzeencthColor</defName>
         <label>tzeentch mutation</label>
-        <description>This pawn's pigment and body have been mutated to better reflect their patron
-            god.</description>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
         <iconPath>UI/Icons/Genes/BodyTypeTzeentch</iconPath>
         <displayOrderInCategory>6</displayOrderInCategory>
         <skinColorOverride>(37, 52, 209)</skinColorOverride>
@@ -601,8 +590,7 @@
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_SlaaneshColor</defName>
         <label>slaanesh mutation</label>
-        <description>This pawn's pigment and body have been mutated to better reflect their patron
-            god.</description>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
         <iconPath>UI/Icons/Genes/BodyTypeSlaanesh</iconPath>
         <displayOrderInCategory>8</displayOrderInCategory>
         <skinColorOverride>(173, 33, 150)</skinColorOverride>

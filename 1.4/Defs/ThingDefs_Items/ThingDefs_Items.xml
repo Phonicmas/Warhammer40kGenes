@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_GeneseedCapsules</defName>
     <label>geneseed capsule</label>
-    <description>...</description>
+    <description>A capsule filled with materials needed to augment a baseliner into a space marine</description>
     <graphicData>
       <texPath>Things/Item/Geneseed</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -22,9 +22,9 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <intricate>true</intricate>
-    <!--<thingCategories>
-      <li>Geneseed</li>
-    </thingCategories>-->
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
   </ThingDef>
 
 </Defs>

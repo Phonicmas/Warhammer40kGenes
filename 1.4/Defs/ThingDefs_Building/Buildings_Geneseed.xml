@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_GeneseedGenetor</defName>
     <label>automated genetor</label>
-    <description>...</description>
+    <description>The automated genetor is the lastest invention of the imperium on the rim, which allows them to slowly turn normal pawns into space marines</description>
     <thingClass>Genes40k.Building_GeneseedGenetor</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <passability>Impassable</passability>

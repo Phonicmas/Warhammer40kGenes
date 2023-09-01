@@ -128,4 +128,19 @@
 		<isBad>false</isBad>
 	</HediffDef>
 
+	<!-- Genetor Gene Growing -->
+
+	<HediffDef>
+		<defName>BEWH_GenetorGrowing</defName>
+		<label>suspended animation</label>
+		<description>Suspended animation</description>
+		<everCurableByItem>false</everCurableByItem>
+		<disablesNeeds>
+			<li>Food</li>
+			<li>Rest</li>
+			<li>Joy</li>
+		</disablesNeeds>
+		<isBad>false</isBad>
+	</HediffDef>
+
 </Defs>

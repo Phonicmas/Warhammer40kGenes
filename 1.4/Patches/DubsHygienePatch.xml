@@ -4,27 +4,49 @@
 		<mods>
 			<li>Dubs Bad Hygiene</li>
 		</mods>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/HediffDef[defName = "BEWH_Sus_anMembraneStasis"]/stages</xpath>
-			<value>
-				<stages>
-					<li>
-						<capMods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName = "BEWH_Sus_anMembraneStasis"]/stages</xpath>
+					<value>
+						<stages>
 							<li>
-								<capacity>Consciousness</capacity>
-								<setMax>0.20</setMax>
+								<capMods>
+									<li>
+										<capacity>Consciousness</capacity>
+										<setMax>0.20</setMax>
+									</li>
+								</capMods>
+								<statFactors>
+									<IncomingDamageFactor>0</IncomingDamageFactor>
+									<ThirstRateMultiplier>0</ThirstRateMultiplier>
+									<HygieneRateMultiplier>0</HygieneRateMultiplier>
+									<BladderRateMultiplier>0</BladderRateMultiplier>
+								</statFactors>
+								<totalBleedFactor>0</totalBleedFactor>
 							</li>
-						</capMods>
-						<statFactors>
-							<IncomingDamageFactor>0</IncomingDamageFactor>
-							<ThirstRateMultiplier>0</ThirstRateMultiplier>
-							<HygieneRateMultiplier>0</HygieneRateMultiplier>
-							<BladderRateMultiplier>0</BladderRateMultiplier>
-						</statFactors>
-						<totalBleedFactor>0</totalBleedFactor>
-					</li>
-				</stages>
-			</value>
+						</stages>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffDef[defName = "BEWH_GenetorGrowing"]</xpath>
+					<value>
+						<stages>
+							<li>
+								<statFactors>
+									<ThirstRateMultiplier>0</ThirstRateMultiplier>
+									<HygieneRateMultiplier>0</HygieneRateMultiplier>
+									<BladderRateMultiplier>0</BladderRateMultiplier>
+								</statFactors>
+							</li>
+						</stages>
+					</value>
+				</li>
+
+
+			</operations>
 		</match>
 	</Operation>
 </Patch>

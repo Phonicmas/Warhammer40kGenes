@@ -265,6 +265,7 @@ namespace Genes40k
             selectedPawn = null;
             sustainerWorking = null;
             powerCutTicks = 0;
+            ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
             innerContainer.TryDropAll(def.hasInteractionCell ? InteractionCell : base.Position, base.Map, ThingPlaceMode.Near);
         }
 
@@ -279,6 +280,7 @@ namespace Genes40k
                 return;
             }
             Pawn containedPawn = ContainedPawn;
+            ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
             List<GeneDef> genesToRemove = null;
             string elevatedTo = "";
             XenotypeIconDef xenoIcon = null;
@@ -388,6 +390,7 @@ namespace Genes40k
                         ticksRemaining = 60000;
                         Fuel.ConsumeFuel(SpaceMarineFuel);
                     }
+                    pawn.health.AddHediff(Genes40kDefOf.BEWH_GenetorGrowing);
                 }
                 if (num)
                 {

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_GeneseedGenetor.cs" />
+    <Compile Include="DefModExtension_Desciption.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
     <Compile Include="Verb_CastAbility_SlaaneshSummon.cs" />
     <Compile Include="Verb_CastAbility_NurgleSummon.cs" />

@@ -55,6 +55,8 @@ namespace Genes40k
 
         public static HediffDef BEWH_DaemonPrince;
 
+        public static HediffDef BEWH_GenetorGrowing;
+
         public static XenotypeIconDef BEWH_AstartesIcon;
         public static XenotypeIconDef BEWH_PrimarisIcon;
         public static XenotypeIconDef BEWH_CustodesIcon;

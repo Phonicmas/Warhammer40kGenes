@@ -10,34 +10,71 @@ namespace Genes40k
     [HarmonyPatch(typeof(GeneDef), "GetDescriptionFull")]
     public class GeneDescriptionPatch
     {
-        public static void Postfix(ref string __result)
+        public static void Postfix(ref string __result, ref GeneDef __instance)
         {
-            if (__result.Contains("FINESTCODE1234567890"))
+            if (!__instance.HasModExtension<DefModExtension_Desciption>())
             {
-                StringBuilder sb = new StringBuilder();
-
-                int removalIndex = __result.IndexOf("Suppressed");
-                if (removalIndex == -1)
-                {
-                    return;
-                }
-                int s1 = __result.IndexOf("CUSTOMSTART12345");
-                int s2 = __result.IndexOf("CUSTOMEND67890");
-                string customTemp = __result.Substring(s1, s2-s1);
-                customTemp = customTemp.Replace("CUSTOMSTART12345", "");
-                string wip = __result.Remove(removalIndex - 17); //17 is the amount of prefix color that also needs to be removed
-                wip = wip.Replace("FINESTCODE1234567890", "");
-
-                sb.Append(wip);
-                sb.AppendLineTagged(("Effects".Translate().CapitalizeFirst() + ":").Colorize(ColoredText.TipSectionTitleColor));
-                sb.AppendLine("  - " + customTemp);
-
-                string result = sb.ToString().TrimEndNewlines();
-
-                __result = result;
                 return;
             }
+            DefModExtension_Desciption defModExtension = __instance.GetModExtension<DefModExtension_Desciption>();
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(__instance.description).AppendLine().AppendLine();
+
+            if (__instance.minAgeActive > 0f)
+            {
+                sb.AppendLine((string)("TakesEffectAfterAge".Translate() + ": ") + __instance.minAgeActive);
+            }
+            sb.AppendLine();
+            if (__instance.biostatCpx != 0)
+            {
+                sb.AppendLineTagged("Complexity".Translate().Colorize(GeneUtility.GCXColor) + ": " + __instance.biostatCpx.ToStringWithSign());
+            }
+            if (__instance.biostatMet != 0)
+            {
+                sb.AppendLineTagged("Metabolism".Translate().Colorize(GeneUtility.METColor) + ": " + __instance.biostatMet.ToStringWithSign());
+            }
+            if (__instance.biostatArc != 0)
+            {
+                sb.AppendLineTagged("ArchitesRequired".Translate().Colorize(GeneUtility.ARCColor) + ": " + __instance.biostatArc.ToStringWithSign());
+            }
+            sb.AppendLine();
+            sb.AppendLine(("Effects".Translate().CapitalizeFirst() + ":").Colorize(ColoredText.TipSectionTitleColor));
+            if (defModExtension.useAlternateTextMethod)
+            {
+                if (defModExtension.flag)
+                {
+                    sb.AppendLine("  - " + "CustomEffectTextCustodes".Translate().CapitalizeFirst());
+                }
+                else
+                {
+                    sb.AppendLine("  - " + "CustomEffectTextPrimarch".Translate().CapitalizeFirst());
+                }
+            }
+            else
+            {
+                sb.AppendLine("  - " + defModExtension.newCustomEffectText.Translate());
+            }
+
+            __result = sb.ToString().TrimEndNewlines();
+        
+
+            /*int removalIndex = __result.IndexOf("Suppressed");
+            if (removalIndex == -1)
+            {
+                return;
+            }
+            string wip = __result.Remove(removalIndex - 17);
+
+            sb.Append(wip);
+            sb.AppendLineTagged(("Effects".Translate().CapitalizeFirst() + ":").Colorize(ColoredText.TipSectionTitleColor));
+            sb.AppendLine("  - " + defModExtension.newCustomEffectText.Translate());
+            
+            string result = sb.ToString().TrimEndNewlines();*/
+
+
             return;
+
         }
     }
 }
