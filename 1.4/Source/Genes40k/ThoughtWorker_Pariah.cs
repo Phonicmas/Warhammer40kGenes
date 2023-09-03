@@ -4,7 +4,7 @@ using Verse;
 
 namespace Genes40k
 {
-    public class ThoughtWorker_OmegaPariah : ThoughtWorker
+    public class ThoughtWorker_Pariah : ThoughtWorker
     {
         protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
         {
@@ -16,9 +16,12 @@ namespace Genes40k
             {
                 return false;
             }
-            if (!other.genes.HasGene(Genes40kDefOf.BEWH_OmegaPariah))
+            if (def.HasModExtension<DefModExtension_Pariah>())
             {
-                return false;
+                if (!other.genes.HasGene(def.GetModExtension<DefModExtension_Pariah>().pariahGene))
+                {
+                    return false;
+                }
             }
             return true;
         }

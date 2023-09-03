@@ -61,7 +61,7 @@
     <uiOrder>2</uiOrder>
     <cooldownTicksRange>200</cooldownTicksRange>
     <verbProperties>
-      <verbClass>Genes40k.Verb_CastAbility_KhorneSummon</verbClass>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
       <label>summon bloodletter</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
@@ -75,6 +75,16 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedBloodletter</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Melee</li>
+        </statScale>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
   <!-- Tzeentch Daemonic Summoning -->
@@ -91,7 +101,7 @@
     <uiOrder>2</uiOrder>
     <cooldownTicksRange>200</cooldownTicksRange>
     <verbProperties>
-      <verbClass>Genes40k.Verb_CastAbility_TzeentchSummon</verbClass>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
       <label>summon pink horror</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
@@ -105,6 +115,16 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPinkHorror</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Intellectual</li>
+        </statScale>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
   <!-- Nurgle Daemonic Summoning -->
@@ -121,7 +141,7 @@
     <uiOrder>2</uiOrder>
     <cooldownTicksRange>200</cooldownTicksRange>
     <verbProperties>
-      <verbClass>Genes40k.Verb_CastAbility_NurgleSummon</verbClass>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
       <label>summon plaguebearer</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
@@ -135,6 +155,16 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPlaguebearer</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Cooking</li>
+        </statScale>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
   <!-- Slaanesh Daemonic Summoning -->
@@ -151,7 +181,7 @@
     <uiOrder>2</uiOrder>
     <cooldownTicksRange>200</cooldownTicksRange>
     <verbProperties>
-      <verbClass>Genes40k.Verb_CastAbility_SlaanneshSummon</verbClass>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
       <label>summon daemonette</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
@@ -165,6 +195,16 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedDaemonette</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Social</li>
+        </statScale>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
 </Defs>

@@ -58,19 +58,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_GeneseedGenetor.cs" />
+    <Compile Include="DefModExtension_DaemonSummon.cs" />
+    <Compile Include="DefModExtension_Pariah.cs" />
     <Compile Include="DefModExtension_Desciption.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
-    <Compile Include="Verb_CastAbility_SlaaneshSummon.cs" />
-    <Compile Include="Verb_CastAbility_NurgleSummon.cs" />
-    <Compile Include="Verb_CastAbility_TzeentchSummon.cs" />
-    <Compile Include="Verb_CastAbility_KhorneSummon.cs" />
+    <Compile Include="Verb_CastAbility_DaemonSummon.cs" />
     <Compile Include="HarmonyPatch_MaxHealth.cs" />
     <Compile Include="HarmonyPatch_MultiLung.cs" />
     <Compile Include="HarmonyPatch_SecondaryHeart.cs" />
     <Compile Include="WorkerClass_ProgenoidRemoval.cs" />
-    <Compile Include="ThoughtWorker_OmegaPariah.cs" />
-    <Compile Include="ThoughtWorker_SigmaPariah.cs" />
-    <Compile Include="ThoughtWorker_UpsilonPariah.cs" />
+    <Compile Include="ThoughtWorker_Pariah.cs" />
     <Compile Include="HediffCompProperties_Aura.cs" />
     <Compile Include="HediffComp_Aura.cs" />
     <Compile Include="Genes40kMod.cs" />

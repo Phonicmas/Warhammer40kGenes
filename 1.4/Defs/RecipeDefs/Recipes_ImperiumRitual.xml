@@ -18,58 +18,6 @@
         <defName>BEWH_CustodesAscend</defName>
         <label>Ascend to Custodes</label>
         <description>Become a mighty Custodes and protect the Emperor.</description>
-        <uiIconThing>BEWH_ImperiumSpot</uiIconThing>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Gold</li>
-                    </thingDefs>
-                </filter>
-                <count>500</count>
-            </li>
-        </ingredients>
-        <skillRequirements>
-            <Melee>13</Melee>
-            <Shooting>13</Shooting>
-            <Intellectual>13</Intellectual>
-            <Social>13</Social>
-        </skillRequirements>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_Ritual">
-                <givesGenes>
-                    <li>BEWH_Custodes</li>
-                </givesGenes>
-                <forbiddenGenes>
-                    <li>BEWH_Primarch</li>
-                    <li>BEWH_Custodes</li>
-                </forbiddenGenes>
-                <removesGenes>
-                    <li>BEWH_SecondaryHeart</li>
-                    <li>BEWH_Ossmodula</li>
-                    <li>BEWH_Biscopea</li>
-                    <li>BEWH_Haemastamen</li>
-                    <li>BEWH_LarramansOrgan</li>
-                    <li>BEWH_CatalepseanNode</li>
-                    <li>BEWH_Preomnor</li>
-                    <li>BEWH_Omophagea</li>
-                    <li>BEWH_MultiLung</li>
-                    <li>BEWH_Occulobe</li>
-                    <li>BEWH_LymansEar</li>
-                    <li>BEWH_SusAnMembrane</li>
-                    <li>BEWH_Melanochrome</li>
-                    <li>BEWH_OoliticKidney</li>
-                    <li>BEWH_Neuroglottis</li>
-                    <li>BEWH_Mucranoid</li>
-                    <li>BEWH_BetchersGland</li>
-                    <li>BEWH_ProgenoidGlands</li>
-                    <li>BEWH_BlackCarapace</li>
-                    <li>BEWH_SinewCoil</li>
-                    <li>BEWH_Magnificat</li>
-                    <li>BEWH_BelisarianFurnace</li>
-                </removesGenes>
-            </li>
-        </modExtensions>
     </RecipeDef>
 
     <!-- Primarch -->
@@ -78,58 +26,6 @@
         <defName>BEWH_PrimarchAscend</defName>
         <label>Ascend to Primarch</label>
         <description>Become a mighty Primarch and wage war on chaos.</description>
-        <uiIconThing>BEWH_ImperiumSpot</uiIconThing>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Gold</li>
-                    </thingDefs>
-                </filter>
-                <count>1000</count>
-            </li>
-        </ingredients>
-        <skillRequirements>
-            <Melee>16</Melee>
-            <Shooting>16</Shooting>
-            <Intellectual>16</Intellectual>
-            <Social>16</Social>
-        </skillRequirements>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_Ritual">
-                <givesGenes>
-                    <li>BEWH_Primarch</li>
-                </givesGenes>
-                <forbiddenGenes>
-                    <li>BEWH_Primarch</li>
-                    <li>BEWH_Custodes</li>
-                </forbiddenGenes>
-                <removesGenes>
-                    <li>BEWH_SecondaryHeart</li>
-                    <li>BEWH_Ossmodula</li>
-                    <li>BEWH_Biscopea</li>
-                    <li>BEWH_Haemastamen</li>
-                    <li>BEWH_LarramansOrgan</li>
-                    <li>BEWH_CatalepseanNode</li>
-                    <li>BEWH_Preomnor</li>
-                    <li>BEWH_Omophagea</li>
-                    <li>BEWH_MultiLung</li>
-                    <li>BEWH_Occulobe</li>
-                    <li>BEWH_LymansEar</li>
-                    <li>BEWH_SusAnMembrane</li>
-                    <li>BEWH_Melanochrome</li>
-                    <li>BEWH_OoliticKidney</li>
-                    <li>BEWH_Neuroglottis</li>
-                    <li>BEWH_Mucranoid</li>
-                    <li>BEWH_BetchersGland</li>
-                    <li>BEWH_ProgenoidGlands</li>
-                    <li>BEWH_BlackCarapace</li>
-                    <li>BEWH_SinewCoil</li>
-                    <li>BEWH_Magnificat</li>
-                    <li>BEWH_BelisarianFurnace</li>
-                </removesGenes>
-            </li>
-        </modExtensions>
     </RecipeDef>
 
     <!-- Pariah -->
