@@ -265,7 +265,11 @@ namespace Genes40k
             selectedPawn = null;
             sustainerWorking = null;
             powerCutTicks = 0;
-            ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
+
+            if (ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing) != null)
+            {
+                ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
+            }
             innerContainer.TryDropAll(def.hasInteractionCell ? InteractionCell : base.Position, base.Map, ThingPlaceMode.Near);
         }
 
@@ -280,9 +284,13 @@ namespace Genes40k
                 return;
             }
             Pawn containedPawn = ContainedPawn;
-            ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
+            if (ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing) != null)
+            {
+                ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
+            }
             List<GeneDef> genesToRemove = null;
             string elevatedTo = "";
+            string progressTo = "";
             XenotypeIconDef xenoIcon = null;
 
             NextGeneToAdd(containedPawn);
@@ -316,6 +324,14 @@ namespace Genes40k
                 xenoIcon = Genes40kDefOf.BEWH_AstartesIcon;
                 fullyElevated = true;
             }
+            if (SpaceMarineGenes().Contains(geneToAdd))
+            {
+                progressTo = "Space Marine";
+            }
+            if (PrimarisGenes().Contains(geneToAdd))
+            {
+                progressTo = "Primaris Marine";
+            }
 
 
             if (!genesToRemove.NullOrEmpty())
@@ -334,16 +350,20 @@ namespace Genes40k
                 }
             }
 
+            
             if (geneToAdd != null && !containedPawn.genes.HasGene(geneToAdd))
             {
                 containedPawn.genes.AddGene(geneToAdd, true);
-                if (xenoIcon != null)
+                if (fullyElevated)
                 {
-                    containedPawn.genes.iconDef = xenoIcon;
-                }
-                if (elevatedTo != "")
-                {
-                    containedPawn.genes.xenotypeName = elevatedTo;
+                    if (xenoIcon != null)
+                    {
+                        containedPawn.genes.iconDef = xenoIcon;
+                    }
+                    if (elevatedTo != "")
+                    {
+                        containedPawn.genes.xenotypeName = elevatedTo;
+                    }
                 }
             }
 
@@ -356,7 +376,7 @@ namespace Genes40k
             }
             else
             {
-                Messages.Message("GeneElevationProgress".Translate(containedPawn.Named("PAWN"), elevatedTo).CapitalizeFirst(), new LookTargets(containedPawn), MessageTypeDefOf.PositiveEvent);
+                Messages.Message("GeneElevationProgress".Translate(containedPawn.Named("PAWN"), progressTo).CapitalizeFirst(), new LookTargets(containedPawn), MessageTypeDefOf.PositiveEvent);
             }
 
         }
@@ -591,7 +611,6 @@ namespace Genes40k
             Scribe_Values.Look(ref ticksRemaining, "ticksRemaining", 0);
             Scribe_Values.Look(ref powerCutTicks, "powerCutTicks", 0);
         }
-
 
 
         private List<GeneDef> SpaceMarineGenes()

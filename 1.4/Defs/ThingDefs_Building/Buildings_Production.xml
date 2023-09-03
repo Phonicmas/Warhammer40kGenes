@@ -71,6 +71,9 @@
             <li>BEWH_UndividedRitual</li>
             <li>BEWH_DPUndividedRitual</li>
             <li>BEWH_PsykerRitual</li>
+            <li>BEWH_PsykerUpgradeOneRitual</li>
+            <li>BEWH_PsykerUpgradeTwoRitual</li>
+            <li>BEWH_PsykerUpgradeThreeRitual</li>
         </recipes>
     </ThingDef>
 
@@ -156,6 +159,8 @@
         </graphicData>
         <recipes>
             <li>BEWH_PariahAscend</li>
+            <li>BEWH_PariahUpgradeOneAscend</li>
+            <li>BEWH_PariahUpgradeTwoAscend</li>
         </recipes>
     </ThingDef>
 

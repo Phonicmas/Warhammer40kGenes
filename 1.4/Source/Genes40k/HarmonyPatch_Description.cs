@@ -40,37 +40,10 @@ namespace Genes40k
             }
             sb.AppendLine();
             sb.AppendLine(("Effects".Translate().CapitalizeFirst() + ":").Colorize(ColoredText.TipSectionTitleColor));
-            if (defModExtension.useAlternateTextMethod)
-            {
-                if (defModExtension.flag)
-                {
-                    sb.AppendLine("  - " + "CustomEffectTextCustodes".Translate().CapitalizeFirst());
-                }
-                else
-                {
-                    sb.AppendLine("  - " + "CustomEffectTextPrimarch".Translate().CapitalizeFirst());
-                }
-            }
-            else
-            {
-                sb.AppendLine("  - " + defModExtension.newCustomEffectText.Translate());
-            }
+
+            sb.AppendLine("  - " + defModExtension.newCustomEffectText.Translate());
 
             __result = sb.ToString().TrimEndNewlines();
-        
-
-            /*int removalIndex = __result.IndexOf("Suppressed");
-            if (removalIndex == -1)
-            {
-                return;
-            }
-            string wip = __result.Remove(removalIndex - 17);
-
-            sb.Append(wip);
-            sb.AppendLineTagged(("Effects".Translate().CapitalizeFirst() + ":").Colorize(ColoredText.TipSectionTitleColor));
-            sb.AppendLine("  - " + defModExtension.newCustomEffectText.Translate());
-            
-            string result = sb.ToString().TrimEndNewlines();*/
 
 
             return;

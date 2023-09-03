@@ -200,8 +200,6 @@
             </li>
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Considerably boosts most aspects of the pawn</newCustomEffectText> <!-- Text that should be listed as a custom effect -->
-                <useAlternateTextMethod>false</useAlternateTextMethod> <!-- set to true and adjust -->
-                <flag>true</flag> <!-- DO NOT TOUCH -->
             </li>
         </modExtensions>
         <exclusionTags>
@@ -423,8 +421,6 @@
             </li>
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Massively boosts most aspects of the pawn</newCustomEffectText> <!-- Text that should be listed as a custom effect -->
-                <useAlternateTextMethod>false</useAlternateTextMethod> <!-- set to true and adjust -->
-                <flag>false</flag> <!-- DO NOT TOUCH -->
             </li>
         </modExtensions>
         <exclusionTags>

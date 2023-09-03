@@ -10,7 +10,4 @@
   <GenesCannotBeElevated>{0}'s genes cannot be elevated any more.</GenesCannotBeElevated>
   <InsertPersonGeneseedGenetorDesc>Insert a person into the automated genetor. It will use genetic material from provided geneseed capsules to slowly elevate the pawns genes.</InsertPersonGeneseedGenetorDesc>
 
-  <CustomEffectTextCustodes>Considerably boosts most aspects of the pawn</CustomEffectTextCustodes>
-  <CustomEffectTextPrimarch>Massively boosts most aspects of the pawn</CustomEffectTextPrimarch>
-
 </LanguageData>
