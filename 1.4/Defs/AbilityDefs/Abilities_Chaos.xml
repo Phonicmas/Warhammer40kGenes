@@ -76,7 +76,7 @@
       </targetParams>
     </verbProperties>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_DaemonSummon">
+      <li Class="Core40k.DefModExtension_DaemonSummon">
         <daemonToSummon>
           <li>BEWH_SummonedBloodletter</li>
         </daemonToSummon>
@@ -116,7 +116,7 @@
       </targetParams>
     </verbProperties>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_DaemonSummon">
+      <li Class="Core40k.DefModExtension_DaemonSummon">
         <daemonToSummon>
           <li>BEWH_SummonedPinkHorror</li>
         </daemonToSummon>
@@ -156,7 +156,7 @@
       </targetParams>
     </verbProperties>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_DaemonSummon">
+      <li Class="Core40k.DefModExtension_DaemonSummon">
         <daemonToSummon>
           <li>BEWH_SummonedPlaguebearer</li>
         </daemonToSummon>
@@ -196,7 +196,7 @@
       </targetParams>
     </verbProperties>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_DaemonSummon">
+      <li Class="Core40k.DefModExtension_DaemonSummon">
         <daemonToSummon>
           <li>BEWH_SummonedDaemonette</li>
         </daemonToSummon>
