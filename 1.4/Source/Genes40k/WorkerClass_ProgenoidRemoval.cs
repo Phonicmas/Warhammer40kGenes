@@ -9,11 +9,27 @@ namespace Genes40k
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
             if (!base.AvailableOnNow(thing, part) || !(thing is Pawn pawn))
+            {
                 return false;
+            }
             if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+            {
                 return false;
-            if (recipe.defName == "BEWH_PrimarisPack" && !IsPrimaris(pawn))
+            }
+            DefModExtension_ProgenoidHarvest defModExtension;
+            if (recipe.HasModExtension<DefModExtension_ProgenoidHarvest>())
+            {
+                defModExtension = recipe.GetModExtension<DefModExtension_ProgenoidHarvest>();
+            }
+            else
+            {
                 return false;
+            }
+            if (!defModExtension.astartesPack && !IsPrimaris(pawn))
+            {
+                return false;
+            }
+                
             List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
             for (int index = 0; index < hediffs.Count; ++index)
             {
@@ -52,8 +68,9 @@ namespace Genes40k
         protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
             Genepack genepack = (Genepack)ThingMaker.MakeThing(ThingDefOf.Genepack);
+            bool isPrimaris = IsPrimaris(pawn);
 
-            if (IsPrimaris(pawn))
+            if (isPrimaris)
             {
                 genepack.Initialize(PrimarisPack());
             }
@@ -67,7 +84,7 @@ namespace Genes40k
             genepacks.Add(genepack);
 
             Xenogerm xenogerm = (Xenogerm)ThingMaker.MakeThing(ThingDefOf.Xenogerm);
-            if (IsPrimaris(pawn))
+            if (isPrimaris)
             {
                 xenogerm.Initialize(genepacks, "Primaris Space Marine", Genes40kDefOf.BEWH_PrimarisIcon);
             }
@@ -87,12 +104,7 @@ namespace Genes40k
             BillStack bills = pawn.health.surgeryBills;
             for (int i = 1; i < bills.Count; i++)
             {
-                if (bills[i].recipe.defName == "BEWH_AstartesPack")
-                {
-                    bills.Delete(bills[i]);
-                    i--;
-                }
-                if (bills[i].recipe.defName == "BEWH_PrimarisPack")
+                if (bills[i].recipe.HasModExtension<DefModExtension_ProgenoidHarvest>())
                 {
                     bills.Delete(bills[i]);
                     i--;

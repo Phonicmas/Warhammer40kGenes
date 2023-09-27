@@ -117,30 +117,4 @@
 		</comps>
 	</HediffDef>
 
-	<!-- Daemon Prince -->
-
-	<HediffDef>
-		<defName>BEWH_DaemonPrince</defName>
-		<label>daemon prince</label>
-		<description>This pawn has ascended to daemonhood.</description>
-		<everCurableByItem>false</everCurableByItem>
-		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-		<isBad>false</isBad>
-	</HediffDef>
-
-	<!-- Genetor Gene Growing -->
-
-	<HediffDef>
-		<defName>BEWH_GenetorGrowing</defName>
-		<label>suspended animation</label>
-		<description>Suspended animation</description>
-		<everCurableByItem>false</everCurableByItem>
-		<disablesNeeds>
-			<li>Food</li>
-			<li>Rest</li>
-			<li>Joy</li>
-		</disablesNeeds>
-		<isBad>false</isBad>
-	</HediffDef>
-
 </Defs>

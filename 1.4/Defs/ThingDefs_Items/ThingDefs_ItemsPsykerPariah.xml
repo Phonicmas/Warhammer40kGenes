@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--====== PSYKER =====-->
+  <!-- Captured Psychic Potential -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_PsykerItem</defName>
+    <label>captured psychic potential</label>
+    <description>A capsule containing psychic potential harvested directly from living psykers.</description>
+    <graphicData>
+      <texPath>Things/Item/PsychicPotential</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <!--====== PARIAH =====-->
+  <!-- Captured Blank Potential -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_PariahItem</defName>
+    <label>captured blank potential</label>
+    <description>A capsule containing blank potential harvested directly from living blanks.</description>
+    <graphicData>
+      <texPath>Things/Item/BlankPotential</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</Defs>

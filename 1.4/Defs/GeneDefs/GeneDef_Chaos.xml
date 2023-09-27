@@ -98,7 +98,7 @@
         </modExtensions>
         <aptitudes>
             <Plants>3</Plants>
-            <Mining>3</Mining>
+            <Cooking>3</Cooking>
         </aptitudes>
         <graphicData>
             <layer>PostTattoo</layer>
@@ -233,7 +233,7 @@
             <Social>1</Social>
             <Artistic>1</Artistic>
             <Plants>1</Plants>
-            <Mining>1</Mining>
+            <Cooking>1</Cooking>
         </aptitudes>
         <graphicData>
             <layer>PostTattoo</layer>

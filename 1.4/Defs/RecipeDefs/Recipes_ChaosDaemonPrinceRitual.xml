@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Recipe Base Daemon Prince-->
+
+    <RecipeDef Name="DPRitualRecipeBase" Abstract="True">
+        <jobString>Performing ritual.</jobString>
+        <workerClass>Core40k.RecipeWorkerClass_Ritual</workerClass>
+        <workAmount>2000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+    </RecipeDef>
+
+    <!-- Daemon Prince Undivided -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPUndividedRitual</defName>
+        <label>Undivided daemon ritual</label>
+        <description>Become a daemon prince of the great Undivided</description>
+        <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_KhorneItem</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_TzeentchItem</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_NurgleItem</li>
+                    </thingDefs>
+                </filter>
+                <count>35</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_SlaaneshItem</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_UndividedColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_UndividedMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+                <skillsScale>
+                    <li>Melee</li>
+                    <li>Shooting</li>
+                    <li>Intellectual</li>
+                    <li>Crafting</li>
+                    <li>Social</li>
+                    <li>Artistic</li>
+                    <li>Plants</li>
+                    <li>Cooking</li>
+                </skillsScale>
+                <skillsScaleAmount>0.5</skillsScaleAmount>
+                <baseChance>-10</baseChance>
+                <giftGiver>the great Undivided</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Khorne -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPKhorneRitual</defName>
+        <label>Khorne daemon ritual</label>
+        <description>Become a daemon prince of Khorne</description>
+        <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_KhorneItem</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_KhorneColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_KhorneMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+                <skillsScale>
+                    <li>Melee</li>
+                    <li>Shooting</li>
+                </skillsScale>
+                <skillsScaleAmount>2</skillsScaleAmount>
+                <baseChance>-10</baseChance>
+                <giftGiver>Khorne</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Tzeentch -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPTzeentchRitual</defName>
+        <label>Tzeentch daemon ritual</label>
+        <description>Become a daemon prince of Tzeentch</description>
+        <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_TzeentchItem</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_TzeencthColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_TzeentchMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+                <skillsScale>
+                    <li>Intellectual</li>
+                    <li>Crafting</li>
+                </skillsScale>
+                <skillsScaleAmount>2</skillsScaleAmount>
+                <baseChance>-10</baseChance>
+                <giftGiver>Tzeentch</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Nurgle -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPNurgleRitual</defName>
+        <label>Nurgle daemon ritual</label>
+        <description>Become a daemon prince of Nurgle</description>
+        <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_NurgleItem</li>
+                    </thingDefs>
+                </filter>
+                <count>75</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_NurgleColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_NurgleMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+                <skillsScale>
+                    <li>Plants</li>
+                    <li>Cooking</li>
+                </skillsScale>
+                <skillsScaleAmount>2</skillsScaleAmount>
+                <baseChance>-10</baseChance>
+                <giftGiver>Nurgle</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Daemon Prince Slaanesh -->
+
+    <RecipeDef ParentName="DPRitualRecipeBase">
+        <defName>BEWH_DPSlaaneshRitual</defName>
+        <label>Slaanesh daemon ritual</label>
+        <description>Become a daemon prince of Slaanesh</description>
+        <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_SlaaneshItem</li>
+                    </thingDefs>
+                </filter>
+                <count>175</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_DaemonMutation</li>
+                    <li>BEWH_DaemonHide</li>
+                    <li>BEWH_DaemonWings</li>
+                    <li>BEWH_DaemonTail</li>
+                    <li>BEWH_DaemonHorns</li>
+                    <li>BEWH_SlaaneshColor</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_SlaaneshMark</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                </forbiddenGenes>
+                <skillsScale>
+                    <li>Social</li>
+                    <li>Artistic</li>
+                </skillsScale>
+                <skillsScaleAmount>2</skillsScaleAmount>
+                <baseChance>-10</baseChance>
+                <giftGiver>Slaanesh</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

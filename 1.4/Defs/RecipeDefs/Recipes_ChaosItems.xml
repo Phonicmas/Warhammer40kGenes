@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <!-- Geneseed Creation Base -->
+    <RecipeDef Name="BEWH_ChaosRecipeBase" Abstract="True">
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <researchPrerequisite>BEWH_UndividedResearch</researchPrerequisite>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+
+    <!--====== SLAANESH =====-->
+    <!-- Slaanesh Ritual Item -->
+    <RecipeDef ParentName="BEWH_ChaosRecipeBase">
+        <defName>BEWH_MakeSlaaneshItem</defName>
+        <label>make psychedelic mix</label>
+        <description>Make a psychedelic mix.</description>
+        <jobString>Making psychedelic mix.</jobString>
+        <workAmount>3000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawHops</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SmokeleafLeaves</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>PsychoidLeaves</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_SlaaneshItem>1</BEWH_SlaaneshItem>
+        </products>
+        <skillRequirements>
+            <Artistic>8</Artistic>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <!--====== TZEENTCH =====-->
+    <!-- Tzeentch Ritual Item -->
+    <RecipeDef ParentName="BEWH_ChaosRecipeBase">
+        <defName>BEWH_MakeTzeentchItem</defName>
+        <label>make ancient grimoire</label>
+        <description>Make a ancient grimoire.</description>
+        <jobString>Making ancient grimoire.</jobString>
+        <workAmount>8000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Leather_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_TzeentchItem>1</BEWH_TzeentchItem>
+        </products>
+        <skillRequirements>
+            <Intellectual>12</Intellectual>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <!--====== NURGLE =====-->
+    <!-- Nurgle Ritual Item -->
+    <RecipeDef ParentName="BEWH_ChaosRecipeBase">
+        <defName>BEWH_MakeNurgleItem</defName>
+        <label>make disease containment capsule</label>
+        <description>Make a disease containment capsule.</description>
+        <jobString>Making disease containment capsule.</jobString>
+        <workAmount>7000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>CorpsesHumanlike</li>
+                    </categories>
+                    <customSummary>Humanlike corpse</customSummary>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_NurgleItem>1</BEWH_NurgleItem>
+        </products>
+        <skillRequirements>
+            <Intellectual>4</Intellectual>
+            <Cooking>8</Cooking>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <!--====== KHORNE =====-->
+    <!-- Khorne Ritual Item -->
+    <RecipeDef ParentName="BEWH_ChaosRecipeBase">
+        <defName>BEWH_MakeKhorneItem</defName>
+        <label>make adorned bloody skull</label>
+        <description>Make an adorned bloody skull.</description>
+        <jobString>Making adorned bloody skull.</jobString>
+        <workAmount>5000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>HemogenPack</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>CorpsesHumanlike</li>
+                    </categories>
+                    <customSummary>Humanlike corpse</customSummary>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_KhorneItem>1</BEWH_KhorneItem>
+        </products>
+        <skillRequirements>
+            <Melee>8</Melee>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+</Defs>

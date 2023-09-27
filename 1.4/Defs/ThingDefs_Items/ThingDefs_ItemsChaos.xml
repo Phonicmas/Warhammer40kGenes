@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--====== BASE =====-->
+  <ThingDef Name ="BEWH_RitualItemBase" ParentName="ResourceBase" Abstract="True">
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tradeability>None</tradeability>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>BEWH_RitualItems</li>
+    </thingCategories>
+  </ThingDef>
+
+
+
+  <!--====== TZEENTCH =====-->
+  <!-- Ancient Grimoire -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_TzeentchItem</defName>
+    <label>ancient grimoire</label>
+    <description>An ancient grimoire bound in human leather containing esoteric knowledge.</description>
+    <graphicData>
+      <texPath>Things/Item/AncientGrimoire</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <!--====== KHORNE =====-->
+  <!-- Adorned Bloody Skull -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_KhorneItem</defName>
+    <label>adorned bloody skull</label>
+    <description>A skull dripped in blood and adorned with golden and silver bits.</description>
+    <graphicData>
+      <texPath>Things/Item/BloodySkull</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>150</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <!--====== NURGLE =====-->
+  <!-- Disease Containment Capsule -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_NurgleItem</defName>
+    <label>disease containment capsule</label>
+    <description>A containment capsule filled with various diseases splashed together.</description>
+    <graphicData>
+      <texPath>Things/Item/DiseaseContainmentCapsule</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>375</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <!--====== SLAANESH =====-->
+  <!-- Psychedelic Mix -->
+
+  <ThingDef ParentName="BEWH_RitualItemBase">
+    <defName>BEWH_SlaaneshItem</defName>
+    <label>psychedelic mix</label>
+    <description>A mix of various drug herbs mixed together.</description>
+    <graphicData>
+      <texPath>Things/Item/PsychedelicMix</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>250</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</Defs>

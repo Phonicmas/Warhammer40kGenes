@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- Geneseed Capsule -->
+
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_GeneseedCapsules</defName>
     <label>geneseed capsule</label>
-    <description>A capsule filled with materials needed to augment a baseliner into a space marine</description>
+    <description>A capsule filled with materials needed to augment a baseliner into a space marine.</description>
     <graphicData>
       <texPath>Things/Item/Geneseed</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

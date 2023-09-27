@@ -20,11 +20,121 @@
                     <li>BEWH_PrimarisPack</li>
                 </value>
             </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
+                <value>
+                    <li>BEWH_HarvestPsyker</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
+                <value>
+                    <li>BEWH_HarvestPariah</li>
+                </value>
+            </li>
+            
 
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "FabricationBench"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes</xpath>
                 <value>
                     <li>BEWH_MakeGeneseedCapsule</li>
+                </value>
+            </li>
+
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeNurgleItem</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "HandTailoringBench"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "HandTailoringBench"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "HandTailoringBench"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeTzeentchItem</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "ElectricTailoringBench"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "ElectricTailoringBench"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "ElectricTailoringBench"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeTzeentchItem</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "DrugLab"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "DrugLab"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "DrugLab"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeSlaaneshItem</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "ButcherSpot"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "ButcherSpot"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "ButcherSpot"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeKhorneItem</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName = "TableButcher"]/recipes</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "TableButcher"]</xpath>
+                    <value>
+                        <recipes />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "TableButcher"]/recipes</xpath>
+                <value>
+                    <li>BEWH_MakeKhorneItem</li>
                 </value>
             </li>
         </operations>

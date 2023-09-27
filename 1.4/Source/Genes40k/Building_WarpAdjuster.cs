@@ -10,18 +10,21 @@ using Verse.Sound;
 namespace Genes40k
 {
     [StaticConstructorOnStartup]
-    public class Building_GeneseedGenetor : Building_Enterable, IThingHolderWithDrawnPawn, IThingHolder
+    public class Building_WarpAdjuster : Building_Enterable, IThingHolderWithDrawnPawn, IThingHolder
     {
         private int ticksRemaining;
 
         private int powerCutTicks;
 
-        private int SpaceMarineFuel = 1;
-        private int PrimarisMarineFuel = 5;
-        private int CustodesFuel = 20;
-        private int PrimarchFuel = 40;
-
+        private int nextFuelConsumption = 99;
         private GeneDef geneToAdd = null;
+        private GeneDef geneToRemove = null;
+
+        private bool cannotUpgrade;
+        private bool hasIllegalGene;
+        private GeneDef forbiddenGene = null;
+
+        DefModExtension_WarpAdjuster defModExtension = null;
 
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
@@ -178,6 +181,13 @@ namespace Genes40k
 
         public override AcceptanceReport CanAcceptPawn(Pawn pawn)
         {
+            if (defModExtension == null)
+            {
+                defModExtension = def.GetModExtension<DefModExtension_WarpAdjuster>();
+            }
+
+            GetGeneChangeAndFuel(pawn);
+
             if (!pawn.IsColonist)
             {
                 return false;
@@ -207,53 +217,19 @@ namespace Genes40k
                 return "PawnHasNoGenes".Translate(pawn.Named("PAWN"));
             }
 
-            if (IsPrimaris(pawn))
+            if (cannotUpgrade)
             {
-                if (!Genes40kDefOf.BEWH_CustodesCreation.IsFinished)
-                {
-                    return "ResearchNotCompleted".Translate(Genes40kDefOf.BEWH_CustodesCreation.label);
-                }
-                if (Fuel.Fuel < CustodesFuel)
-                {
-                    return "NotEnoughFuelPresent".Translate(CustodesFuel, pawn.Named("PAWN"));
-                }
+                return "CannotIncreaseEffectiveness".Translate(pawn.Named("PAWN"));
             }
-            else if (IsSpaceMarine(pawn))
+
+            if (hasIllegalGene)
             {
-                if (!Genes40kDefOf.BEWH_PrimarisMarineCreation.IsFinished)
-                {
-                    return "ResearchNotCompleted".Translate(Genes40kDefOf.BEWH_PrimarisMarineCreation.label);
-                }
-                if (Fuel.Fuel < PrimarisMarineFuel)
-                {
-                    return "NotEnoughFuelPresent".Translate(PrimarisMarineFuel, pawn.Named("PAWN"));
-                }
+                return "MayNotHaveGene".Translate(pawn.Named("PAWN"), defModExtension.potentialType, forbiddenGene.label);
             }
-            else if (IsCustodes(pawn))
+
+            if (Fuel.Fuel < nextFuelConsumption)
             {
-                if (!Genes40kDefOf.BEWH_PrimarchCreation.IsFinished)
-                {
-                    return "ResearchNotCompleted".Translate(Genes40kDefOf.BEWH_PrimarchCreation.label);
-                }
-                if (Fuel.Fuel < PrimarchFuel)
-                {
-                    return "NotEnoughFuelPresent".Translate(PrimarchFuel, pawn.Named("PAWN"));
-                }
-            }
-            else if (IsPrimarch(pawn))
-            {
-                return "GenesCannotBeElevated".Translate(pawn.Named("PAWN"));
-            }
-            else
-            {
-                if (!Genes40kDefOf.BEWH_SpaceMarineCreation.IsFinished)
-                {
-                    return "ResearchNotCompleted".Translate(Genes40kDefOf.BEWH_SpaceMarineCreation.label);
-                }
-                if (Fuel.Fuel < SpaceMarineFuel)
-                {
-                    return "NotEnoughFuelPresent".Translate(SpaceMarineFuel, pawn.Named("PAWN"));
-                }
+                return "NotEnoughFuelPresent".Translate(nextFuelConsumption, pawn.Named("PAWN"));
             }
 
             return true;
@@ -288,97 +264,39 @@ namespace Genes40k
             {
                 ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
             }
-            List<GeneDef> genesToRemove = null;
-            string elevatedTo = "";
-            string progressTo = "";
-            XenotypeIconDef xenoIcon = null;
 
-            NextGeneToAdd(containedPawn);
+            GetGeneChangeAndFuel(containedPawn);
 
-            bool fullyElevated = false;
-
-            if (geneToAdd == Genes40kDefOf.BEWH_Primarch)
+            if (geneToRemove != null)
             {
-                genesToRemove = CustodesGenes();
-                elevatedTo = "Primarch";
-                xenoIcon = Genes40kDefOf.BEWH_PrimarchIcon;
-                fullyElevated = true;
-            }
-            if (geneToAdd == Genes40kDefOf.BEWH_Custodes)
-            {
-                genesToRemove = SpaceMarineGenes();
-                genesToRemove.AddRange(PrimarisGenes());
-                elevatedTo = "Custodes";
-                xenoIcon = Genes40kDefOf.BEWH_CustodesIcon;
-                fullyElevated = true;
-            }
-            if (geneToAdd == Genes40kDefOf.BEWH_BelisarianFurnace)
-            {
-                elevatedTo = "Primaris Marine";
-                xenoIcon = Genes40kDefOf.BEWH_PrimarisIcon;
-                fullyElevated = true;
-            }
-            if (geneToAdd == Genes40kDefOf.BEWH_BlackCarapace)
-            {
-                elevatedTo = "Space Marine";
-                xenoIcon = Genes40kDefOf.BEWH_AstartesIcon;
-                fullyElevated = true;
-            }
-            if (SpaceMarineGenes().Contains(geneToAdd))
-            {
-                progressTo = "Space Marine";
-            }
-            if (PrimarisGenes().Contains(geneToAdd))
-            {
-                progressTo = "Primaris Marine";
-            }
-
-
-            if (!genesToRemove.NullOrEmpty())
-            {
-                List<Gene> removeThese = new List<Gene>();
+                Gene toRemove = null;
                 foreach (Gene gene in containedPawn.genes.Xenogenes)
                 {
-                    if (genesToRemove.Contains(gene.def))
+                    if (geneToRemove == gene.def)
                     {
-                        removeThese.Add(gene);
+                        toRemove = gene;
                     }
                 }
-                foreach (Gene gene in removeThese)
+                if (toRemove == null)
                 {
-                    containedPawn.genes.RemoveGene(gene);
+                    Log.Error("Pawn did not have gene to remove");
+                    return;
                 }
+                containedPawn.genes.RemoveGene(toRemove);
             }
 
-            
+
             if (geneToAdd != null && !containedPawn.genes.HasGene(geneToAdd))
             {
                 containedPawn.genes.AddGene(geneToAdd, true);
-                if (fullyElevated)
-                {
-                    if (xenoIcon != null)
-                    {
-                        containedPawn.genes.iconDef = xenoIcon;
-                    }
-                    if (elevatedTo != "")
-                    {
-                        containedPawn.genes.xenotypeName = elevatedTo;
-                    }
-                }
             }
 
             IntVec3 intVec = (def.hasInteractionCell ? InteractionCell : base.Position);
             innerContainer.TryDropAll(intVec, base.Map, ThingPlaceMode.Near);
 
-            if (fullyElevated)
-            {
-                Messages.Message("GeneElevationComplete".Translate(containedPawn.Named("PAWN"), elevatedTo).CapitalizeFirst(), new LookTargets(containedPawn), MessageTypeDefOf.PositiveEvent);
-            }
-            else
-            {
-                Messages.Message("GeneElevationProgress".Translate(containedPawn.Named("PAWN"), progressTo).CapitalizeFirst(), new LookTargets(containedPawn), MessageTypeDefOf.PositiveEvent);
-            }
+            Messages.Message("EnhanceComplete".Translate(containedPawn.Named("PAWN"), defModExtension.potentialType).CapitalizeFirst(), new LookTargets(containedPawn), MessageTypeDefOf.PositiveEvent);
 
+            Fuel.ConsumeFuel(nextFuelConsumption);
         }
 
         public override void TryAcceptPawn(Pawn pawn)
@@ -391,26 +309,9 @@ namespace Genes40k
                 {
                     Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
                     startTick = Find.TickManager.TicksGame;
-                    if (IsSpaceMarine(pawn))
-                    {
-                        ticksRemaining = (int)modSettings.primarisMarineTime;
-                        Fuel.ConsumeFuel(PrimarisMarineFuel);
-                    }
-                    if (IsPrimaris(pawn))
-                    {
-                        ticksRemaining = (int)modSettings.custodesTime;
-                        Fuel.ConsumeFuel(CustodesFuel);
-                    }
-                    else if (IsCustodes(pawn))
-                    {
-                        ticksRemaining = (int)modSettings.primarchTime;
-                        Fuel.ConsumeFuel(PrimarchFuel);
-                    }
-                    else
-                    {
-                        ticksRemaining = (int)modSettings.spaceMarineTime;
-                        Fuel.ConsumeFuel(SpaceMarineFuel);
-                    }
+
+                    ticksRemaining = (int)modSettings.warpTime;
+
                     pawn.health.AddHediff(Genes40kDefOf.BEWH_GenetorGrowing);
                 }
                 if (num)
@@ -422,6 +323,10 @@ namespace Genes40k
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
+            if (defModExtension == null)
+            {
+                defModExtension = def.GetModExtension<DefModExtension_WarpAdjuster>();
+            }
             foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(selPawn))
             {
                 yield return floatMenuOption;
@@ -454,6 +359,11 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
+            if (defModExtension == null)
+            {
+                defModExtension = def.GetModExtension<DefModExtension_WarpAdjuster>();
+            }
+
             foreach (Gizmo gizmo in base.GetGizmos())
             {
                 yield return gizmo;
@@ -505,7 +415,7 @@ namespace Genes40k
             }
             Command_Action command_Action4 = new Command_Action();
             command_Action4.defaultLabel = "InsertPerson".Translate() + "...";
-            command_Action4.defaultDesc = "InsertPersonGeneseedGenetorDesc".Translate();
+            command_Action4.defaultDesc = "InsertPersonWarpAdjusterDesc".Translate(defModExtension.potentialType);
             command_Action4.icon = InsertPawnTex;
             command_Action4.action = delegate
             {
@@ -526,8 +436,6 @@ namespace Genes40k
                         }
                         else
                         {
-                            NextGeneToAdd(pawn);
-
                             text += "\n" + "Adds gene: " + geneToAdd.label + "\n";
 
                             Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.XenogermReplicating);
@@ -582,25 +490,8 @@ namespace Genes40k
                     text += "\n";
                 }
 
-                string elevatingTo = "";
-                if (IsSpaceMarine(selectedPawn))
-                {
-                    elevatingTo = "Primaris Marine";
-                }
-                else if (IsPrimaris(selectedPawn))
-                {
-                    elevatingTo = "Custodes";
-                }
-                else if (IsCustodes(selectedPawn))
-                {
-                    elevatingTo = "Primarch";
-                }
-                else
-                {
-                    elevatingTo = "Space Marine";
-                }
+                text += "IncreasingEffectiveness".Translate(ContainedPawn.Named("PAWN"), defModExtension.potentialType).Resolve() + "\n";
 
-                text += "CurrentlyElevatingTo".Translate(ContainedPawn.Named("PAWN"), elevatingTo).Resolve() + "\n";
                 text = ((!PowerOn) ? (text + "ElevatingPausedNoPower".Translate((60000 - powerCutTicks).ToStringTicksToPeriod().Named("TIME")).Colorize(ColorLibrary.RedReadable)) : (text + "DurationLeft".Translate(ticksRemaining.ToStringTicksToPeriod()).Resolve()));
             }
             return text;
@@ -613,126 +504,48 @@ namespace Genes40k
             Scribe_Values.Look(ref powerCutTicks, "powerCutTicks", 0);
         }
 
-
-        private List<GeneDef> SpaceMarineGenes()
+        private void GetGeneChangeAndFuel(Pawn pawn)
         {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_SecondaryHeart,
-                Genes40kDefOf.BEWH_Ossmodula,
-                Genes40kDefOf.BEWH_Biscopea,
-                Genes40kDefOf.BEWH_Haemastamen,
-                Genes40kDefOf.BEWH_LarramansOrgan,
-                Genes40kDefOf.BEWH_CatalepseanNode,
-                Genes40kDefOf.BEWH_Preomnor,
-                Genes40kDefOf.BEWH_Omophagea,
-                Genes40kDefOf.BEWH_MultiLung,
-                Genes40kDefOf.BEWH_Occulobe,
-                Genes40kDefOf.BEWH_LymansEar,
-                Genes40kDefOf.BEWH_SusAnMembrane,
-                Genes40kDefOf.BEWH_Melanochrome,
-                Genes40kDefOf.BEWH_OoliticKidney,
-                Genes40kDefOf.BEWH_Neuroglottis,
-                Genes40kDefOf.BEWH_Mucranoid,
-                Genes40kDefOf.BEWH_BetchersGland,
-                Genes40kDefOf.BEWH_ProgenoidGlands,
-                Genes40kDefOf.BEWH_BlackCarapace
-            };
-            return genedef;
-        }
+            cannotUpgrade = false;
+            hasIllegalGene = false;
+            geneToAdd = null;
+            geneToRemove = null;
+            forbiddenGene = null;
+            nextFuelConsumption = 99;
 
-        private List<GeneDef> PrimarisGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
+            //Checks if pawn has genes to upgrade
+            for (int i = 0; i < defModExtension.genesList.Count; i++)
             {
-                Genes40kDefOf.BEWH_SinewCoil,
-                Genes40kDefOf.BEWH_Magnificat,
-                Genes40kDefOf.BEWH_BelisarianFurnace
-            };
-            return genedef;
-        }
-
-        private List<GeneDef> CustodesGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_Custodes
-            };
-            return genedef;
-        }
-
-        private bool IsSpaceMarine(Pawn pawn)
-        {
-            foreach (GeneDef gene in SpaceMarineGenes())
-            {
-                if (!pawn.genes.HasGene(gene))
+                if (pawn.genes.HasGene(defModExtension.genesList[i]))
                 {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private bool IsPrimaris(Pawn pawn)
-        {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SinewCoil) && pawn.genes.HasGene(Genes40kDefOf.BEWH_Magnificat) && pawn.genes.HasGene(Genes40kDefOf.BEWH_BelisarianFurnace))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsCustodes(Pawn pawn)
-        {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Custodes))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsPrimarch(Pawn pawn)
-        {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Primarch))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private void NextGeneToAdd(Pawn pawn)
-        {
-            if (IsCustodes(pawn))
-            {
-                geneToAdd = Genes40kDefOf.BEWH_Primarch;
-            }
-            else if (IsPrimaris(pawn))
-            {
-                geneToAdd = Genes40kDefOf.BEWH_Custodes;
-            }
-            else if (IsSpaceMarine(pawn))
-            {
-                List<GeneDef> primarisGenes = PrimarisGenes();
-                primarisGenes.Reverse();
-                foreach (GeneDef gene in primarisGenes)
-                {
-                    if (!pawn.genes.HasGene(gene))
+                    if (i < defModExtension.genesList.Count-1)
                     {
-                        geneToAdd = gene;
+                        geneToAdd = defModExtension.genesList[i + 1];
+                        geneToRemove = defModExtension.genesList[i];
+                        nextFuelConsumption = defModExtension.costList[i+1];
+                        break;
+                    }
+                    else
+                    {
+                        cannotUpgrade = true;
                     }
                 }
             }
-            else
+            //Checks if pawn has illegal gene
+            for (int i = 0; i < defModExtension.cannotHaveGenes.Count; i++)
             {
-                List<GeneDef> spaceMarineGenes = SpaceMarineGenes();
-                spaceMarineGenes.Reverse();
-                foreach (GeneDef gene in spaceMarineGenes)
+                if (pawn.genes.HasGene(defModExtension.cannotHaveGenes[i]))
                 {
-                    if (!pawn.genes.HasGene(gene))
-                    {
-                        geneToAdd = gene;
-                    }
+                    hasIllegalGene = true;
+                    forbiddenGene = defModExtension.cannotHaveGenes[i];
+                    break;
                 }
+            }
+            //Pawn has no genes to upgrade or any illegal ones
+            if (geneToAdd == null)
+            {
+                geneToAdd = defModExtension.genesList[0];
+                nextFuelConsumption = defModExtension.costList[0];
             }
         }
     }

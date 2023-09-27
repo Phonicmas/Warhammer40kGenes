@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using System;
 using Verse;
 
 
@@ -9,9 +10,10 @@ namespace Genes40k
     {
         public static void Postfix(Pawn pawn, ref float __result)
         {
-            float amount = 1;
             if (pawn.genes != null)
             {
+                float amount = 1;
+
                 if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SecondaryHeart))
                 {
                     amount += 0.1f;
@@ -52,8 +54,10 @@ namespace Genes40k
                 {
                     amount += 10f;
                 }
+
+                float temp = (float)Math.Round(__result * amount);
+                __result = temp;
             }
-            __result *= amount;
         }
     }
 }

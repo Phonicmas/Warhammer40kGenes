@@ -2,20 +2,25 @@
 <Defs>
 
     <!-- Make geneseed base -->
-
-    <RecipeDef ParentName="SurgeryFlesh">
-        <defName>BEWH_AstartesPack</defName>
-        <label>Make astartes genepack</label>
-        <description>Remove fully grown germ cells from progenoid glands to make all gene-seeds of an astartes.</description>
+    <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_GeneseedFromProgenoid" Abstract="True">
         <workerClass>Genes40k.WorkerClass_GeneProgenoidRemoval</workerClass>
-        <jobString>creating gene-seed from progenoid glands</jobString>
-        <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
-        <workAmount>2200</workAmount>
         <hideBodyPartNames>true</hideBodyPartNames>
         <removesHediff>BEWH_ProgenoidGlandsGrowth</removesHediff>
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-        <ingredients Inherit="true">
+    </RecipeDef>
+
+
+    <!-- Make geneseed base -->
+
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
+        <defName>BEWH_AstartesPack</defName>
+        <label>Make astartes genepack</label>
+        <description>Remove fully grown germ cells from progenoid glands to make all gene-seeds of an astartes.</description>
+        <jobString>creating gene-seed from progenoid glands</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
+        <workAmount>2200</workAmount>
+        <ingredients>
             <li>
                 <filter>
                     <thingDefs>
@@ -44,23 +49,23 @@
         <skillRequirements>
             <Medicine>14</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ProgenoidHarvest">
+                <astartesPack>True</astartesPack>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
     <!-- Make primaris geneseed base -->
 
-    <RecipeDef ParentName="SurgeryFlesh">
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_PrimarisPack</defName>
         <label>Make primaris genepack</label>
         <description>Remove fully grown germ cells from progenoid glands to make all gene-seeds of a primaris.</description>
-        <workerClass>Genes40k.WorkerClass_GeneProgenoidRemoval</workerClass>
         <jobString>creating primaris gene-seed from progenoid glands</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>4200</workAmount>
-        <hideBodyPartNames>true</hideBodyPartNames>
-        <removesHediff>BEWH_ProgenoidGlandsGrowth</removesHediff>
-        <targetsBodyPart>false</targetsBodyPart>
-        <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-        <ingredients Inherit="true">
+        <ingredients>
             <li>
                 <filter>
                     <thingDefs>
@@ -89,6 +94,11 @@
         <skillRequirements>
             <Medicine>16</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ProgenoidHarvest">
+                <astartesPack>False</astartesPack>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
     <!-- Stasis Resurrection -->
@@ -105,7 +115,7 @@
         <removesHediff>BEWH_Sus_anMembraneStasis</removesHediff>
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-        <ingredients Inherit="False">
+        <ingredients>
             <li>
                 <filter>
                     <thingDefs>

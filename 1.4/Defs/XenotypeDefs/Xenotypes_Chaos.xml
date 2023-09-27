@@ -4,8 +4,8 @@
   <!-- Choas Marine Base -->
 
   <XenotypeDef Name="ChaosMarineBase" Abstract="True">
-    <canGenerateAsCombatant>false</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
     <inheritable>false</inheritable>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
@@ -107,8 +107,8 @@
 
   <XenotypeDef Name="DaemonPrinceBase" Abstract="True">
     <inheritable>false</inheritable>
-    <canGenerateAsCombatant>false</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0.05</factionlessGenerationWeight>
     <!--<soundDefOnImplant>soundDefHere</soundDefOnImplant>-->    <!-- Add sound def here for when
     daemon asecension is aquired -->
     <combatPowerFactor>3</combatPowerFactor>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Genetor Gene Growing -->
+	<HediffDef>
+		<defName>BEWH_GenetorGrowing</defName>
+		<label>suspended animation</label>
+		<description>Suspended animation</description>
+		<everCurableByItem>false</everCurableByItem>
+		<disablesNeeds>
+			<li>Food</li>
+			<li>Rest</li>
+			<li>Joy</li>
+		</disablesNeeds>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- Daemon Prince -->
+	<HediffDef>
+		<defName>BEWH_DaemonPrince</defName>
+		<label>daemon prince</label>
+		<description>This pawn has ascended to daemonhood.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- Harvest shock base -->
+	<HediffDef ParentName="DiseaseBase" Name="HarvestShock" Abstract="True">
+		<label>harvest shock</label>
+		<isBad>true</isBad>
+		<initialSeverity>0</initialSeverity>
+		<maxSeverity>15</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+				<mentalBreakMtbDays>2</mentalBreakMtbDays>
+				<allowedMentalBreakIntensities>
+					<li>Minor</li>
+				</allowedMentalBreakIntensities>
+			</li>
+			<li>
+				<minSeverity>5.0</minSeverity>
+				<label>major</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.5</offset>
+					</li>
+				</capMods>
+				<mentalBreakMtbDays>2</mentalBreakMtbDays>
+				<allowedMentalBreakIntensities>
+					<li>Minor</li>
+					<li>Major</li>
+				</allowedMentalBreakIntensities>
+			</li>
+			<li>
+				<minSeverity>10.0</minSeverity>
+				<label>total</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Harvest shock psyker -->
+	<HediffDef ParentName="HarvestShock">
+		<defName>BEWH_HarvestShockPsyker</defName>
+		<description>Sudden loss of connection to the warp have cause a shock.</description>
+	</HediffDef>
+
+	<!-- Harvest shock pariah -->
+	<HediffDef ParentName="HarvestShock">
+		<defName>BEWH_HarvestShockPariah</defName>
+		<description>Sudden reintroduction of warp pressence have cause a shock.</description>
+	</HediffDef>
+
+</Defs>

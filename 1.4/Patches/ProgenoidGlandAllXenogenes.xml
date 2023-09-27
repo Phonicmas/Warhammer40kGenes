@@ -8,7 +8,7 @@
         <label>Progenoid Glands copies all xenogenes from pawn:</label>
         <operations>
             <li Class="PatchOperationReplace">
-                <xpath>Defs/RecipeDef[defName = "BEWH_AstartesPack"]/workerClass</xpath>
+                <xpath>Defs/RecipeDef[@Name = "BEWH_GeneseedFromProgenoid"]/workerClass</xpath>
                 <value>
                     <workerClass>Genes40k.WorkerClass_GeneProgenoidRemoval_AllGenes</workerClass>
                 </value>

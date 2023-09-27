@@ -4,8 +4,8 @@
   <!-- Space Marine Base -->
 
   <XenotypeDef Name="SpaceMarineBase" Abstract="True">
-    <canGenerateAsCombatant>false</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
     <inheritable>false</inheritable>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>

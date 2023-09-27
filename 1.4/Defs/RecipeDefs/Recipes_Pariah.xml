@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Pariah -->
+
+    <RecipeDef ParentName="AscendRecipeBase">
+        <defName>BEWH_PariahAscend</defName>
+        <label>Become a Blank</label>
+        <description>Become a Blank and suppress psykers.</description>
+        <uiIconThing>BEWH_ImperiumSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_SigmaPariah</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_Psyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_SigmaPariah</li>
+                    <li>BEWH_UpsilonPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Pariah Upgrade 1 -->
+
+    <RecipeDef ParentName="AscendRecipeBase">
+        <defName>BEWH_PariahUpgradeOneAscend</defName>
+        <label>Increase Blank effectiveness (To Upsilon)</label>
+        <description>Increase Blank effectiveness</description>
+        <uiIconThing>BEWH_ImperiumSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_UpsilonPariah</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_SigmaPariah</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_Psyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_UpsilonPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </forbiddenGenes>
+                <removesGenes>
+                    <li>BEWH_SigmaPariah</li>
+                </removesGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Pariah Upgrade 2 -->
+
+    <RecipeDef ParentName="AscendRecipeBase">
+        <defName>BEWH_PariahUpgradeTwoAscend</defName>
+        <label>Increase Blank effectiveness (To Omega)</label>
+        <description>Increase Blank effectiveness</description>
+        <uiIconThing>BEWH_ImperiumSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_OmegaPariah</li>
+                </givesGenes>
+                <requiredGenes>
+                    <li>BEWH_UpsilonPariah</li>
+                </requiredGenes>
+                <forbiddenGenes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_Psyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_SigmaPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </forbiddenGenes>
+                <removesGenes>
+                    <li>BEWH_UpsilonPariah</li>
+                </removesGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

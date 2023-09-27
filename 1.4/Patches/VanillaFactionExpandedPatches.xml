@@ -28,8 +28,8 @@
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/FactionDef[defName = "Empire"]/xenotypeSet/xenotypeChances</xpath>
                     <value>
-                        <BEWH_SpaceMarine>0.1</BEWH_SpaceMarine>
-                        <BEWH_PrimarisSpaceMarine>0.03</BEWH_PrimarisSpaceMarine>
+                        <BEWH_SpaceMarine>0.2</BEWH_SpaceMarine>
+                        <BEWH_PrimarisSpaceMarine>0.07</BEWH_PrimarisSpaceMarine>
                         <BEWH_SpaceMarinePsyker>0.015</BEWH_SpaceMarinePsyker>
                         <BEWH_Custodes>0.005</BEWH_Custodes>
                         <BEWH_Pariah>0.015</BEWH_Pariah>
@@ -66,11 +66,11 @@
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/FactionDef[defName = "VFEE_Deserters"]/xenotypeSet/xenotypeChances</xpath>
                     <value>
-                        <BEWH_TzeentchMarine>0.02</BEWH_TzeentchMarine>
-                        <BEWH_NurgleMarine>0.02</BEWH_NurgleMarine>
-                        <BEWH_SlaaneshMarine>0.02</BEWH_SlaaneshMarine>
-                        <BEWH_KhorneMarine>0.02</BEWH_KhorneMarine>
-                        <BEWH_ChaosMarine>0.02</BEWH_ChaosMarine>
+                        <BEWH_TzeentchMarine>0.04</BEWH_TzeentchMarine>
+                        <BEWH_NurgleMarine>0.04</BEWH_NurgleMarine>
+                        <BEWH_SlaaneshMarine>0.04</BEWH_SlaaneshMarine>
+                        <BEWH_KhorneMarine>0.04</BEWH_KhorneMarine>
+                        <BEWH_ChaosMarine>0.04</BEWH_ChaosMarine>
                         <BEWH_DPKhorne>0.002</BEWH_DPKhorne>
                         <BEWH_DPNurgle>0.002</BEWH_DPNurgle>
                         <BEWH_DPTzeentch>0.002</BEWH_DPTzeentch>

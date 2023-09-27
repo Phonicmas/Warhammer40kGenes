@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <!-- Harvest potential base -->
+    <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_PariahPsykerHarvest" Abstract="True">
+        <workerClass>Genes40k.WorkerClass_PotentialHarvest</workerClass>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <removesHediff>BEWH_ProgenoidGlandsGrowth</removesHediff>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+        <workAmount>2200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Intellectual>10</Intellectual>
+        </skillRequirements>
+    </RecipeDef>
+
+
+    <!--===== HARVEST PARIAH =====-->
+    <RecipeDef ParentName="BEWH_PariahPsykerHarvest">
+        <defName>BEWH_HarvestPariah</defName>
+        <label>harvest blank potential</label>
+        <description>Tap into the targets resilience to the warp and forcefully rip it out for later usage. This procedure is violent and ineffecient and as such will only acquire some of the targets potential and can potentially kill them in the process.</description>
+        <jobString>harvesting blank potential</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully harvested blank potential from {1}.</successfullyRemovedHediffMessage>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PotentialHarvest">
+                <mustHaveOne>
+                    <li>BEWH_SigmaPariah</li>
+                    <li>BEWH_UpsilonPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </mustHaveOne>
+                <amountFromTier>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>4</li>
+                </amountFromTier>
+                <harvestedItem>BEWH_PariahItem</harvestedItem>
+                <chanceToKill>35</chanceToKill>
+                <backlashHediff>BEWH_HarvestShockPariah</backlashHediff>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!--===== HARVEST PSYKER =====-->
+    <RecipeDef ParentName="BEWH_PariahPsykerHarvest">
+        <defName>BEWH_HarvestPsyker</defName>
+        <label>harvest psychic potential</label>
+        <description>Tap into the targets connection to the warp and forcefully rip it out for later usage. This procedure is violent and ineffecient and as such will only acquire some of the targets potential and can potentially kill them in the process.</description>
+        <jobString>harvesting psychic potential</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully harvested psychic potential from {1}.</successfullyRemovedHediffMessage>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PotentialHarvest">
+                <mustHaveOne>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_Psyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                </mustHaveOne>
+                <amountFromTier>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </amountFromTier>
+                <harvestedItem>BEWH_PsykerItem</harvestedItem>
+                <chanceToKill>35</chanceToKill>
+                <backlashHediff>BEWH_HarvestShockPsyker</backlashHediff>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>
