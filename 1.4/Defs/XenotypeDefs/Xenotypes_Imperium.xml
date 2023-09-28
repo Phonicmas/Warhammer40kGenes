@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Space Marine Base -->
-
-  <XenotypeDef Name="SpaceMarineBase" Abstract="True">
-    <canGenerateAsCombatant>true</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
+  <XenotypeDef Name="BEWH_ImperiumEliteBase" Abstract="True">
     <inheritable>false</inheritable>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_UntradeablePawn" />
+    </modExtensions>
+  </XenotypeDef>
+
+  <!-- Space Marine Base -->
+  <XenotypeDef ParentName="BEWH_ImperiumEliteBase" Name="SpaceMarineBase" Abstract="True">
+    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
       <li>BEWH_SecondaryHeart</li>
@@ -74,16 +80,13 @@
 
   <!-- Custodes -->
 
-  <XenotypeDef>
+  <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_Custodes</defName>
     <label>custodes</label>
     <description>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</description>
     <descriptionShort>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</descriptionShort>
     <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
-    <inheritable>false</inheritable>
     <combatPowerFactor>4</combatPowerFactor>
-    <canGenerateAsCombatant>true</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0</factionlessGenerationWeight>
     <genes>
       <li>BEWH_Custodes</li>
     </genes>
@@ -91,16 +94,13 @@
 
   <!-- Primarch -->
 
-  <XenotypeDef>
+  <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_Primarch</defName>
     <label>primarch</label>
     <description>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</description>
     <descriptionShort>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</descriptionShort>
     <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
-    <inheritable>false</inheritable>
     <combatPowerFactor>8</combatPowerFactor>
-    <canGenerateAsCombatant>true</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0</factionlessGenerationWeight>
     <genes>
       <li>BEWH_Primarch</li>
     </genes>
@@ -115,6 +115,7 @@
     <descriptionShort>With no presence in the warp these beings are resistant to psychic attack.</descriptionShort>
     <iconPath>UI/Xenotypes/PariahXenoIcon</iconPath>
     <inheritable>false</inheritable>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
     <combatPowerFactor>1.2</combatPowerFactor>
     <genes>
       <li>BEWH_UpsilonPariah</li>

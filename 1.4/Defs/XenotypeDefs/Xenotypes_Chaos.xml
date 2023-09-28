@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Choas Marine Base -->
-
-  <XenotypeDef Name="ChaosMarineBase" Abstract="True">
-    <canGenerateAsCombatant>true</canGenerateAsCombatant>
-    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
+  <XenotypeDef Name="BEWH_ChaosEliteBase" Abstract="True">
     <inheritable>false</inheritable>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_UntradeablePawn" />
+    </modExtensions>
+  </XenotypeDef>
+
+  <!-- Choas Marine Base -->
+  <XenotypeDef ParentName="BEWH_ChaosEliteBase" Name="ChaosMarineBase" Abstract="True">
+    <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
       <li>BEWH_SecondaryHeart</li>
@@ -32,7 +38,6 @@
   </XenotypeDef>
 
   <!-- Tzeentch Marine -->
-
   <XenotypeDef ParentName="ChaosMarineBase">
     <defName>BEWH_TzeentchMarine</defName>
     <label>tzeentch marine</label>
@@ -47,7 +52,6 @@
   </XenotypeDef>
 
   <!-- Nurgle Marine -->
-
   <XenotypeDef ParentName="ChaosMarineBase">
     <defName>BEWH_NurgleMarine</defName>
     <label>nurgle marine</label>
@@ -61,7 +65,6 @@
   </XenotypeDef>
 
   <!-- Slaanesh Marine -->
-
   <XenotypeDef ParentName="ChaosMarineBase">
     <defName>BEWH_SlaaneshMarine</defName>
     <label>slaanesh marine</label>
@@ -75,7 +78,6 @@
   </XenotypeDef>
 
   <!-- Khorne Marine -->
-
   <XenotypeDef ParentName="ChaosMarineBase">
     <defName>BEWH_KhorneMarine</defName>
     <label>khorne marine</label>
@@ -89,7 +91,6 @@
   </XenotypeDef>
 
   <!-- Chaos Marine -->
-
   <XenotypeDef ParentName="ChaosMarineBase">
     <defName>BEWH_ChaosMarine</defName>
     <label>chaos marine</label>
@@ -103,14 +104,10 @@
   </XenotypeDef>
 
 
-  <!-- Daemon Prince Base -->
 
-  <XenotypeDef Name="DaemonPrinceBase" Abstract="True">
-    <inheritable>false</inheritable>
-    <canGenerateAsCombatant>true</canGenerateAsCombatant>
+  <!-- Daemon Prince Base -->
+  <XenotypeDef ParentName="BEWH_ChaosEliteBase" Name="DaemonPrinceBase" Abstract="True">
     <factionlessGenerationWeight>0.05</factionlessGenerationWeight>
-    <!--<soundDefOnImplant>soundDefHere</soundDefOnImplant>-->    <!-- Add sound def here for when
-    daemon asecension is aquired -->
     <combatPowerFactor>3</combatPowerFactor>
     <genes>
       <li>BEWH_DaemonMutation</li>
@@ -118,14 +115,12 @@
       <li>BEWH_DaemonWings</li>
       <li>BEWH_DaemonHorns</li>
       <li>BEWH_DaemonHide</li>
-      <!--<li>GeneName</li>-->
       <li>Hair_BaldOnly</li>
       <li>Beard_NoBeardOnly</li>
     </genes>
   </XenotypeDef>
 
   <!-- Daemon Prince Undivided -->
-
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPUndivided</defName>
     <label>undivided daemon prince</label>
