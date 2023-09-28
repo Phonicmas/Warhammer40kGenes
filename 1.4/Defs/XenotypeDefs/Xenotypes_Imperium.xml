@@ -82,7 +82,7 @@
     <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
     <inheritable>false</inheritable>
     <combatPowerFactor>4</combatPowerFactor>
-    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
     <factionlessGenerationWeight>0</factionlessGenerationWeight>
     <genes>
       <li>BEWH_Custodes</li>
@@ -99,7 +99,7 @@
     <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
     <inheritable>false</inheritable>
     <combatPowerFactor>8</combatPowerFactor>
-    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <canGenerateAsCombatant>true</canGenerateAsCombatant>
     <factionlessGenerationWeight>0</factionlessGenerationWeight>
     <genes>
       <li>BEWH_Primarch</li>

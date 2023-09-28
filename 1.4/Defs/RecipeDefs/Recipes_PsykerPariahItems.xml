@@ -10,6 +10,7 @@
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
         <workAmount>2200</workAmount>
+        <researchPrerequisite>BEWH_PotentialHarvesting</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>

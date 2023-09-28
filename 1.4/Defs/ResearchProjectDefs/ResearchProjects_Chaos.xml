@@ -9,7 +9,7 @@
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <tab>BEWH_WH40kTab</tab>
-    <baseCost>2000</baseCost>
+    <baseCost>3000</baseCost>
   </ResearchProjectDef>
 
 
