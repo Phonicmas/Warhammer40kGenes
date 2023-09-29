@@ -84,7 +84,7 @@
                 </skillsScale>
                 <skillsScaleAmount>0.5</skillsScaleAmount>
                 <baseChance>-10</baseChance>
-                <giftGiver>the great Undivided</giftGiver>
+                <giftGiver>Undivided</giftGiver>
             </li>
         </modExtensions>
     </RecipeDef>
