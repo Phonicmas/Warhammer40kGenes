@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+    <!--===== ON PARIAH PAWN ======-->
     <!-- Sigma Pariah -->
-
     <HediffDef>
         <defName>BEWH_SigmaPariah</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -26,7 +26,6 @@
     </HediffDef>
 
     <!-- Upsilon Pariah -->
-
     <HediffDef>
         <defName>BEWH_UpsilonPariah</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -51,7 +50,6 @@
     </HediffDef>
 
     <!-- Omega Pariah -->
-
     <HediffDef>
         <defName>BEWH_OmegaPariah</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -75,8 +73,9 @@
         </comps>
     </HediffDef>
 
-    <!-- Sigma Pariah Effecter -->
 
+    <!--===== ON AFFECTED PAWNS =====-->
+    <!-- Sigma Pariah Effecter -->
     <HediffDef>
         <defName>BEWH_SigmaPariahEffecter</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -102,10 +101,12 @@
                 <severityPerDay>-48</severityPerDay>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah" />
+        </modExtensions>
     </HediffDef>
 
     <!-- Upsilon Pariah Effecter-->
-
     <HediffDef>
         <defName>BEWH_UpsilonPariahEffecter</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -138,10 +139,12 @@
                 <severityPerDay>-48</severityPerDay>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah" />
+        </modExtensions>
     </HediffDef>
 
     <!-- Omega Pariah Effecter-->
-
     <HediffDef>
         <defName>BEWH_OmegaPariahEffecter</defName>
         <hediffClass>HediffWithComps</hediffClass>
@@ -174,6 +177,9 @@
                 <severityPerDay>-48</severityPerDay>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah" />
+        </modExtensions>
     </HediffDef>
 
 </Defs>

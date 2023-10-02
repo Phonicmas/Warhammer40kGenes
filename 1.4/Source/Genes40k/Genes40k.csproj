@@ -85,7 +85,6 @@
     <Compile Include="HarmonyPatch_Carapace.cs" />
     <Compile Include="CompProperties_Remembrance.cs" />
     <Compile Include="CompAbility_Remembrance.cs" />
-    <Compile Include="WorkerClass_ProgenoidRemoval_AllGenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

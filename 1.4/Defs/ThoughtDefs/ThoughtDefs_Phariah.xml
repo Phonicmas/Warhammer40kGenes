@@ -13,7 +13,7 @@
             <li>
                 <label>Sigma Pariah</label>
                 <description>Calm...</description>
-                <baseMoodEffect>20</baseMoodEffect>
+                <baseMoodEffect>10</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -28,14 +28,12 @@
         <stages>
             <li>
                 <label>Pariah</label>
-                <baseOpinionOffset>-10</baseOpinionOffset>
+                <baseOpinionOffset>-6</baseOpinionOffset>
             </li>
         </stages>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>
-                    <li>BEWH_SigmaPariah</li>
-                </pariahGene>
+                <pariahGene>BEWH_SigmaPariah</pariahGene>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -52,7 +50,7 @@
             <li>
                 <label>Upsilon Pariah</label>
                 <description>Calm...</description>
-                <baseMoodEffect>50</baseMoodEffect>
+                <baseMoodEffect>25</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -67,14 +65,12 @@
         <stages>
             <li>
                 <label>Pariah</label>
-                <baseOpinionOffset>-25</baseOpinionOffset>
+                <baseOpinionOffset>-18</baseOpinionOffset>
             </li>
         </stages>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>
-                    <li>BEWH_UpsilonPariah</li>
-                </pariahGene>
+                <pariahGene>BEWH_UpsilonPariah</pariahGene>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -106,14 +102,12 @@
         <stages>
             <li>
                 <label>Pariah</label>
-                <baseOpinionOffset>-50</baseOpinionOffset>
+                <baseOpinionOffset>-35</baseOpinionOffset>
             </li>
         </stages>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>
-                    <li>BEWH_OmegaPariah</li>
-                </pariahGene>
+                <pariahGene>BEWH_OmegaPariah</pariahGene>
             </li>
         </modExtensions>
     </ThoughtDef>

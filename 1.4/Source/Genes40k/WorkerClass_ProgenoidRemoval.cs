@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Genes40k
@@ -36,7 +37,10 @@ namespace Genes40k
                 if ((!recipe.targetsBodyPart || hediffs[index].Part != null) && hediffs[index].def == recipe.removesHediff && hediffs[index].Visible)
                 {
                     if (hediffs[index].Severity >= 1f)
+                    {
                         return true;
+                    }
+                        
                 }
             }
             return false;
@@ -70,32 +74,49 @@ namespace Genes40k
             Genepack genepack = (Genepack)ThingMaker.MakeThing(ThingDefOf.Genepack);
             bool isPrimaris = IsPrimaris(pawn);
 
-            if (isPrimaris)
+            List<GeneDef> genesForPack = new List<GeneDef>();
+
+            Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+
+            if (modSettings.progenoidHarvestsAllXenogenes)
             {
-                genepack.Initialize(PrimarisPack());
+                for (int i = 0; i < pawn.genes.Xenogenes.Count(); i++)
+                {
+                    genesForPack.Add(pawn.genes.Xenogenes[i].def);
+                }
             }
             else
             {
-                genepack.Initialize(AstartesPack());
-            }
-            
-            List<Genepack> genepacks = new List<Genepack>();
+                genesForPack = AstartesPack();
 
-            genepacks.Add(genepack);
+                if (isPrimaris)
+                {
+                    genesForPack.AddRange(PrimarisPack());
+                }
+            }
+
+            genepack.Initialize(genesForPack);
+
+            List<Genepack> genepacks = new List<Genepack>
+            {
+                genepack
+            };
 
             Xenogerm xenogerm = (Xenogerm)ThingMaker.MakeThing(ThingDefOf.Xenogerm);
             if (isPrimaris)
             {
-                xenogerm.Initialize(genepacks, "Primaris Space Marine", Genes40kDefOf.BEWH_PrimarisIcon);
+                xenogerm.Initialize(genepacks, "PrimarisMarine".Translate(), Genes40kDefOf.BEWH_PrimarisIcon);
             }
             else
             {
-                xenogerm.Initialize(genepacks, "Space Marine", Genes40kDefOf.BEWH_AstartesIcon);
+                xenogerm.Initialize(genepacks, "SpaceMarine".Translate(), Genes40kDefOf.BEWH_AstartesIcon);
             }
 
             ClearQueue(pawn);
             if (GenPlace.TryPlaceThing(((Thing)xenogerm), pawn.PositionHeld, pawn.MapHeld, ThingPlaceMode.Near))
+            {
                 return;
+            } 
             Log.Error("Could not drop item near " + (object)pawn.PositionHeld);
         }
 
@@ -143,25 +164,6 @@ namespace Genes40k
         {
             List<GeneDef> genedef = new List<GeneDef>
             {
-                Genes40kDefOf.BEWH_SecondaryHeart,
-                Genes40kDefOf.BEWH_Ossmodula,
-                Genes40kDefOf.BEWH_Biscopea,
-                Genes40kDefOf.BEWH_Haemastamen,
-                Genes40kDefOf.BEWH_LarramansOrgan,
-                Genes40kDefOf.BEWH_CatalepseanNode,
-                Genes40kDefOf.BEWH_Preomnor,
-                Genes40kDefOf.BEWH_Omophagea,
-                Genes40kDefOf.BEWH_MultiLung,
-                Genes40kDefOf.BEWH_Occulobe,
-                Genes40kDefOf.BEWH_LymansEar,
-                Genes40kDefOf.BEWH_SusAnMembrane,
-                Genes40kDefOf.BEWH_Melanochrome,
-                Genes40kDefOf.BEWH_OoliticKidney,
-                Genes40kDefOf.BEWH_Neuroglottis,
-                Genes40kDefOf.BEWH_Mucranoid,
-                Genes40kDefOf.BEWH_BetchersGland,
-                Genes40kDefOf.BEWH_ProgenoidGlands,
-                Genes40kDefOf.BEWH_BlackCarapace,
                 Genes40kDefOf.BEWH_SinewCoil,
                 Genes40kDefOf.BEWH_Magnificat,
                 Genes40kDefOf.BEWH_BelisarianFurnace

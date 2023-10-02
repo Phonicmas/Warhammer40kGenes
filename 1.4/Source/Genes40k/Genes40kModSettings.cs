@@ -15,6 +15,8 @@ namespace Genes40k
 
         public int killChance = 35;
 
+        public bool progenoidHarvestsAllXenogenes = false;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref spaceMarineTime, "SpaceMarineTime", 60000);
@@ -23,6 +25,7 @@ namespace Genes40k
             Scribe_Values.Look(ref primarchTime, "PrimarchTime", 480000);
             Scribe_Values.Look(ref warpTime, "WarpTime", 100000);
             Scribe_Values.Look(ref killChance, "PotentialHarvestKillChance", 35);
+            Scribe_Values.Look(ref progenoidHarvestsAllXenogenes, "progenoidHarvestsAllXenogenes", false);
             base.ExposeData();
         }
     }

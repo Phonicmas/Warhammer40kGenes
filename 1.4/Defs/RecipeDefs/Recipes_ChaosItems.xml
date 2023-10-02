@@ -120,22 +120,39 @@
             </li>
             <li>
                 <filter>
-                    <categories>
-                        <li>CorpsesHumanlike</li>
-                    </categories>
-                    <customSummary>Humanlike corpse</customSummary>
-                </filter>
-                <count>1</count>
-            </li>
-            <li>
-                <filter>
                     <thingDefs>
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
                 <count>50</count>
             </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Corpses</li>
+                    </categories>
+                    <customSummary>Rotten humanlike corpse</customSummary>
+                </filter>
+                <count>1</count>
+            </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Silver</li>
+                <li>Steel</li>
+            </thingDefs>
+            <categories>
+                <li>Corpses</li>
+            </categories>
+            <disallowedCategories>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+                <li>CorpsesInsect</li>
+            </disallowedCategories>
+            <specialFiltersToDisallow>
+                <li>AllowFresh</li>
+            </specialFiltersToDisallow>
+        </fixedIngredientFilter>
         <products>
             <BEWH_NurgleItem>1</BEWH_NurgleItem>
         </products>
@@ -166,15 +183,6 @@
             </li>
             <li>
                 <filter>
-                    <categories>
-                        <li>CorpsesHumanlike</li>
-                    </categories>
-                    <customSummary>Humanlike corpse</customSummary>
-                </filter>
-                <count>1</count>
-            </li>
-            <li>
-                <filter>
                     <thingDefs>
                         <li>Gold</li>
                     </thingDefs>
@@ -189,7 +197,34 @@
                 </filter>
                 <count>3</count>
             </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Corpses</li>
+                    </categories>
+                    <customSummary>Fresh humanlike corpse</customSummary>
+                </filter>
+                <count>1</count>
+            </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>HemogenPack</li>
+                <li>Gold</li>
+                <li>Silver</li>
+            </thingDefs>
+            <categories>
+                <li>Corpses</li>
+            </categories>
+            <disallowedCategories>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+                <li>CorpsesInsect</li>
+            </disallowedCategories>
+            <specialFiltersToDisallow>
+                <li>AllowRotten</li>
+            </specialFiltersToDisallow>
+        </fixedIngredientFilter>
         <products>
             <BEWH_KhorneItem>1</BEWH_KhorneItem>
         </products>

@@ -42,6 +42,15 @@
 
   <CheckVEFPatches>Remember to check Vanilla Expanded Framework toggable patches for more settings!</CheckVEFPatches>
 
+  <progenoidHarvestsAllXenogenes>Enabling this will allow the harvest of the progenoid gland to include all xenogenes of the pawn instead of only space marine genes.</progenoidHarvestsAllXenogenes>
+
   <ModSettingsName>Warhammer 40k - Genes</ModSettingsName>
+
+  <SpaceMarine>Space marine</SpaceMarine>
+  <PrimarisMarine>Primaris marine</PrimarisMarine>
+  <Custodes>Custodes</Custodes>
+  <Primarch>Primarch</Primarch>
+
+  <AddsGene>Adds Gene: {0}</AddsGene>
 
 </LanguageData>

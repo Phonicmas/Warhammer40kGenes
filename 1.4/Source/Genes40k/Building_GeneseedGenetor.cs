@@ -300,7 +300,7 @@ namespace Genes40k
             if (geneToAdd == Genes40kDefOf.BEWH_Primarch)
             {
                 genesToRemove = CustodesGenes();
-                elevatedTo = "Primarch";
+                elevatedTo = "Primarch".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_PrimarchIcon;
                 fullyElevated = true;
             }
@@ -308,29 +308,29 @@ namespace Genes40k
             {
                 genesToRemove = SpaceMarineGenes();
                 genesToRemove.AddRange(PrimarisGenes());
-                elevatedTo = "Custodes";
+                elevatedTo = "Custodes".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_CustodesIcon;
                 fullyElevated = true;
             }
             if (geneToAdd == Genes40kDefOf.BEWH_BelisarianFurnace)
             {
-                elevatedTo = "Primaris Marine";
+                elevatedTo = "PrimarisMarine".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_PrimarisIcon;
                 fullyElevated = true;
             }
             if (geneToAdd == Genes40kDefOf.BEWH_BlackCarapace)
             {
-                elevatedTo = "Space Marine";
+                elevatedTo = "SpaceMarine".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_AstartesIcon;
                 fullyElevated = true;
             }
             if (SpaceMarineGenes().Contains(geneToAdd))
             {
-                progressTo = "Space Marine";
+                progressTo = "SpaceMarine".Translate();
             }
             if (PrimarisGenes().Contains(geneToAdd))
             {
-                progressTo = "Primaris Marine";
+                progressTo = "PrimarisMarine".Translate();
             }
 
 
@@ -528,7 +528,7 @@ namespace Genes40k
                         {
                             NextGeneToAdd(pawn);
 
-                            text += "\n" + "Adds gene: " + geneToAdd.label + "\n";
+                            text += "\n" + "AddsGene".Translate(geneToAdd.label) + "\n";
 
                             Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.XenogermReplicating);
                             if (firstHediffOfDef != null)

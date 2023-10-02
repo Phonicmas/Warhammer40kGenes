@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 
 namespace Genes40k
@@ -8,11 +9,7 @@ namespace Genes40k
 
         public int radius = 1;
 
-        public int tickInterval = 100;
-
         public HediffDef hediff;
-
-        public float severity = 1f;
 
         public HediffCompProperties_Aura()
         {
