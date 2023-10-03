@@ -199,7 +199,10 @@
                 <headScaleFactor>(1.22, 1.22)</headScaleFactor>
             </li>
             <li Class="Genes40k.DefModExtension_Desciption">
-                <newCustomEffectText>Considerably boosts most aspects of the pawn</newCustomEffectText> <!-- Text that should be listed as a custom effect -->
+                <newCustomEffectText>Considerably boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>5</increaseMultiplier>
             </li>
         </modExtensions>
         <exclusionTags>
@@ -420,7 +423,10 @@
                 <headScaleFactor>(1.3, 1.3)</headScaleFactor>
             </li>
             <li Class="Genes40k.DefModExtension_Desciption">
-                <newCustomEffectText>Massively boosts most aspects of the pawn</newCustomEffectText> <!-- Text that should be listed as a custom effect -->
+                <newCustomEffectText>Massively boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>10</increaseMultiplier>
             </li>
         </modExtensions>
         <exclusionTags>

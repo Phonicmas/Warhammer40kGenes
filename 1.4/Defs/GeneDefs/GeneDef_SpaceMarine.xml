@@ -58,6 +58,11 @@
         <exclusionTags>
             <li>SM1</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>0.1</increaseMultiplier>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Ossmodula -->
@@ -94,6 +99,9 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <bodyScaleFactor>(1.15, 1.15)</bodyScaleFactor>
                 <headScaleFactor>(1.15, 1.15)</headScaleFactor>
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>0.4</increaseMultiplier>
             </li>
         </modExtensions>
         <minAgeActive>12</minAgeActive>
@@ -138,6 +146,9 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <caravanCarryingFactor>1.3</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>0.2</increaseMultiplier>
             </li>
         </modExtensions>
         <minAgeActive>12</minAgeActive>
@@ -419,6 +430,11 @@
         <exclusionTags>
             <li>SM13</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>0.4</increaseMultiplier>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Oolitic Kidney -->
@@ -619,6 +635,9 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <caravanCarryingFactor>2</caravanCarryingFactor>
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>0.4</increaseMultiplier>
             </li>
         </modExtensions>
         <suppressedTraits>

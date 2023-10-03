@@ -40,7 +40,7 @@ namespace Genes40k
             listingStandard.Label("KillChanceOnHarvest".Translate(settings.killChance));
             settings.killChance = (int)listingStandard.Slider(settings.killChance, 0, 100);
 
-            listingStandard.CheckboxLabeled("progenoidHarvestsAllXenogenes".Translate(), ref settings.progenoidHarvestsAllXenogenes, "Test");
+            listingStandard.CheckboxLabeled("progenoidHarvestsAllXenogenes".Translate(), ref settings.progenoidHarvestsAllXenogenes);
 
             listingStandard.Label("CheckVEFPatches".Translate());
 
@@ -50,7 +50,7 @@ namespace Genes40k
 
         public override string SettingsCategory()
         {
-            return "ModSettingsName".Translate();
+            return "ModSettingsNameGenes".Translate();
         }
     }
 }

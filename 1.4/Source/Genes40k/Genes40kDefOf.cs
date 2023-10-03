@@ -10,15 +10,6 @@ namespace Genes40k
         public static GeneDef BEWH_Custodes;
         public static GeneDef BEWH_Primarch;
 
-        public static GeneDef BEWH_SigmaPariah;
-        public static GeneDef BEWH_UpsilonPariah;
-        public static GeneDef BEWH_OmegaPariah;
-
-        public static GeneDef BEWH_IotaPsyker;
-        public static GeneDef BEWH_Psyker;
-        public static GeneDef BEWH_DeltaPsyker;
-        public static GeneDef BEWH_BetaPsyker;
-
         public static GeneDef BEWH_SecondaryHeart;
         public static GeneDef BEWH_Ossmodula;
         public static GeneDef BEWH_Biscopea;
@@ -43,22 +34,7 @@ namespace Genes40k
         public static GeneDef BEWH_Magnificat;
         public static GeneDef BEWH_BelisarianFurnace;
 
-        public static GeneDef BEWH_NurgleMark;
-        public static GeneDef BEWH_UndividedMark;
-        public static GeneDef BEWH_KhorneMark;
-        public static GeneDef BEWH_TzeentchMark;
-        public static GeneDef BEWH_SlaaneshMark;
-
         public static GeneDef BEWH_DaemonMutation;
-        public static GeneDef BEWH_DaemonHide;
-        public static GeneDef BEWH_DaemonWings;
-        public static GeneDef BEWH_DaemonTail;
-        public static GeneDef BEWH_DaemonHorns;
-
-        public static RecipeDef BEWH_AstartesPack;
-        public static RecipeDef BEWH_PrimarisPack;
-
-        public static HediffDef BEWH_DaemonPrince;
 
         public static HediffDef BEWH_GenetorGrowing;
 

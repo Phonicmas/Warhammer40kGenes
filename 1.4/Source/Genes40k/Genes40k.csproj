@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Building_WarpAdjuster.cs" />
     <Compile Include="Building_GeneseedGenetor.cs" />
+    <Compile Include="DefModExtension_MaxHealth.cs" />
     <Compile Include="DefModExtension_PotentialHarvest.cs" />
     <Compile Include="DefModExtension_WarpAdjuster.cs" />
     <Compile Include="DefModExtension_ProgenoidHarvest.cs" />

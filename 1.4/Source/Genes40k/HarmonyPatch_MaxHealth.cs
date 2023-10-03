@@ -10,54 +10,20 @@ namespace Genes40k
     {
         public static void Postfix(Pawn pawn, ref float __result)
         {
+            float healthMultipler = 1;
+
             if (pawn.genes != null)
             {
-                float amount = 1;
-
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SecondaryHeart))
+                foreach (Gene gene in pawn.genes.GenesListForReading)
                 {
-                    amount += 0.1f;
+                    if (gene.def.HasModExtension<DefModExtension_MaxHealth>())
+                    {
+                        healthMultipler += gene.def.GetModExtension<DefModExtension_MaxHealth>().increaseMultiplier;
+                    }
                 }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Ossmodula))
-                {
-                    amount += 0.4f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Biscopea))
-                {
-                    amount += 0.2f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Melanochrome))
-                {
-                    amount += 0.4f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SinewCoil))
-                {
-                    amount += 0.4f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_NurgleMark))
-                {
-                    amount += 0.5f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_UndividedMark))
-                {
-                    amount += 0.25f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_DaemonHide))
-                {
-                    amount += 2.5f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Custodes))
-                {
-                    amount += 5f;
-                }
-                if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Primarch))
-                {
-                    amount += 10f;
-                }
-
-                float temp = (float)Math.Round(__result * amount);
-                __result = temp;
+                __result = (float)Math.Round(__result * healthMultipler);
             }
+            return;
         }
     }
 }
