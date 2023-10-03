@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimWorld;
 using System;
 using Verse;
 
@@ -12,7 +13,7 @@ namespace Genes40k
         {
             float healthMultipler = 1;
 
-            if (pawn.genes != null)
+            if (pawn.genes != null && !pawn.genes.GenesListForReading.NullOrEmpty())
             {
                 foreach (Gene gene in pawn.genes.GenesListForReading)
                 {
@@ -21,9 +22,28 @@ namespace Genes40k
                         healthMultipler += gene.def.GetModExtension<DefModExtension_MaxHealth>().increaseMultiplier;
                     }
                 }
-                __result = (float)Math.Round(__result * healthMultipler);
             }
-            return;
+
+            if (pawn.story != null && pawn.story.traits != null && !pawn.story.traits.allTraits.NullOrEmpty())
+            {
+                foreach (Trait trait in pawn.story.traits.allTraits)
+                {
+                    if (trait.def.HasModExtension<DefModExtension_MaxHealth>())
+                    {
+                        healthMultipler += trait.def.GetModExtension<DefModExtension_MaxHealth>().increaseMultiplier;
+                    }
+                }
+            }
+
+            int temp = (int)Math.Round(__result * healthMultipler);
+            if (temp <= 0)
+            {
+                __result = 1;
+            }
+            else
+            {
+                __result = temp;
+            }
         }
     }
 }
