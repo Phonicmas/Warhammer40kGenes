@@ -7,6 +7,8 @@ namespace Genes40k
 {
     public class WorkerClass_GeneProgenoidRemoval : Recipe_Surgery
     {
+        private bool isPrimaris = false;
+
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
             if (!base.AvailableOnNow(thing, part) || !(thing is Pawn pawn))
@@ -26,7 +28,8 @@ namespace Genes40k
             {
                 return false;
             }
-            if (!defModExtension.astartesPack && !IsPrimaris(pawn))
+            isPrimaris = IsPrimaris(pawn);
+            if (!defModExtension.astartesPack && !isPrimaris)
             {
                 return false;
             }
@@ -72,7 +75,6 @@ namespace Genes40k
         protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
             Genepack genepack = (Genepack)ThingMaker.MakeThing(ThingDefOf.Genepack);
-            bool isPrimaris = IsPrimaris(pawn);
 
             List<GeneDef> genesForPack = new List<GeneDef>();
 

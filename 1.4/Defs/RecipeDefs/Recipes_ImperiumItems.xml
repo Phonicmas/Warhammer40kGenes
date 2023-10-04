@@ -14,6 +14,9 @@
         <workAmount>7000</workAmount>
         <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
         <researchPrerequisite>BEWH_GeneseedGenetor</researchPrerequisite>
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
