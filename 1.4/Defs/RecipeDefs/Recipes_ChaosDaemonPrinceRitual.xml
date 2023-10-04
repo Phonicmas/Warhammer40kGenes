@@ -19,6 +19,9 @@
         <label>Undivided daemon ritual</label>
         <description>Become a daemon prince of the great Undivided</description>
         <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_UndividedRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -96,6 +99,9 @@
         <label>Khorne daemon ritual</label>
         <description>Become a daemon prince of Khorne</description>
         <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_KhorneRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -143,6 +149,9 @@
         <label>Tzeentch daemon ritual</label>
         <description>Become a daemon prince of Tzeentch</description>
         <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_TzeentchRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -190,6 +199,9 @@
         <label>Nurgle daemon ritual</label>
         <description>Become a daemon prince of Nurgle</description>
         <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_NurgleRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -237,6 +249,9 @@
         <label>Slaanesh daemon ritual</label>
         <description>Become a daemon prince of Slaanesh</description>
         <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_SlaaneshRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>

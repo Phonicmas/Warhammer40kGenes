@@ -19,6 +19,9 @@
         <label>Undivided ritual</label>
         <description>Pledge yourself to the great undivided</description>
         <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_UndividedRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -89,6 +92,9 @@
         <label>Khorne ritual</label>
         <description>Pledge yourself to Khorne</description>
         <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_KhorneRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -129,6 +135,9 @@
         <label>Tzeentch ritual</label>
         <description>Pledge yourself to Tzeentch</description>
         <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_TzeentchRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -169,6 +178,9 @@
         <label>Nurgle ritual</label>
         <description>Pledge yourself to Nurgle</description>
         <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_NurgleRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -209,6 +221,9 @@
         <label>Slaanesh ritual</label>
         <description>Pledge yourself to Slaanesh</description>
         <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_SlaaneshRitualSpot</li>
+        </recipeUsers>
         <ingredients>
             <li>
                 <filter>

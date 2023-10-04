@@ -67,10 +67,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <recipes>
-            <li>BEWH_UndividedRitual</li>
-            <li>BEWH_DPUndividedRitual</li>
-        </recipes>
     </ThingDef>
 
     <!-- Khorne -->
@@ -84,10 +80,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <recipes>
-            <li>BEWH_KhorneRitual</li>
-            <li>BEWH_DPKhorneRitual</li>
-        </recipes>
     </ThingDef>
 
     <!-- Tzeentch -->
@@ -101,10 +93,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <recipes>
-            <li>BEWH_TzeentchRitual</li>
-            <li>BEWH_DPTzeentchRitual</li>
-        </recipes>
     </ThingDef>
 
     <!-- Nurgle -->
@@ -118,10 +106,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <recipes>
-            <li>BEWH_NurgleRitual</li>
-            <li>BEWH_DPNurgleRitual</li>
-        </recipes>
     </ThingDef>
 
     <!-- Slaanesh -->
@@ -135,10 +119,6 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <recipes>
-            <li>BEWH_SlaaneshRitual</li>
-            <li>BEWH_DPSlaaneshRitual</li>
-        </recipes>
     </ThingDef>
 
 
