@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Building_WarpAdjuster.cs" />
     <Compile Include="Building_GeneseedGenetor.cs" />
-    <Compile Include="DefModExtension_MaxHealth.cs" />
+    <Compile Include="DefModExtension_DaemonMutation.cs" />
     <Compile Include="DefModExtension_PotentialHarvest.cs" />
     <Compile Include="DefModExtension_WarpAdjuster.cs" />
     <Compile Include="DefModExtension_ProgenoidHarvest.cs" />
@@ -72,7 +72,6 @@
     <Compile Include="Genes40kModSettings.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
     <Compile Include="Verb_CastAbility_DaemonSummon.cs" />
-    <Compile Include="HarmonyPatch_MaxHealth.cs" />
     <Compile Include="HarmonyPatch_MultiLung.cs" />
     <Compile Include="HarmonyPatch_SecondaryHeart.cs" />
     <Compile Include="WorkerClass_PotentialHarvest.cs" />

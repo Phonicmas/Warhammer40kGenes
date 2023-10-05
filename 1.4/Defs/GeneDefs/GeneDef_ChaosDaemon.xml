@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Daemon Prince Genes-->
+    <!-- Daemon Mutation -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_DaemonMutation</defName>
+        <label>Daemon Mutation</label>
+        <description>This pawn has been genetically modified beyond their human shell as a result of their chaos dedication.</description>
+        <iconPath>UI/Icons/Genes/DaemonicMutationIcon</iconPath>
+        <marketValueFactor>2</marketValueFactor>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <geneClass>Gene_Clotting</geneClass>
+        <dontMindRawFood>true</dontMindRawFood>
+        <sterilize>true</sterilize>
+        <selectionWeight>0.1</selectionWeight>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <statOffsets>
+            <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
+            <ToxicResistance>3</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+            <Fertility>0</Fertility>
+            <AimingDelayFactor>0.75</AimingDelayFactor>
+            <MeleeWeapon_CooldownMultiplier>0.75</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.75</RangedCooldownFactor>
+            <FoodPoisonChance>0</FoodPoisonChance>
+            <ImmunityGainSpeed>4</ImmunityGainSpeed>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+        </capMods>
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+            <li>WoundInfection</li>
+            <li>LungRot</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
+        <minAgeActive>18</minAgeActive>
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+        <biostatCpx>5</biostatCpx>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                <hediffToWholeBody>BEWH_DaemonPrince</hediffToWholeBody>
+                <bodyScaleFactor>(1.24, 1.24)</bodyScaleFactor>
+                <headScaleFactor>(1.24, 1.24)</headScaleFactor>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Daemon Hide -->
+    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonHideBase" Abstract="True">
+        <displayOrderInCategory>12</displayOrderInCategory>
+        <prerequisite>BEWH_DaemonMutation</prerequisite>
+        <statOffsets>
+            <ComfyTemperatureMin>-110</ComfyTemperatureMin>
+            <ComfyTemperatureMax>110</ComfyTemperatureMax>
+            <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.55</ArmorRating_Heat>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.65</IncomingDamageFactor>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <InjuryHealingFactor>8</InjuryHealingFactor>
+        </statFactors>
+        <painFactor>0.25</painFactor>
+        <biostatCpx>3</biostatCpx>
+    </GeneDef>
+    <GeneDef ParentName="BEWH_DaemonHideBase">
+        <defName>BEWH_DaemonHide</defName>
+        <label>Daemon Hide</label>
+        <description>This pawn have been awarded with tough hiide for their servitude, able to withstand even the hardest blows.</description>
+        <iconPath>UI/Icons/Genes/DaemonicHideIcon</iconPath>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Hide</daemonPart>
+                <godGiver>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                    <li>Undivided</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Daemon Wings -->
+    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonWingsBase" Abstract="True">
+        <displayOrderInCategory>13</displayOrderInCategory>
+        <prerequisite>BEWH_DaemonMutation</prerequisite>
+        <abilities>
+            <li>BEWH_DaemonicFlight</li>
+        </abilities>
+        <statOffsets>
+            <CarryingCapacity>200</CarryingCapacity>
+        </statOffsets>
+        <statFactors>
+            <MoveSpeed>1.05</MoveSpeed>
+        </statFactors>
+        <biostatCpx>3</biostatCpx>
+    </GeneDef>
+    <GeneDef ParentName="BEWH_DaemonWingsBase">
+        <defName>BEWH_DaemonWings</defName>
+        <label>Daemon Wings</label>
+        <description>This pawn have been awarded with wings for their servitude, used to fly vast distances in a split second.</description>
+        <iconPath>UI/Icons/Genes/DaemonicWingIcon</iconPath>
+        <graphicData>
+            <drawLoc>Tailbone</drawLoc>
+            <drawScale>1.2</drawScale>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/DaemonicWings/DaemonicWings</graphicPath>
+            <color>(255, 255, 255)</color>
+            <colorType>Skin</colorType>
+            <drawOffsetNorth>(0, 0.1, 0)</drawOffsetNorth>
+            <drawOffsetSouth>(0, -0.1, 0)</drawOffsetSouth>
+            <drawOffsetEast>(-0.55, -0.1, -0.05)</drawOffsetEast>
+        </graphicData>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Wings</daemonPart>
+                <godGiver>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                    <li>Undivided</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Daemon Tail -->
+    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonTailBase" Abstract="True">
+        <displayOrderInCategory>14</displayOrderInCategory>
+        <prerequisite>BEWH_DaemonMutation</prerequisite>
+        <statOffsets>
+            <MeleeDodgeChance>8</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+            <MeleeHitChance>1.4</MeleeHitChance>
+            <MeleeDamageFactor>1.55</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.35</postFactor>
+            </li>
+        </capMods>
+        <exclusionTags>
+            <li>Tail</li>
+        </exclusionTags>
+        <biostatCpx>3</biostatCpx>
+    </GeneDef>
+    <GeneDef ParentName="BEWH_DaemonTailBase">
+        <defName>BEWH_DaemonTail</defName>
+        <label>Daemon Tail</label>
+        <description>This pawn have been awarded with a tail for their servitude, used to manipulate certain thing but can also be used as a weapon.</description>
+        <iconPath>UI/Icons/Genes/DaemonicTailIcon</iconPath>
+        <graphicData>
+            <drawLoc>Tailbone</drawLoc>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/DaemonicTail/DaemonicTail</graphicPath>
+            <color>(255, 255, 255)</color>
+            <colorType>Skin</colorType>
+            <drawOffsetNorth>(0.05, 0.2, -0.2)</drawOffsetNorth>
+            <drawOffsetEast>(-0.5, -0.11, -0.05)</drawOffsetEast>
+        </graphicData>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_DaemonicTailAttack</hediff>
+                        <bodyparts>
+                            <li>Torso</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Tail</daemonPart>
+                <godGiver>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                    <li>Undivided</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Daemon Horns -->
+    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonHornsBase" Abstract="True">
+        <displayOrderInCategory>15</displayOrderInCategory>
+        <prerequisite>BEWH_DaemonMutation</prerequisite>
+        <statOffsets>
+            <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Delicate</def>
+            </li>
+            <li>
+                <def>Wimp</def>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>NaturalMood</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>NaturalMood</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <exclusionTags>
+            <li>Headbone</li>
+        </exclusionTags>
+        <biostatCpx>3</biostatCpx>
+    </GeneDef>
+    <GeneDef ParentName="BEWH_DaemonHornsBase">
+        <defName>BEWH_DaemonHorns</defName>
+        <label>Daemon Horns</label>
+        <description>This pawn have been awarded with horns for their servitude, not only for show as it can be used as a deadly weapon.</description>
+        <iconPath>UI/Icons/Genes/DaemonicHornIcon</iconPath>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/DaemonicHorns/DaemonicHorns</graphicPath>
+            <color>(255, 255, 255)</color>
+            <layer>PostHeadgear</layer>
+            <drawLoc>HeadTop</drawLoc>
+            <drawOffsetNorth>(0, -0.1, 0)</drawOffsetNorth>
+        </graphicData>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_DaemonicHornAttack</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Horns</daemonPart>
+                <godGiver>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                    <li>Undivided</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Daemon Colour Genes-->
+    <!-- Khorne -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_KhorneColor</defName>
+        <label>khorne mutation</label>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
+        <iconPath>UI/Icons/Genes/BodyTypeKhorne</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <skinColorOverride>(151, 21, 21)</skinColorOverride>
+        <bodyType>Hulk</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Khorne</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Color</daemonPart>
+                <godGiver>
+                    <li>Khorne</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Nurgle -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_NurgleColor</defName>
+        <label>nurgle mutation</label>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
+        <iconPath>UI/Icons/Genes/BodyTypeNurgle</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <skinColorOverride>(98, 140, 22)</skinColorOverride>
+        <bodyType>Fat</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Color</daemonPart>
+                <godGiver>
+                    <li>Nurgle</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Tzeencth -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_TzeencthColor</defName>
+        <label>tzeentch mutation</label>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
+        <iconPath>UI/Icons/Genes/BodyTypeTzeentch</iconPath>
+        <displayOrderInCategory>6</displayOrderInCategory>
+        <skinColorOverride>(37, 52, 209)</skinColorOverride>
+        <bodyType>Thin</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Tzeentch</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Color</daemonPart>
+                <godGiver>
+                    <li>Tzeentch</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Slaanesh -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_SlaaneshColor</defName>
+        <label>slaanesh mutation</label>
+        <description>This pawn's pigment and body have been mutated to better reflect their patron god.</description>
+        <iconPath>UI/Icons/Genes/BodyTypeSlaanesh</iconPath>
+        <displayOrderInCategory>8</displayOrderInCategory>
+        <skinColorOverride>(173, 33, 150)</skinColorOverride>
+        <bodyType>Standard</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Slaanesh</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Color</daemonPart>
+                <godGiver>
+                    <li>Slaanesh</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Undivided -->
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_UndividedColor</defName>
+        <label>undivided mutation</label>
+        <description>This pawn's pigment have been mutated to better reflect their patron gods.</description>
+        <iconPath>UI/Icons/Genes/BodyTypeChaos</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <skinColorOverride>(90, 90, 90)</skinColorOverride>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_DaemonMutation">
+                <daemonPart>Color</daemonPart>
+                <godGiver>
+                    <li>Undivided</li>
+                </godGiver>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

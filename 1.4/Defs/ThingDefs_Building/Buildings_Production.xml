@@ -121,18 +121,4 @@
         </graphicData>
     </ThingDef>
 
-
-    <!-- Imperium -->
-
-    <ThingDef ParentName="RitualBase">
-        <defName>BEWH_ImperiumSpot</defName>
-        <label>Imperium ascension spot</label>
-        <description>A place to ascend.</description>
-        <graphicData>
-            <texPath>Things/Building/Production/ImperiumIcon</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1,1)</drawSize>
-        </graphicData>
-    </ThingDef>
-
 </Defs>

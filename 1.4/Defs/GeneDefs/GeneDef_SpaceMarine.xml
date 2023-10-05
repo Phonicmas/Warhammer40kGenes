@@ -27,9 +27,7 @@
     </GeneDef>
 
     <!-- Space Marine Genes-->
-
     <!-- Secondary Heart-->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_SecondaryHeart</defName>
         <label>secondary heart</label>
@@ -42,6 +40,9 @@
                 <postFactor>1.25</postFactor>
             </li>
         </capMods>
+        <statFactors>
+            <IncomingDamageFactor>0.91</IncomingDamageFactor>
+        </statFactors>
         <customEffectDescriptions>
             <li>Can survive loss of heart</li>
         </customEffectDescriptions>
@@ -58,15 +59,9 @@
         <exclusionTags>
             <li>SM1</li>
         </exclusionTags>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>0.1</increaseMultiplier>
-            </li>
-        </modExtensions>
     </GeneDef>
 
     <!-- Ossmodula -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Ossmodula</defName>
         <label>ossmodula</label>
@@ -86,6 +81,7 @@
             <LeatherAmount>1.25</LeatherAmount>
             <MeatAmount>1.25</MeatAmount>
             <Mass>1.25</Mass>
+            <IncomingDamageFactor>0.74</IncomingDamageFactor>
         </statFactors>
         <suppressedTraits>
             <li>
@@ -100,9 +96,6 @@
                 <bodyScaleFactor>(1.15, 1.15)</bodyScaleFactor>
                 <headScaleFactor>(1.15, 1.15)</headScaleFactor>
             </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>0.4</increaseMultiplier>
-            </li>
         </modExtensions>
         <minAgeActive>12</minAgeActive>
         <exclusionTags>
@@ -111,7 +104,6 @@
     </GeneDef>
 
     <!-- Biscopea -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Biscopea</defName>
         <label>biscopea</label>
@@ -125,6 +117,7 @@
         <statFactors>
             <MeleeDamageFactor>1.6</MeleeDamageFactor>
             <StaggerDurationFactor>0.5</StaggerDurationFactor>
+            <IncomingDamageFactor>0.82</IncomingDamageFactor>
         </statFactors>
         <capMods>
             <li>
@@ -147,9 +140,6 @@
                 <caravanCarryingFactor>1.3</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
             </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>0.2</increaseMultiplier>
-            </li>
         </modExtensions>
         <minAgeActive>12</minAgeActive>
         <exclusionTags>
@@ -158,7 +148,6 @@
     </GeneDef>
 
     <!-- Haemastamen -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Haemastamen</defName>
         <label>haemastamen</label>
@@ -193,7 +182,6 @@
     </GeneDef>
 
     <!-- Larraman's Organ  -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_LarramansOrgan</defName>
         <label>larraman's organ</label>
@@ -215,7 +203,6 @@
     </GeneDef>
 
     <!-- Catalepsean Node -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_CatalepseanNode</defName>
         <label>catalepsean node</label>
@@ -249,7 +236,6 @@
     </GeneDef>
 
     <!-- Preomnor -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Preomnor</defName>
         <label>preomnor</label>
@@ -269,7 +255,6 @@
     </GeneDef>
 
     <!-- Omophagea -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Omophagea</defName>
         <label>omophagea</label>
@@ -293,7 +278,6 @@
     </GeneDef>
 
     <!-- Multi-lung -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_MultiLung</defName>
         <label>multi-lung</label>
@@ -322,7 +306,6 @@
     </GeneDef>
 
     <!-- Occulobe -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Occulobe</defName>
         <label>occulobe</label>
@@ -362,7 +345,6 @@
     </GeneDef>
 
     <!-- Lyman's Ear -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_LymansEar</defName>
         <label>lyman's ear</label>
@@ -394,7 +376,6 @@
     </GeneDef>
 
     <!-- Sus-an Membrane -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_SusAnMembrane</defName>
         <label>sus-an membrane</label>
@@ -418,7 +399,6 @@
     </GeneDef>
 
     <!-- Melanochrome -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Melanochrome</defName>
         <label>melanochrome</label>
@@ -427,18 +407,15 @@
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>BEWH_SusAnMembrane</prerequisite>
         <minAgeActive>16</minAgeActive>
+        <statFactors>
+            <IncomingDamageFactor>0.74</IncomingDamageFactor>
+        </statFactors>
         <exclusionTags>
             <li>SM13</li>
         </exclusionTags>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>0.4</increaseMultiplier>
-            </li>
-        </modExtensions>
     </GeneDef>
 
     <!-- Oolitic Kidney -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_OoliticKidney</defName>
         <label>oolitic kidney</label>
@@ -472,7 +449,6 @@
     </GeneDef>
 
     <!-- Neuroglottis -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Neuroglottis</defName>
         <label>neuroglottis</label>
@@ -496,7 +472,6 @@
     </GeneDef>
 
     <!-- Mucranoid -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_Mucranoid</defName>
         <label>mucranoid</label>
@@ -515,7 +490,6 @@
     </GeneDef>
 
     <!-- Betcher's Gland -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_BetchersGland</defName>
         <label>betcher's gland</label>
@@ -542,7 +516,6 @@
     </GeneDef>
 
     <!-- Progenoid Glands -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_ProgenoidGlands</defName>
         <label>progenoid glands</label>
@@ -595,7 +568,6 @@
     </GeneDef>
 
     <!-- Black Carapace -->
-
     <GeneDef ParentName="SpaceMarineParent">
         <defName>BEWH_BlackCarapace</defName>
         <label>black carapace</label>
@@ -614,9 +586,7 @@
     </GeneDef>
 
     <!-- Primaris Genes-->
-
     <!-- Sinew Coil -->
-
     <GeneDef ParentName="PrimarisSpaceMarineParent">
         <defName>BEWH_SinewCoil</defName>
         <label>sinew coil</label>
@@ -628,6 +598,7 @@
             <CarryingCapacity>100</CarryingCapacity>
         </statOffsets>
         <statFactors>
+            <IncomingDamageFactor>0.74</IncomingDamageFactor>
             <MeleeDamageFactor>1.3</MeleeDamageFactor>
             <IncomingDamageFactor>0.85</IncomingDamageFactor>
             <StaggerDurationFactor>0</StaggerDurationFactor>
@@ -635,9 +606,6 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <caravanCarryingFactor>2</caravanCarryingFactor>
-            </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>0.4</increaseMultiplier>
             </li>
         </modExtensions>
         <suppressedTraits>
@@ -657,7 +625,6 @@
     </GeneDef>
 
     <!-- Magnificat -->
-
     <GeneDef ParentName="PrimarisSpaceMarineParent">
         <defName>BEWH_Magnificat</defName>
         <label>magnificat</label>
@@ -690,7 +657,6 @@
     </GeneDef>
 
     <!-- Belisarian Furnace -->
-
     <GeneDef ParentName="PrimarisSpaceMarineParent">
         <defName>BEWH_BelisarianFurnace</defName>
         <label>belisarian furnace</label>

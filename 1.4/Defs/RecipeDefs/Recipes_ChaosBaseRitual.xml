@@ -68,16 +68,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScale>
-                    <li>Melee</li>
-                    <li>Shooting</li>
-                    <li>Intellectual</li>
-                    <li>Crafting</li>
-                    <li>Social</li>
-                    <li>Artistic</li>
-                    <li>Plants</li>
-                    <li>Cooking</li>
-                </skillsScale>
                 <skillsScaleAmount>0.5</skillsScaleAmount>
                 <baseChance>10</baseChance>
                 <giftGiver>Undivided</giftGiver>
@@ -117,10 +107,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScale>
-                    <li>Melee</li>
-                    <li>Shooting</li>
-                </skillsScale>
                 <skillsScaleAmount>2</skillsScaleAmount>
                 <baseChance>10</baseChance>
                 <giftGiver>Khorne</giftGiver>
@@ -160,10 +146,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScale>
-                    <li>Intellectual</li>
-                    <li>Crafting</li>
-                </skillsScale>
                 <skillsScaleAmount>2</skillsScaleAmount>
                 <baseChance>10</baseChance>
                 <giftGiver>Tzeentch</giftGiver>
@@ -203,10 +185,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScale>
-                    <li>Plants</li>
-                    <li>Cooking</li>
-                </skillsScale>
                 <skillsScaleAmount>2</skillsScaleAmount>
                 <baseChance>10</baseChance>
                 <giftGiver>Nurgle</giftGiver>
@@ -246,10 +224,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScale>
-                    <li>Social</li>
-                    <li>Artistic</li>
-                </skillsScale>
                 <skillsScaleAmount>2</skillsScaleAmount>
                 <baseChance>10</baseChance>
                 <giftGiver>Slaanesh</giftGiver>

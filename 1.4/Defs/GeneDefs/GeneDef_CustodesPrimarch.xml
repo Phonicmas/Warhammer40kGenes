@@ -62,7 +62,7 @@
             <RangedCooldownFactor>0.6</RangedCooldownFactor>
             <MeleeHitChance>1.8</MeleeHitChance>
             <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.55</IncomingDamageFactor>
+            <IncomingDamageFactor>0.4</IncomingDamageFactor>
             <RawNutritionFactor>4</RawNutritionFactor>
             <GlobalLearningFactor>2</GlobalLearningFactor>
             <ImmunityGainSpeed>8</ImmunityGainSpeed>
@@ -201,9 +201,6 @@
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Considerably boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
             </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>5</increaseMultiplier>
-            </li>
         </modExtensions>
         <exclusionTags>
             <li>SupremeImperial</li>
@@ -285,7 +282,7 @@
             <RangedCooldownFactor>0.35</RangedCooldownFactor>
             <MeleeHitChance>2.5</MeleeHitChance>
             <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.3</IncomingDamageFactor>
+            <IncomingDamageFactor>0.2</IncomingDamageFactor>
             <RawNutritionFactor>4</RawNutritionFactor>
             <GlobalLearningFactor>3</GlobalLearningFactor>
             <ImmunityGainSpeed>12</ImmunityGainSpeed>
@@ -424,9 +421,6 @@
             </li>
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Massively boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
-            </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>10</increaseMultiplier>
             </li>
         </modExtensions>
         <exclusionTags>

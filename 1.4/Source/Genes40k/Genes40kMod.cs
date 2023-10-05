@@ -42,7 +42,7 @@ namespace Genes40k
 
             listingStandard.CheckboxLabeled("progenoidHarvestsAllXenogenes".Translate(), ref settings.progenoidHarvestsAllXenogenes);
 
-            listingStandard.Label("CheckVEFPatches".Translate());
+            listingStandard.Label("\n" + "CheckVEFPatches".Translate());
 
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);

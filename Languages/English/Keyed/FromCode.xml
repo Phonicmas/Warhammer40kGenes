@@ -38,7 +38,7 @@
 
   <WarpAdjusterCycleTime>Warp adjuster cycle time: {0} days</WarpAdjusterCycleTime>
 
-  <KillChanceOnHarvest>Kill chance on potential harvest: {0}%</KillChanceOnHarvest>
+  <KillChanceOnHarvest>Kill chance on psychic or blank potential harvesting: {0}%</KillChanceOnHarvest>
 
   <CheckVEFPatches>Remember to check Vanilla Expanded Framework toggable patches for more settings!</CheckVEFPatches>
 
