@@ -207,7 +207,7 @@ namespace Genes40k
                 return "PawnHasNoGenes".Translate(pawn.Named("PAWN"));
             }
 
-            if (IsPrimaris(pawn))
+            if (Genes40kUtils.IsPrimaris(pawn))
             {
                 if (!Genes40kDefOf.BEWH_CustodesCreation.IsFinished)
                 {
@@ -306,8 +306,8 @@ namespace Genes40k
             }
             if (geneToAdd == Genes40kDefOf.BEWH_Custodes)
             {
-                genesToRemove = SpaceMarineGenes();
-                genesToRemove.AddRange(PrimarisGenes());
+                genesToRemove = Genes40kUtils.SpaceMarineGenes();
+                genesToRemove.AddRange(Genes40kUtils.PrimarisGenes());
                 elevatedTo = "Custodes".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_CustodesIcon;
                 fullyElevated = true;
@@ -324,11 +324,11 @@ namespace Genes40k
                 xenoIcon = Genes40kDefOf.BEWH_AstartesIcon;
                 fullyElevated = true;
             }
-            if (SpaceMarineGenes().Contains(geneToAdd))
+            if (Genes40kUtils.SpaceMarineGenes().Contains(geneToAdd))
             {
                 progressTo = "SpaceMarine".Translate();
             }
-            if (PrimarisGenes().Contains(geneToAdd))
+            if (Genes40kUtils.PrimarisGenes().Contains(geneToAdd))
             {
                 progressTo = "PrimarisMarine".Translate();
             }
@@ -396,7 +396,7 @@ namespace Genes40k
                         ticksRemaining = (int)modSettings.primarisMarineTime;
                         Fuel.ConsumeFuel(PrimarisMarineFuel);
                     }
-                    if (IsPrimaris(pawn))
+                    if (Genes40kUtils.IsPrimaris(pawn))
                     {
                         ticksRemaining = (int)modSettings.custodesTime;
                         Fuel.ConsumeFuel(CustodesFuel);
@@ -587,7 +587,7 @@ namespace Genes40k
                 {
                     elevatingTo = "Primaris Marine";
                 }
-                else if (IsPrimaris(selectedPawn))
+                else if (Genes40kUtils.IsPrimaris(selectedPawn))
                 {
                     elevatingTo = "Custodes";
                 }
@@ -613,45 +613,6 @@ namespace Genes40k
             Scribe_Values.Look(ref powerCutTicks, "powerCutTicks", 0);
         }
 
-
-        private List<GeneDef> SpaceMarineGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_SecondaryHeart,
-                Genes40kDefOf.BEWH_Ossmodula,
-                Genes40kDefOf.BEWH_Biscopea,
-                Genes40kDefOf.BEWH_Haemastamen,
-                Genes40kDefOf.BEWH_LarramansOrgan,
-                Genes40kDefOf.BEWH_CatalepseanNode,
-                Genes40kDefOf.BEWH_Preomnor,
-                Genes40kDefOf.BEWH_Omophagea,
-                Genes40kDefOf.BEWH_MultiLung,
-                Genes40kDefOf.BEWH_Occulobe,
-                Genes40kDefOf.BEWH_LymansEar,
-                Genes40kDefOf.BEWH_SusAnMembrane,
-                Genes40kDefOf.BEWH_Melanochrome,
-                Genes40kDefOf.BEWH_OoliticKidney,
-                Genes40kDefOf.BEWH_Neuroglottis,
-                Genes40kDefOf.BEWH_Mucranoid,
-                Genes40kDefOf.BEWH_BetchersGland,
-                Genes40kDefOf.BEWH_ProgenoidGlands,
-                Genes40kDefOf.BEWH_BlackCarapace
-            };
-            return genedef;
-        }
-
-        private List<GeneDef> PrimarisGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_SinewCoil,
-                Genes40kDefOf.BEWH_Magnificat,
-                Genes40kDefOf.BEWH_BelisarianFurnace
-            };
-            return genedef;
-        }
-
         private List<GeneDef> CustodesGenes()
         {
             List<GeneDef> genedef = new List<GeneDef>
@@ -663,7 +624,7 @@ namespace Genes40k
 
         private bool IsSpaceMarine(Pawn pawn)
         {
-            foreach (GeneDef gene in SpaceMarineGenes())
+            foreach (GeneDef gene in Genes40kUtils.SpaceMarineGenes())
             {
                 if (!pawn.genes.HasGene(gene))
                 {
@@ -671,15 +632,6 @@ namespace Genes40k
                 }
             }
             return true;
-        }
-
-        private bool IsPrimaris(Pawn pawn)
-        {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SinewCoil) && pawn.genes.HasGene(Genes40kDefOf.BEWH_Magnificat) && pawn.genes.HasGene(Genes40kDefOf.BEWH_BelisarianFurnace))
-            {
-                return true;
-            }
-            return false;
         }
 
         private bool IsCustodes(Pawn pawn)
@@ -706,13 +658,13 @@ namespace Genes40k
             {
                 geneToAdd = Genes40kDefOf.BEWH_Primarch;
             }
-            else if (IsPrimaris(pawn))
+            else if (Genes40kUtils.IsPrimaris(pawn))
             {
                 geneToAdd = Genes40kDefOf.BEWH_Custodes;
             }
             else if (IsSpaceMarine(pawn))
             {
-                List<GeneDef> primarisGenes = PrimarisGenes();
+                List<GeneDef> primarisGenes = Genes40kUtils.PrimarisGenes();
                 primarisGenes.Reverse();
                 foreach (GeneDef gene in primarisGenes)
                 {
@@ -724,7 +676,7 @@ namespace Genes40k
             }
             else
             {
-                List<GeneDef> spaceMarineGenes = SpaceMarineGenes();
+                List<GeneDef> spaceMarineGenes = Genes40kUtils.SpaceMarineGenes();
                 spaceMarineGenes.Reverse();
                 foreach (GeneDef gene in spaceMarineGenes)
                 {

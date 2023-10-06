@@ -38,7 +38,6 @@
   </XenotypeDef>
 
   <!-- Space Marine -->
-
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_SpaceMarine</defName>
     <label>space marine</label>
@@ -49,7 +48,6 @@
   </XenotypeDef>
 
   <!-- Primaris Space Marine -->
-
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_PrimarisSpaceMarine</defName>
     <label>primaris space marine</label>
@@ -65,7 +63,6 @@
   </XenotypeDef>
 
   <!-- Space Marine Psyker -->
-
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_SpaceMarinePsyker</defName>
     <label>space marine psyker</label>
@@ -79,7 +76,6 @@
   </XenotypeDef>
 
   <!-- Custodes -->
-
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_Custodes</defName>
     <label>custodes</label>
@@ -93,7 +89,6 @@
   </XenotypeDef>
 
   <!-- Primarch -->
-
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_Primarch</defName>
     <label>primarch</label>
@@ -107,7 +102,6 @@
   </XenotypeDef>
 
   <!-- Pariah -->
-
   <XenotypeDef>
     <defName>BEWH_Pariah</defName>
     <label>pariah</label>
@@ -121,7 +115,5 @@
       <li>BEWH_UpsilonPariah</li>
     </genes>
   </XenotypeDef>
-
-  <!-- Add more of each such that every gene can occur??? -->
 
 </Defs>

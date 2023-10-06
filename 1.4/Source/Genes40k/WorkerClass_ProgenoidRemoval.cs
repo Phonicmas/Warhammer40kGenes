@@ -28,7 +28,7 @@ namespace Genes40k
             {
                 return false;
             }
-            isPrimaris = IsPrimaris(pawn);
+            isPrimaris = Genes40kUtils.IsPrimaris(pawn);
             if (!defModExtension.astartesPack && !isPrimaris)
             {
                 return false;
@@ -74,52 +74,8 @@ namespace Genes40k
 
         protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            Genepack genepack = (Genepack)ThingMaker.MakeThing(ThingDefOf.Genepack);
-
-            List<GeneDef> genesForPack = new List<GeneDef>();
-
-            Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
-
-            if (modSettings.progenoidHarvestsAllXenogenes)
-            {
-                for (int i = 0; i < pawn.genes.Xenogenes.Count(); i++)
-                {
-                    genesForPack.Add(pawn.genes.Xenogenes[i].def);
-                }
-            }
-            else
-            {
-                genesForPack = AstartesPack();
-
-                if (isPrimaris)
-                {
-                    genesForPack.AddRange(PrimarisPack());
-                }
-            }
-
-            genepack.Initialize(genesForPack);
-
-            List<Genepack> genepacks = new List<Genepack>
-            {
-                genepack
-            };
-
-            Xenogerm xenogerm = (Xenogerm)ThingMaker.MakeThing(ThingDefOf.Xenogerm);
-            if (isPrimaris)
-            {
-                xenogerm.Initialize(genepacks, "PrimarisMarine".Translate(), Genes40kDefOf.BEWH_PrimarisIcon);
-            }
-            else
-            {
-                xenogerm.Initialize(genepacks, "SpaceMarine".Translate(), Genes40kDefOf.BEWH_AstartesIcon);
-            }
-
+            Genes40kUtils.MakeGenePack40k(pawn, isPrimaris);
             ClearQueue(pawn);
-            if (GenPlace.TryPlaceThing(((Thing)xenogerm), pawn.PositionHeld, pawn.MapHeld, ThingPlaceMode.Near))
-            {
-                return;
-            } 
-            Log.Error("Could not drop item near " + (object)pawn.PositionHeld);
         }
 
         private void ClearQueue(Pawn pawn)
@@ -135,52 +91,6 @@ namespace Genes40k
             }
         }
 
-        private List<GeneDef> AstartesPack()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_SecondaryHeart,
-                Genes40kDefOf.BEWH_Ossmodula,
-                Genes40kDefOf.BEWH_Biscopea,
-                Genes40kDefOf.BEWH_Haemastamen,
-                Genes40kDefOf.BEWH_LarramansOrgan,
-                Genes40kDefOf.BEWH_CatalepseanNode,
-                Genes40kDefOf.BEWH_Preomnor,
-                Genes40kDefOf.BEWH_Omophagea,
-                Genes40kDefOf.BEWH_MultiLung,
-                Genes40kDefOf.BEWH_Occulobe,
-                Genes40kDefOf.BEWH_LymansEar,
-                Genes40kDefOf.BEWH_SusAnMembrane,
-                Genes40kDefOf.BEWH_Melanochrome,
-                Genes40kDefOf.BEWH_OoliticKidney,
-                Genes40kDefOf.BEWH_Neuroglottis,
-                Genes40kDefOf.BEWH_Mucranoid,
-                Genes40kDefOf.BEWH_BetchersGland,
-                Genes40kDefOf.BEWH_ProgenoidGlands,
-                Genes40kDefOf.BEWH_BlackCarapace
-            };
-            return genedef;
-        }
-
-        private List<GeneDef> PrimarisPack()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
-            {
-                Genes40kDefOf.BEWH_SinewCoil,
-                Genes40kDefOf.BEWH_Magnificat,
-                Genes40kDefOf.BEWH_BelisarianFurnace
-            };
-            return genedef;
-        }
-    
-        private bool IsPrimaris(Pawn pawn)
-        {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SinewCoil) && pawn.genes.HasGene(Genes40kDefOf.BEWH_Magnificat) && pawn.genes.HasGene(Genes40kDefOf.BEWH_BelisarianFurnace))
-            {
-                return true;
-            }
-            return false;
-        }
     }
 
 }

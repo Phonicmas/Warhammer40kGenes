@@ -45,7 +45,6 @@ namespace Genes40k
 
             __result = sb.ToString().TrimEndNewlines();
 
-
             return;
 
         }

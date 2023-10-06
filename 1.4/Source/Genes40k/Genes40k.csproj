@@ -69,6 +69,7 @@
     <Compile Include="DefModExtension_ProgenoidHarvest.cs" />
     <Compile Include="DefModExtension_Pariah.cs" />
     <Compile Include="DefModExtension_Desciption.cs" />
+    <Compile Include="Genes40kMod.cs" />
     <Compile Include="Genes40kModSettings.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
     <Compile Include="Verb_CastAbility_DaemonSummon.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="ThoughtWorker_Pariah.cs" />
     <Compile Include="HediffCompProperties_Aura.cs" />
     <Compile Include="HediffComp_Aura.cs" />
-    <Compile Include="Genes40kMod.cs" />
+    <Compile Include="Genes40kUtils.cs" />
     <Compile Include="Genes40kDefOf.cs" />
     <Compile Include="HarmonyPatch_Description.cs" />
     <Compile Include="HarmonyPatch_Carapace.cs" />

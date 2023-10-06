@@ -91,8 +91,8 @@
     </statBases>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>2</warmupTime>
       <range>0</range>
+      <warmupTime>2</warmupTime>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
       <targetParams>
@@ -139,7 +139,6 @@
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>1</warmupTime>
       <range>0</range>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
@@ -173,7 +172,7 @@
     <defName>BEWH_OmophageaCorpseEat</defName>
     <label>remembrance</label>
     <description>Carriers of the omophagea can eat dead pawns to acquire a fragment of all their knowledge</description>
-    <jobDef>CastAbilityOnThing</jobDef>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/OmophageaRemembrance</iconPath>
     <showPsycastEffects>False</showPsycastEffects>
@@ -181,20 +180,19 @@
     <category>SpaceMarine</category>
     <uiOrder>4</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
       <warmupTime>3</warmupTime>
-      <range>3</range>
-      <drawAimPie>True</drawAimPie>
-      <requireLineOfSight>True</requireLineOfSight>
       <targetParams>
-        <canTargetCorpses>true</canTargetCorpses>
         <canTargetPawns>false</canTargetPawns>
         <canTargetBuildings>false</canTargetBuildings>
         <canTargetAnimals>false</canTargetAnimals>
-        <canTargetHumans>true</canTargetHumans>
-        <canTargetBloodfeeders>false</canTargetBloodfeeders>
         <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>true</canTargetCorpses>
       </targetParams>
     </verbProperties>
     <comps>
@@ -230,9 +228,8 @@
       <Ability_Duration>120</Ability_Duration>
     </statBases>
     <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
       <warmupTime>1</warmupTime>
-      <range>0</range>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
       <targetParams>
