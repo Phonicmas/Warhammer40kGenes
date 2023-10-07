@@ -53,4 +53,6 @@
 
   <AddsGene>Adds Gene: {0}</AddsGene>
 
+  <MustBeSpaceMarine>Must be a Space Marine</MustBeSpaceMarine>
+
 </LanguageData>

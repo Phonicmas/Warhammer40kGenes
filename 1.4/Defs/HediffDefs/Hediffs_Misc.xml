@@ -92,4 +92,14 @@
 		<description>Sudden reintroduction of warp pressence have cause a shock.</description>
 	</HediffDef>
 
+	<!-- 2nd Geneseed Harvested -->
+    <HediffDef>
+        <defName>BEWH_SecondGeneseedHarvest</defName>
+        <label>secondary geneseed harvested</label>
+        <description>This pawn has had their second geneseed harvested after death.</description>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+    </HediffDef>
+
 </Defs>

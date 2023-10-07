@@ -53,6 +53,8 @@ namespace Genes40k
         public static ResearchProjectDef BEWH_CustodesCreation;
         public static ResearchProjectDef BEWH_PrimarchCreation;
 
+        public static HediffDef BEWH_SecondGeneseedHarvest;
+
         static Genes40kDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

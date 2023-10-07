@@ -63,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Building_WarpAdjuster.cs" />
     <Compile Include="Building_GeneseedGenetor.cs" />
+    <Compile Include="RoleRequirement_MustBeSpaceMarine.cs" />
+    <Compile Include="Comp_AbilityGeneseedHarvest.cs" />
+    <Compile Include="CompProperties_AbilityGeneseedHarvest.cs" />
     <Compile Include="DefModExtension_DaemonMutation.cs" />
     <Compile Include="DefModExtension_PotentialHarvest.cs" />
     <Compile Include="DefModExtension_WarpAdjuster.cs" />
