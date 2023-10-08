@@ -95,7 +95,11 @@
 
 
     <!-- Daemon Hide -->
-    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonHideBase" Abstract="True">
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_DaemonHide</defName>
+        <label>Daemon Hide</label>
+        <description>This pawn have been awarded with tough hiide for their servitude, able to withstand even the hardest blows.</description>
+        <iconPath>UI/Icons/Genes/DaemonicHideIcon</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
         <statOffsets>
@@ -112,12 +116,6 @@
         </statFactors>
         <painFactor>0.25</painFactor>
         <biostatCpx>3</biostatCpx>
-    </GeneDef>
-    <GeneDef ParentName="BEWH_DaemonHideBase">
-        <defName>BEWH_DaemonHide</defName>
-        <label>Daemon Hide</label>
-        <description>This pawn have been awarded with tough hiide for their servitude, able to withstand even the hardest blows.</description>
-        <iconPath>UI/Icons/Genes/DaemonicHideIcon</iconPath>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
@@ -138,7 +136,11 @@
 
 
     <!-- Daemon Wings -->
-    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonWingsBase" Abstract="True">
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_DaemonWings</defName>
+        <label>Daemon Wings</label>
+        <description>This pawn have been awarded with wings for their servitude, used to fly vast distances in a split second.</description>
+        <iconPath>UI/Icons/Genes/DaemonicWingIcon</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
         <abilities>
@@ -151,12 +153,6 @@
             <MoveSpeed>1.05</MoveSpeed>
         </statFactors>
         <biostatCpx>3</biostatCpx>
-    </GeneDef>
-    <GeneDef ParentName="BEWH_DaemonWingsBase">
-        <defName>BEWH_DaemonWings</defName>
-        <label>Daemon Wings</label>
-        <description>This pawn have been awarded with wings for their servitude, used to fly vast distances in a split second.</description>
-        <iconPath>UI/Icons/Genes/DaemonicWingIcon</iconPath>
         <graphicData>
             <drawLoc>Tailbone</drawLoc>
             <drawScale>1.2</drawScale>
@@ -186,7 +182,11 @@
 
 
     <!-- Daemon Tail -->
-    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonTailBase" Abstract="True">
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_DaemonTail</defName>
+        <label>Daemon Tail</label>
+        <description>This pawn have been awarded with a tail for their servitude, used to manipulate certain thing but can also be used as a weapon.</description>
+        <iconPath>UI/Icons/Genes/DaemonicTailIcon</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
         <statOffsets>
@@ -206,12 +206,6 @@
             <li>Tail</li>
         </exclusionTags>
         <biostatCpx>3</biostatCpx>
-    </GeneDef>
-    <GeneDef ParentName="BEWH_DaemonTailBase">
-        <defName>BEWH_DaemonTail</defName>
-        <label>Daemon Tail</label>
-        <description>This pawn have been awarded with a tail for their servitude, used to manipulate certain thing but can also be used as a weapon.</description>
-        <iconPath>UI/Icons/Genes/DaemonicTailIcon</iconPath>
         <graphicData>
             <drawLoc>Tailbone</drawLoc>
             <graphicPath>Things/Pawn/Humanlike/BodyAttachments/DaemonicTail/DaemonicTail</graphicPath>
@@ -247,7 +241,11 @@
 
 
     <!-- Daemon Horns -->
-    <GeneDef ParentName="ChaosParent" Name="BEWH_DaemonHornsBase" Abstract="True">
+    <GeneDef ParentName="ChaosParent">
+        <defName>BEWH_DaemonHorns</defName>
+        <label>Daemon Horns</label>
+        <description>This pawn have been awarded with horns for their servitude, not only for show as it can be used as a deadly weapon.</description>
+        <iconPath>UI/Icons/Genes/DaemonicHornIcon</iconPath>
         <displayOrderInCategory>15</displayOrderInCategory>
         <prerequisite>BEWH_DaemonMutation</prerequisite>
         <statOffsets>
@@ -296,12 +294,6 @@
             <li>Headbone</li>
         </exclusionTags>
         <biostatCpx>3</biostatCpx>
-    </GeneDef>
-    <GeneDef ParentName="BEWH_DaemonHornsBase">
-        <defName>BEWH_DaemonHorns</defName>
-        <label>Daemon Horns</label>
-        <description>This pawn have been awarded with horns for their servitude, not only for show as it can be used as a deadly weapon.</description>
-        <iconPath>UI/Icons/Genes/DaemonicHornIcon</iconPath>
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/HeadAttachments/DaemonicHorns/DaemonicHorns</graphicPath>
             <color>(255, 255, 255)</color>
