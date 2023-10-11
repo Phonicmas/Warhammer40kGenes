@@ -16,10 +16,13 @@ namespace Genes40k
             {
                 return originalResult;
             }
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_MultiLung))
+            foreach (Gene gene in pawn.genes.GenesListForReading)
             {
-                float result = originalResult + 0.4f;
-                return result;
+                if (gene.def.HasModExtension<DefModExtension_LostLungSurvival>())
+                {
+                    float result = originalResult + 0.4f;
+                    return result;
+                }
             }
             return originalResult;
         }

@@ -59,6 +59,9 @@
         <exclusionTags>
             <li>SM1</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LostHeartSurvival" />
+        </modExtensions>
     </GeneDef>
 
     <!-- Ossmodula -->
@@ -303,6 +306,9 @@
         <exclusionTags>
             <li>SM9</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LostLungSurvival" />
+        </modExtensions>
     </GeneDef>
 
     <!-- Occulobe -->

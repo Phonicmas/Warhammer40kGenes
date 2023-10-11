@@ -201,6 +201,8 @@
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Considerably boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
             </li>
+            <li Class="Genes40k.DefModExtension_LostLungSurvival" />
+            <li Class="Genes40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
         <exclusionTags>
             <li>SupremeImperial</li>
@@ -422,6 +424,8 @@
             <li Class="Genes40k.DefModExtension_Desciption">
                 <newCustomEffectText>Massively boosts most aspects of the pawn</newCustomEffectText>                <!-- Text that should be listed as a custom effect -->
             </li>
+            <li Class="Genes40k.DefModExtension_LostLungSurvival" />
+            <li Class="Genes40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
         <exclusionTags>
             <li>SupremeImperial</li>
