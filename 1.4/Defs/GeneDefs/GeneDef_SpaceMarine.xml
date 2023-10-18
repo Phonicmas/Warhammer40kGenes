@@ -41,7 +41,7 @@
             </li>
         </capMods>
         <statFactors>
-            <IncomingDamageFactor>0.91</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
         </statFactors>
         <customEffectDescriptions>
             <li>Can survive loss of heart</li>
@@ -84,7 +84,7 @@
             <LeatherAmount>1.25</LeatherAmount>
             <MeatAmount>1.25</MeatAmount>
             <Mass>1.25</Mass>
-            <IncomingDamageFactor>0.74</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
         </statFactors>
         <suppressedTraits>
             <li>
@@ -120,7 +120,7 @@
         <statFactors>
             <MeleeDamageFactor>1.6</MeleeDamageFactor>
             <StaggerDurationFactor>0.5</StaggerDurationFactor>
-            <IncomingDamageFactor>0.82</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
         </statFactors>
         <capMods>
             <li>
@@ -414,7 +414,7 @@
         <prerequisite>BEWH_SusAnMembrane</prerequisite>
         <minAgeActive>16</minAgeActive>
         <statFactors>
-            <IncomingDamageFactor>0.74</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
         </statFactors>
         <exclusionTags>
             <li>SM13</li>
@@ -582,7 +582,7 @@
         <displayOrderInCategory>19</displayOrderInCategory>
         <prerequisite>BEWH_ProgenoidGlands</prerequisite>
         <statFactors>
-            <IncomingDamageFactor>0.90</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
         </statFactors>
         <painFactor>0.75</painFactor>
         <minAgeActive>19</minAgeActive>
@@ -605,7 +605,7 @@
         </statOffsets>
         <statFactors>
             <MeleeDamageFactor>1.3</MeleeDamageFactor>
-            <IncomingDamageFactor>0.75</IncomingDamageFactor>
+            <IncomingDamageFactor>0.92</IncomingDamageFactor>
             <StaggerDurationFactor>0</StaggerDurationFactor>
         </statFactors>
         <modExtensions>

@@ -31,6 +31,7 @@
 		<isBad>true</isBad>
 		<initialSeverity>0</initialSeverity>
 		<maxSeverity>15</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-1.0</severityPerDay>
@@ -98,6 +99,7 @@
         <label>secondary geneseed harvested</label>
         <description>This pawn has had their second geneseed harvested after death.</description>
         <scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
     </HediffDef>

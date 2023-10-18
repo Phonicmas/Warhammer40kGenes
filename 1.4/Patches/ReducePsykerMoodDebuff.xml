@@ -3,7 +3,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Reduce psyker mood debuff:</label>
         <operations>

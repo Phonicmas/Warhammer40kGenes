@@ -5,7 +5,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Restore custodes fertility:</label>
         <operations>
@@ -22,7 +22,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Restore space marine fertility:</label>
         <operations>
@@ -39,7 +39,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Restore primarch fertility:</label>
         <operations>
@@ -56,7 +56,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Restore daemon fertility:</label>
         <operations>
