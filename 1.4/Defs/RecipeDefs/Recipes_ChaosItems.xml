@@ -22,7 +22,7 @@
         <jobString>Making psychedelic mix.</jobString>
         <workAmount>3000</workAmount>
         <recipeUsers>
-            <li>DrugLab</li>
+            <li>CraftingSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -69,8 +69,7 @@
         <jobString>Making ancient grimoire.</jobString>
         <workAmount>8000</workAmount>
         <recipeUsers>
-            <li>ElectricTailoringBench</li>
-            <li>HandTailoringBench</li>
+            <li>CraftingSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -112,12 +111,12 @@
     <!-- Nurgle Ritual Item -->
     <RecipeDef ParentName="BEWH_ChaosRecipeBase">
         <defName>BEWH_MakeNurgleItem</defName>
-        <label>make disease containment capsule</label>
-        <description>Make a disease containment capsule.</description>
-        <jobString>Making disease containment capsule.</jobString>
+        <label>make disease filled brew</label>
+        <description>Make a disease filled brew.</description>
+        <jobString>Making disease filled brew.</jobString>
         <workAmount>7000</workAmount>
         <recipeUsers>
-            <li>FabricationBench</li>
+            <li>CraftingSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -183,8 +182,7 @@
         <jobString>Making adorned bloody skull.</jobString>
         <workAmount>5000</workAmount>
         <recipeUsers>
-            <li>ButcherSpot</li>
-            <li>TableButcher</li>
+            <li>CraftingSpot</li>
         </recipeUsers>
         <ingredients>
             <li>

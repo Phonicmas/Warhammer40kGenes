@@ -55,14 +55,14 @@
   </ThingDef>
 
   <!--====== NURGLE =====-->
-  <!-- Disease Containment Capsule -->
+  <!-- Disease Filled Brew -->
 
   <ThingDef ParentName="BEWH_RitualItemBase">
     <defName>BEWH_NurgleItem</defName>
-    <label>disease containment capsule</label>
-    <description>A containment capsule filled with various diseases splashed together.</description>
+    <label>disease filled brew</label>
+    <description>A brew filled with various diseases splashed together.</description>
     <graphicData>
-      <texPath>Things/Item/DiseaseContainmentCapsule</texPath>
+      <texPath>Things/Item/DiseaseFilledBrew</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>

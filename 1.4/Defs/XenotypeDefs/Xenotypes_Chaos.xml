@@ -118,9 +118,9 @@
   <!-- Daemon Prince Undivided -->
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPUndivided</defName>
-    <label>undivided daemon prince</label>
-    <description>Undivided daemon prince.</description>
-    <descriptionShort>daemon prince.</descriptionShort>
+    <label>Daemon Prince of the Undivided</label>
+    <description>Daemon prince of the Undivided, chosen to lead the forces of the Undivided.</description>
+    <descriptionShort>Undivided Daemon prince.</descriptionShort>
     <iconPath>UI/Xenotypes/DaemonPrinceUndividedXenoIcon</iconPath>
     <genes>
       <li>BEWH_UndividedMark</li>
@@ -132,9 +132,9 @@
 
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPKhorne</defName>
-    <label>khorne daemon prince</label>
-    <description>khorne daemon prince.</description>
-    <descriptionShort>daemon prince.</descriptionShort>
+    <label>Daemon prince of Khorne</label>
+    <description>Daemon prince of Khorne, chosen to lead the forces of Khorne.</description>
+    <descriptionShort>Khorne Daemon prince.</descriptionShort>
     <iconPath>UI/Xenotypes/DaemonPrinceKhorneXenoIcon</iconPath>
     <genes>
       <li>BEWH_KhorneMark</li>
@@ -146,9 +146,9 @@
 
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPNurgle</defName>
-    <label>nurgle daemon prince</label>
-    <description>Nurgle daemon prince.</description>
-    <descriptionShort>daemon prince.</descriptionShort>
+    <label>Daemon prince of Nurgle</label>
+    <description>Daemon prince of Nurgle, chosen to lead the forces of Nurgle.</description>
+    <descriptionShort>Nurgle Daemon prince.</descriptionShort>
     <iconPath>UI/Xenotypes/DaemonPrinceNurgleXenoIcon</iconPath>
     <genes>
       <li>BEWH_NurgleMark</li>
@@ -160,9 +160,9 @@
 
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPTzeentch</defName>
-    <label>tzeentch daemon prince</label>
-    <description>Tzeentch daemon prince.</description>
-    <descriptionShort>daemon prince.</descriptionShort>
+    <label>Daemon prince of Tzeentch</label>
+    <description>Daemon prince of Tzeentch, chosen to lead the forces of Tzeentch.</description>
+    <descriptionShort>Tzeentch Daemon prince.</descriptionShort>
     <iconPath>UI/Xenotypes/DaemonPrinceTzeentchXenoIcon</iconPath>
     <genes>
       <li>BEWH_TzeentchMark</li>
@@ -175,9 +175,9 @@
 
   <XenotypeDef ParentName="DaemonPrinceBase">
     <defName>BEWH_DPSlaanesh</defName>
-    <label>slaanesh daemon prince</label>
-    <description>Slaanesh daemon prince.</description>
-    <descriptionShort>daemon prince.</descriptionShort>
+    <label>Daemon prince of Slaanesh</label>
+    <description>Daemon prince of Slaanesh, chosen to lead the forces of Slaanesh.</description>
+    <descriptionShort>Slaanesh Daemon prince.</descriptionShort>
     <iconPath>UI/Xenotypes/DaemonPrinceSlaaneshXenoIcon</iconPath>
     <genes>
       <li>BEWH_SlaaneshMark</li>
@@ -201,8 +201,7 @@
   <XenotypeDef ParentName="ChaosCultistBase">
     <defName>BEWH_TzeentchCultist</defName>
     <label>tzeentch cultist</label>
-    <description>A pawn led down the road of chaos, this one follows Tzeentch,
-      the changer of ways.</description>
+    <description>A pawn led down the road of chaos, this one follows Tzeentch, the changer of ways.</description>
     <descriptionShort>Tzeentch follower.</descriptionShort>
     <iconPath>UI/Xenotypes/CultistTzeentchXenoIcon</iconPath>
     <genes>
@@ -216,8 +215,7 @@
   <XenotypeDef ParentName="ChaosCultistBase">
     <defName>BEWH_NurgleCultist</defName>
     <label>nurgle cultist</label>
-    <description>A pawn led down the road of chaos, this one follows Nurgle, the
-      plague father.</description>
+    <description>A pawn led down the road of chaos, this one follows Nurgle, the plague father.</description>
     <descriptionShort>Nurgle follower.</descriptionShort>
     <iconPath>UI/Xenotypes/CultistNurgleXenoIcon</iconPath>
     <genes>
@@ -230,8 +228,7 @@
   <XenotypeDef ParentName="ChaosCultistBase">
     <defName>BEWH_SlaaneshCultist</defName>
     <label>slaanesh cultist</label>
-    <description>A pawn led down the road of chaos, this one follows Slaanesh
-      the lord of pleasure.</description>
+    <description>A pawn led down the road of chaos, this one follows Slaanesh, the lord of pleasure.</description>
     <descriptionShort>Slanesh follower.</descriptionShort>
     <iconPath>UI/Xenotypes/CultistSlaaneshXenoIcon</iconPath>
     <genes>
@@ -244,8 +241,7 @@
   <XenotypeDef ParentName="ChaosCultistBase">
     <defName>BEWH_KhorneCultist</defName>
     <label>khorne cultist</label>
-    <description>A pawn led down the road of chaos, this one follows Khorne the
-      blood god.</description>
+    <description>A pawn led down the road of chaos, this one follows Khorne, the blood god.</description>
     <descriptionShort>Khorne follower.</descriptionShort>
     <iconPath>UI/Xenotypes/CultistKhorneXenoIcon</iconPath>
     <genes>
@@ -258,8 +254,7 @@
   <XenotypeDef ParentName="ChaosCultistBase">
     <defName>BEWH_ChaosCultist</defName>
     <label>chaos cultist</label>
-    <description>A pawn led down the road of chaos, this one follows no specific
-      god but instead accepts them all.</description>
+    <description>A pawn led down the road of chaos, this one follows no specific god but instead accepts them all.</description>
     <descriptionShort>chaos follower.</descriptionShort>
     <iconPath>UI/Xenotypes/CultistChaosXenoIcon</iconPath>
     <genes>

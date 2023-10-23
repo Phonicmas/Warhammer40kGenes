@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Chao Research Base -->
+  <!-- Chaos Research Base -->
   <ResearchProjectDef Name="BEWH_ChaosResearchBase" Abstract="True">
-    <techLevel>Spacer</techLevel>
-    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchFacilities>
-      <li>MultiAnalyzer</li>
-    </requiredResearchFacilities>
+    <techLevel>Neolithic</techLevel>
     <tab>BEWH_WH40kTab</tab>
     <baseCost>3000</baseCost>
   </ResearchProjectDef>
 
+  <!-- Chaos Research High Tech Base -->
+  <ResearchProjectDef Name="BEWH_ChaosResearchHighTechBase" ParentName="BEWH_ChaosResearchBase" Abstract="True">
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
 
   <!-- Undivided -->
   <ResearchProjectDef ParentName="BEWH_ChaosResearchBase">

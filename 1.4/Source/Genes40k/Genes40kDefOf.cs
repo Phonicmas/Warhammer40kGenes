@@ -36,6 +36,18 @@ namespace Genes40k
 
         public static GeneDef BEWH_DaemonMutation;
 
+        public static GeneDef BEWH_UndividedMark;
+        public static GeneDef BEWH_SlaaneshMark;
+        public static GeneDef BEWH_TzeentchMark;
+        public static GeneDef BEWH_NurgleMark;
+        public static GeneDef BEWH_KhorneMark;
+
+        public static XenotypeIconDef BEWH_DPUndividedIcon;
+        public static XenotypeIconDef BEWH_DPSlaaneshIcon;
+        public static XenotypeIconDef BEWH_DPTzeentchIcon;
+        public static XenotypeIconDef BEWH_DPNurgleIcon;
+        public static XenotypeIconDef BEWH_DPKhorneIcon;
+
         public static HediffDef BEWH_GenetorGrowing;
 
         public static XenotypeIconDef BEWH_AstartesIcon;
