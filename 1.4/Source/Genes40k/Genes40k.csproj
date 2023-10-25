@@ -77,6 +77,8 @@
     <Compile Include="Genes40kMod.cs" />
     <Compile Include="Genes40kModSettings.cs" />
     <Compile Include="MapComponent_DaemonPrince.cs" />
+    <Compile Include="ThoughtWorker_Precept_Psyker_Social.cs" />
+    <Compile Include="ThoughtWorker_Precept_Psyker.cs" />
     <Compile Include="Verb_CastAbility_DaemonSummon.cs" />
     <Compile Include="HarmonyPatch_MultiLung.cs" />
     <Compile Include="HarmonyPatch_SecondaryHeart.cs" />

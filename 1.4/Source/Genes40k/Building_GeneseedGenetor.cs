@@ -218,7 +218,7 @@ namespace Genes40k
                     return "NotEnoughFuelPresent".Translate(CustodesFuel, pawn.Named("PAWN"));
                 }
             }
-            else if (IsSpaceMarine(pawn))
+            else if (Genes40kUtils.IsSpaceMarine(pawn))
             {
                 if (!Genes40kDefOf.BEWH_PrimarisMarineCreation.IsFinished)
                 {
@@ -391,7 +391,7 @@ namespace Genes40k
                 {
                     Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
                     startTick = Find.TickManager.TicksGame;
-                    if (IsSpaceMarine(pawn))
+                    if (Genes40kUtils.IsSpaceMarine(pawn))
                     {
                         ticksRemaining = (int)modSettings.primarisMarineTime;
                         Fuel.ConsumeFuel(PrimarisMarineFuel);
@@ -583,7 +583,7 @@ namespace Genes40k
                 }
 
                 string elevatingTo = "";
-                if (IsSpaceMarine(selectedPawn))
+                if (Genes40kUtils.IsSpaceMarine(selectedPawn))
                 {
                     elevatingTo = "Primaris Marine";
                 }
@@ -622,18 +622,6 @@ namespace Genes40k
             return genedef;
         }
 
-        private bool IsSpaceMarine(Pawn pawn)
-        {
-            foreach (GeneDef gene in Genes40kUtils.SpaceMarineGenes())
-            {
-                if (!pawn.genes.HasGene(gene))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
         private bool IsCustodes(Pawn pawn)
         {
             if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Custodes))
@@ -662,7 +650,7 @@ namespace Genes40k
             {
                 geneToAdd = Genes40kDefOf.BEWH_Custodes;
             }
-            else if (IsSpaceMarine(pawn))
+            else if (Genes40kUtils.IsSpaceMarine(pawn))
             {
                 List<GeneDef> primarisGenes = Genes40kUtils.PrimarisGenes();
                 primarisGenes.Reverse();

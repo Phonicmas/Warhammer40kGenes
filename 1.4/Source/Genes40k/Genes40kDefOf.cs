@@ -42,6 +42,11 @@ namespace Genes40k
         public static GeneDef BEWH_NurgleMark;
         public static GeneDef BEWH_KhorneMark;
 
+        public static GeneDef BEWH_IotaPsyker;
+        public static GeneDef BEWH_Psyker;
+        public static GeneDef BEWH_DeltaPsyker;
+        public static GeneDef BEWH_BetaPsyker;
+
         public static XenotypeIconDef BEWH_DPUndividedIcon;
         public static XenotypeIconDef BEWH_DPSlaaneshIcon;
         public static XenotypeIconDef BEWH_DPTzeentchIcon;

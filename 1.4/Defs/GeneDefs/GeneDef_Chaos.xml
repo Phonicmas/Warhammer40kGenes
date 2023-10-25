@@ -27,7 +27,7 @@
         <defName>BEWH_KhorneMark</defName>
         <label>Mark of Khorne</label>
         <description>This pawn has been genetically modified as a result of being marked by Khorne.</description>
-        <iconPath>UI/Icons/Genes/KhorneIcon</iconPath>
+        <iconPath>UI/Icons/Chaos/KhorneIcon</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
         <statOffsets>
@@ -77,7 +77,7 @@
         <defName>BEWH_NurgleMark</defName>
         <label>Mark of Nurgle</label>
         <description>This pawn has been genetically modified as a result of being marked by Nurgle.</description>
-        <iconPath>UI/Icons/Genes/NurgleIcon</iconPath>
+        <iconPath>UI/Icons/Chaos/NurgleIcon</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <statFactors>
             <IncomingDamageFactor>0.55</IncomingDamageFactor>
@@ -116,7 +116,7 @@
         <defName>BEWH_TzeentchMark</defName>
         <label>Mark of Tzeentch</label>
         <description>This pawn has been genetically modified as a result of being marked by Tzeentch.</description>
-        <iconPath>UI/Icons/Genes/TzeentchIcon</iconPath>
+        <iconPath>UI/Icons/Chaos/TzeentchIcon</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <statOffsets>
             <PsychicSensitivity>0.6</PsychicSensitivity>
@@ -161,7 +161,7 @@
         <defName>BEWH_SlaaneshMark</defName>
         <label>Mark of Slaanesh</label>
         <description>This pawn has been genetically modified as a result of being marked by Slaanesh.</description>
-        <iconPath>UI/Icons/Genes/SlaaneshIcon</iconPath>
+        <iconPath>UI/Icons/Chaos/SlaaneshIcon</iconPath>
         <displayOrderInCategory>7</displayOrderInCategory>
         <statOffsets>
             <MeleeDodgeChance>10</MeleeDodgeChance>
@@ -198,7 +198,7 @@
         <defName>BEWH_UndividedMark</defName>
         <label>Mark of Chaos</label>
         <description>This pawn has been genetically modified as a result of being marked by the chaos gods.</description>
-        <iconPath>UI/Icons/Genes/UndividedIcon</iconPath>
+        <iconPath>UI/Icons/Chaos/ChaosIcon</iconPath>
         <displayOrderInCategory>9</displayOrderInCategory>
         <statOffsets>
             <ArmorRating_Blunt>0.05</ArmorRating_Blunt>

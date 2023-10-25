@@ -45,15 +45,48 @@ namespace Genes40k
             return genedef;
         }
 
+        public static bool IsSpaceMarine(Pawn pawn)
+        {
+            foreach (GeneDef geneDef in SpaceMarineGenes())
+            {
+                if (!pawn.genes.HasGene(geneDef))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public static bool IsPrimaris(Pawn pawn)
         {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_SinewCoil) && pawn.genes.HasGene(Genes40kDefOf.BEWH_Magnificat) && pawn.genes.HasGene(Genes40kDefOf.BEWH_BelisarianFurnace))
+            foreach (GeneDef geneDef in PrimarisGenes())
+            {
+                if (!pawn.genes.HasGene(geneDef))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    
+        public static bool IsPsyker(Pawn pawn)
+        {
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_IotaPsyker) || pawn.genes.HasGene(Genes40kDefOf.BEWH_Psyker) || pawn.genes.HasGene(Genes40kDefOf.BEWH_DeltaPsyker) || pawn.genes.HasGene(Genes40kDefOf.BEWH_BetaPsyker))
             {
                 return true;
             }
             return false;
         }
-    
+
+        public static bool IsDaemonPrince(Pawn pawn)
+        {
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_DaemonMutation))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static void MakeGenePack40k(Pawn pawn, bool isPrimaris)
         {
             Genepack genepack = (Genepack)ThingMaker.MakeThing(ThingDefOf.Genepack);
