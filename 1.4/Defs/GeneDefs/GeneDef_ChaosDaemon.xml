@@ -153,6 +153,10 @@
             <MoveSpeed>1.05</MoveSpeed>
         </statFactors>
         <biostatCpx>3</biostatCpx>
+        <exclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </exclusionTags>
         <graphicData>
             <drawLoc>Tailbone</drawLoc>
             <drawScale>1.2</drawScale>
@@ -291,7 +295,8 @@
             </li>
         </suppressedTraits>
         <exclusionTags>
-            <li>Headbone</li>
+            <li>Horn</li>
+            <li>Horns</li>
         </exclusionTags>
         <biostatCpx>3</biostatCpx>
         <graphicData>
