@@ -36,16 +36,16 @@
         <selectionWeight>0.1</selectionWeight>
 
         <statOffsets>
-            <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.9</ArmorRating_Heat>
-            <CarryingCapacity>500</CarryingCapacity>
+            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.75</ArmorRating_Heat>
+            <CarryingCapacity>300</CarryingCapacity>
             <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
             <ToxicResistance>2</ToxicResistance>
-            <MentalBreakThreshold>-1</MentalBreakThreshold>
-            <ComfyTemperatureMin>-200</ComfyTemperatureMin>
-            <ComfyTemperatureMax>200</ComfyTemperatureMax>
-            <MeleeDodgeChance>20</MeleeDodgeChance>
+            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>80</ComfyTemperatureMax>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
         </statOffsets>
 
         <statFactors>
@@ -54,9 +54,9 @@
             <LeatherAmount>1.45</LeatherAmount>
             <MeatAmount>1.45</MeatAmount>
             <Mass>1.45</Mass>
-            <InjuryHealingFactor>12</InjuryHealingFactor>
-            <RestFallRateFactor>0.15</RestFallRateFactor>
-            <MeleeDamageFactor>4</MeleeDamageFactor>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+            <MeleeDamageFactor>3.5</MeleeDamageFactor>
             <AimingDelayFactor>0.6</AimingDelayFactor>
             <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
             <RangedCooldownFactor>0.6</RangedCooldownFactor>
@@ -65,45 +65,45 @@
             <IncomingDamageFactor>0.4</IncomingDamageFactor>
             <RawNutritionFactor>4</RawNutritionFactor>
             <GlobalLearningFactor>2</GlobalLearningFactor>
-            <ImmunityGainSpeed>8</ImmunityGainSpeed>
+            <ImmunityGainSpeed>6</ImmunityGainSpeed>
         </statFactors>
 
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>2</postFactor>
+                <postFactor>1.85</postFactor>
             </li>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Sight</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Eating</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <postFactor>3.5</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
         </capMods>
 
@@ -192,7 +192,7 @@
         <minAgeActive>3</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
+                <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
                 <caravanCarryingFactor>3</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
                 <bodyScaleFactor>(1.22, 1.22)</bodyScaleFactor>
@@ -259,16 +259,16 @@
 
         <statOffsets>
             <PsychicSensitivity>3</PsychicSensitivity>
-            <ArmorRating_Blunt>1.50</ArmorRating_Blunt>
-            <ArmorRating_Sharp>1.50</ArmorRating_Sharp>
-            <ArmorRating_Heat>1.50</ArmorRating_Heat>
-            <CarryingCapacity>1000</CarryingCapacity>
+            <ArmorRating_Blunt>1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1</ArmorRating_Sharp>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <CarryingCapacity>500</CarryingCapacity>
             <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
             <ToxicResistance>2</ToxicResistance>
-            <MentalBreakThreshold>-1</MentalBreakThreshold>
-            <ComfyTemperatureMin>-200</ComfyTemperatureMin>
-            <ComfyTemperatureMax>200</ComfyTemperatureMax>
-            <MeleeDodgeChance>50</MeleeDodgeChance>
+            <MentalBreakThreshold>-0.75</MentalBreakThreshold>
+            <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+            <ComfyTemperatureMax>100</ComfyTemperatureMax>
+            <MeleeDodgeChance>25</MeleeDodgeChance>
         </statOffsets>
 
         <statFactors>
@@ -276,56 +276,56 @@
             <Mass>2</Mass>
             <LeatherAmount>2</LeatherAmount>
             <MeatAmount>2</MeatAmount>
-            <InjuryHealingFactor>24</InjuryHealingFactor>
-            <RestFallRateFactor>0.05</RestFallRateFactor>
-            <MeleeDamageFactor>10</MeleeDamageFactor>
+            <InjuryHealingFactor>16</InjuryHealingFactor>
+            <RestFallRateFactor>0.25</RestFallRateFactor>
+            <MeleeDamageFactor>8</MeleeDamageFactor>
             <AimingDelayFactor>0.35</AimingDelayFactor>
             <MeleeWeapon_CooldownMultiplier>0.35</MeleeWeapon_CooldownMultiplier>
             <RangedCooldownFactor>0.35</RangedCooldownFactor>
             <MeleeHitChance>2.5</MeleeHitChance>
             <StaggerDurationFactor>0</StaggerDurationFactor>
             <IncomingDamageFactor>0.2</IncomingDamageFactor>
-            <RawNutritionFactor>4</RawNutritionFactor>
-            <GlobalLearningFactor>3</GlobalLearningFactor>
-            <ImmunityGainSpeed>12</ImmunityGainSpeed>
+            <RawNutritionFactor>3</RawNutritionFactor>
+            <GlobalLearningFactor>2.5</GlobalLearningFactor>
+            <ImmunityGainSpeed>10</ImmunityGainSpeed>
         </statFactors>
 
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>2.5</postFactor>
+                <postFactor>2.25</postFactor>
             </li>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Sight</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Eating</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <postFactor>5</postFactor>
+                <postFactor>4</postFactor>
             </li>
         </capMods>
 
@@ -415,8 +415,8 @@
         <minAgeActive>3</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <diseaseProgressionFactor>0.01</diseaseProgressionFactor>
-                <caravanCarryingFactor>5</caravanCarryingFactor>
+                <diseaseProgressionFactor>0.05</diseaseProgressionFactor>
+                <caravanCarryingFactor>4</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
                 <bodyScaleFactor>(1.3, 1.3)</bodyScaleFactor>
                 <headScaleFactor>(1.3, 1.3)</headScaleFactor>

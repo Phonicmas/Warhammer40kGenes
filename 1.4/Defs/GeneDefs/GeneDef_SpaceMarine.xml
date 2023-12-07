@@ -41,7 +41,7 @@
             </li>
         </capMods>
         <statFactors>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <customEffectDescriptions>
             <li>Can survive loss of heart</li>
@@ -84,7 +84,7 @@
             <LeatherAmount>1.25</LeatherAmount>
             <MeatAmount>1.25</MeatAmount>
             <Mass>1.25</Mass>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <suppressedTraits>
             <li>
@@ -118,14 +118,14 @@
             <CarryingCapacity>80</CarryingCapacity>
         </statOffsets>
         <statFactors>
-            <MeleeDamageFactor>1.6</MeleeDamageFactor>
+            <MeleeDamageFactor>1.55</MeleeDamageFactor>
             <StaggerDurationFactor>0.5</StaggerDurationFactor>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>1.2</postFactor>
+                <postFactor>1.15</postFactor>
             </li>
         </capMods>
         <aptitudes>
@@ -161,11 +161,11 @@
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>
-                <offset>0.4</offset>
+                <offset>0.35</offset>
             </li>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>1.2</postFactor>
+                <postFactor>1.15</postFactor>
             </li>
         </capMods>
         <suppressedTraits>
@@ -194,7 +194,7 @@
         <prerequisite>BEWH_Haemastamen</prerequisite>
         <geneClass>Gene_Clotting</geneClass>
         <statFactors>
-            <InjuryHealingFactor>4</InjuryHealingFactor>
+            <InjuryHealingFactor>3.5</InjuryHealingFactor>
         </statFactors>
         <customEffectDescriptions>
             <li>Bleeding wounds close very quickly.</li>
@@ -266,7 +266,7 @@
         <displayOrderInCategory>8</displayOrderInCategory>
         <prerequisite>BEWH_Preomnor</prerequisite>
         <statFactors>
-            <GlobalLearningFactor>1.25</GlobalLearningFactor>
+            <GlobalLearningFactor>1.2</GlobalLearningFactor>
         </statFactors>
         <abilities>
             <li>BEWH_OmophageaCorpseEat</li>
@@ -299,7 +299,7 @@
         <capMods>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>1.3</postFactor>
+                <postFactor>1.25</postFactor>
             </li>
         </capMods>
         <minAgeActive>16</minAgeActive>
@@ -321,12 +321,12 @@
         <prerequisite>BEWH_MultiLung</prerequisite>
         <ignoreDarkness>true</ignoreDarkness>
         <statFactors>
-            <AimingDelayFactor>0.85</AimingDelayFactor>
+            <AimingDelayFactor>0.9</AimingDelayFactor>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Sight</capacity>
-                <postFactor>1.4</postFactor>
+                <postFactor>1.3</postFactor>
             </li>
         </capMods>
         <aptitudes>
@@ -361,7 +361,7 @@
         <capMods>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>1.6</postFactor>
+                <postFactor>1.5</postFactor>
             </li>
         </capMods>
         <aptitudes>
@@ -414,7 +414,7 @@
         <prerequisite>BEWH_SusAnMembrane</prerequisite>
         <minAgeActive>16</minAgeActive>
         <statFactors>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <exclusionTags>
             <li>SM13</li>
@@ -433,7 +433,7 @@
             <ToxicResistance>0.75</ToxicResistance>
         </statOffsets>
         <statFactors>
-            <ImmunityGainSpeed>1.4</ImmunityGainSpeed>
+            <ImmunityGainSpeed>1.35</ImmunityGainSpeed>
         </statFactors>
         <capMods>
             <li>
@@ -468,7 +468,7 @@
         <capMods>
             <li>
                 <capacity>Eating</capacity>
-                <postFactor>1.4</postFactor>
+                <postFactor>1.35</postFactor>
             </li>
         </capMods>
         <minAgeActive>16</minAgeActive>
@@ -486,8 +486,8 @@
         <displayOrderInCategory>16</displayOrderInCategory>
         <prerequisite>BEWH_Neuroglottis</prerequisite>
         <statOffsets>
-            <ComfyTemperatureMin>-60</ComfyTemperatureMin>
-            <ComfyTemperatureMax>60</ComfyTemperatureMax>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>40</ComfyTemperatureMax>
         </statOffsets>
         <minAgeActive>16</minAgeActive>
         <exclusionTags>
@@ -509,7 +509,7 @@
         <capMods>
             <li>
                 <capacity>Talking</capacity>
-                <postFactor>1.15</postFactor>
+                <postFactor>1.1</postFactor>
             </li>
         </capMods>
         <descriptionHyperlinks>
@@ -582,9 +582,9 @@
         <displayOrderInCategory>19</displayOrderInCategory>
         <prerequisite>BEWH_ProgenoidGlands</prerequisite>
         <statFactors>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <IncomingDamageFactor>0.9</IncomingDamageFactor>
         </statFactors>
-        <painFactor>0.75</painFactor>
+        <painFactor>0.8</painFactor>
         <minAgeActive>19</minAgeActive>
         <exclusionTags>
             <li>SM19</li>
@@ -604,8 +604,8 @@
             <CarryingCapacity>100</CarryingCapacity>
         </statOffsets>
         <statFactors>
-            <MeleeDamageFactor>1.3</MeleeDamageFactor>
-            <IncomingDamageFactor>0.92</IncomingDamageFactor>
+            <MeleeDamageFactor>1.25</MeleeDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
             <StaggerDurationFactor>0</StaggerDurationFactor>
         </statFactors>
         <modExtensions>

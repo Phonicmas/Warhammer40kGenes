@@ -130,7 +130,7 @@
         <iconPath>UI/Icons/Genes/GenePsykerBeta</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <statFactors>
-            <PsychicSensitivity>3.5</PsychicSensitivity>
+            <PsychicSensitivity>4</PsychicSensitivity>
             <MeditationFocusGain>2</MeditationFocusGain>
             <PsychicEntropyRecoveryRate>2.5</PsychicEntropyRecoveryRate>
         </statFactors>
