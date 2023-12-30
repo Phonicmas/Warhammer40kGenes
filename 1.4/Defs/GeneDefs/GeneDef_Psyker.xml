@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Gene Category -->
-
-    <GeneCategoryDef>
-        <defName>BEWHSpaceMarinePsyker</defName>
-        <label>psyker</label>
-        <displayPriorityInXenotype>538</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <!-- Parent Gene -->
-
-    <GeneDef Name="PsykerParent" Abstract="True">
-        <displayCategory>BEWHSpaceMarinePsyker</displayCategory>
-        <biostatCpx>5</biostatCpx>
-        <biostatMet>-2</biostatMet>
-        <suppressedTraits>
-            <li>
-                <def>PsychicSensitivity</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>PsychicSensitivity</def>
-                <degree>-2</degree>
-            </li>
-        </suppressedTraits>
-        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
-        <exclusionTags>
-            <li>Psyker</li>
-            <li>Pariah</li>
-        </exclusionTags>
-    </GeneDef>
-
-    <!-- Psyker Genes -->
-
     <!-- Iota Psyker -->
-
     <GeneDef ParentName="PsykerParent">
         <defName>BEWH_IotaPsyker</defName>
         <label>iota psyker</label>
@@ -57,14 +23,14 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffToWholeBody>BEWH_IotaPsyker</hediffToWholeBody>
+                <!--<hediffToWholeBody>BEWH_IotaPsyker</hediffToWholeBody>-->
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>
     </GeneDef>
 
     <!-- Epsilon Psyker -->
-
     <GeneDef ParentName="PsykerParent">
         <defName>BEWH_Psyker</defName>
         <label>epsilon psyker</label>
@@ -86,14 +52,14 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffToWholeBody>BEWH_EpsilonPsyker</hediffToWholeBody>
+                <!--<hediffToWholeBody>BEWH_EpsilonPsyker</hediffToWholeBody>-->
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>
     </GeneDef>
 
     <!-- Delta Psyker -->
-
     <GeneDef ParentName="PsykerParent">
         <defName>BEWH_DeltaPsyker</defName>
         <label>delta psyker</label>
@@ -115,14 +81,14 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffToWholeBody>BEWH_DeltaPsyker</hediffToWholeBody>
+                <!--<hediffToWholeBody>BEWH_DeltaPsyker</hediffToWholeBody>-->
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>
     </GeneDef>
 
     <!-- Beta Psyker -->
-
     <GeneDef ParentName="PsykerParent">
         <defName>BEWH_BetaPsyker</defName>
         <label>beta psyker</label>
@@ -144,9 +110,10 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffToWholeBody>BEWH_BetaPsyker</hediffToWholeBody>
+                <!--<hediffToWholeBody>BEWH_BetaPsyker</hediffToWholeBody>-->
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>
     </GeneDef>
 

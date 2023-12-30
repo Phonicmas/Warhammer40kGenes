@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Gene Category -->
-
-    <GeneCategoryDef>
-        <defName>BEWHPariah</defName>
-        <label>pariah</label>
-        <displayPriorityInXenotype>536</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <!-- Parent Gene -->
-
-    <GeneDef Name="PariahParent" Abstract="True">
-        <displayCategory>BEWHPariah</displayCategory>
-        <biostatCpx>5</biostatCpx>
-        <biostatMet>-2</biostatMet>
-        <suppressedTraits>
-            <li>
-                <def>PsychicSensitivity</def>
-                <degree>1</degree>
-            </li>
-            <li>
-                <def>PsychicSensitivity</def>
-                <degree>2</degree>
-            </li>
-        </suppressedTraits>
-        <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
-        <exclusionTags>
-            <li>Psyker</li>
-            <li>Pariah</li>
-        </exclusionTags>
-    </GeneDef>
-
-    <!-- Pariah Genes -->
-
     <!-- Sigma Pariah -->
-
     <GeneDef ParentName="PariahParent">
         <defName>BEWH_SigmaPariah</defName>
         <label>sigma pariah</label>
@@ -57,11 +23,11 @@
                 <hediffToWholeBody>BEWH_SigmaPariah</hediffToWholeBody>
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Pariah"/>
         </modExtensions>
     </GeneDef>
 
     <!-- Upsilon Pariah -->
-
     <GeneDef ParentName="PariahParent">
         <defName>BEWH_UpsilonPariah</defName>
         <label>upsilon pariah</label>
@@ -83,11 +49,11 @@
                 <hediffToWholeBody>BEWH_UpsilonPariah</hediffToWholeBody>
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Pariah"/>
         </modExtensions>
     </GeneDef>
 
     <!-- Omega Pariah -->
-
     <GeneDef ParentName="PariahParent">
         <defName>BEWH_OmegaPariah</defName>
         <label>omega pariah</label>
@@ -109,6 +75,7 @@
                 <hediffToWholeBody>BEWH_OmegaPariah</hediffToWholeBody>
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
+            <li Class="Genes40k.DefModExtension_Pariah"/>
         </modExtensions>
     </GeneDef>
 

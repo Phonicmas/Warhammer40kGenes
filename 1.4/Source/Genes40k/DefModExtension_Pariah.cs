@@ -6,5 +6,4 @@ namespace Genes40k
     {
         public GeneDef pariahGene;
     }
-
 }

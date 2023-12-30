@@ -297,14 +297,14 @@ namespace Genes40k
 
             bool fullyElevated = false;
 
-            if (geneToAdd == Genes40kDefOf.BEWH_Primarch)
+            if (geneToAdd == Genes40kDefOf.BEWH_PrimarchAnatomy)
             {
                 genesToRemove = CustodesGenes();
                 elevatedTo = "Primarch".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_PrimarchIcon;
                 fullyElevated = true;
             }
-            if (geneToAdd == Genes40kDefOf.BEWH_Custodes)
+            if (geneToAdd == Genes40kDefOf.BEWH_CustodesAnatomy)
             {
                 genesToRemove = Genes40kUtils.SpaceMarineGenes();
                 genesToRemove.AddRange(Genes40kUtils.PrimarisGenes());
@@ -354,6 +354,22 @@ namespace Genes40k
             if (geneToAdd != null && !containedPawn.genes.HasGene(geneToAdd))
             {
                 containedPawn.genes.AddGene(geneToAdd, true);
+                if (geneToAdd.HasModExtension<DefModExtension_Custodes>())
+                {
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_CustodesResilience, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_CustodesToughness, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_CustodesExpertise, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_CustodesStrength, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_CustodesAnatomy, true);
+                }
+                if (geneToAdd.HasModExtension<DefModExtension_Primarch>())
+                {
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchResilience, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchToughness, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchExpertise, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchStrength, true);
+                    containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchAnatomy, true);
+                }
                 if (fullyElevated)
                 {
                     if (xenoIcon != null)
@@ -617,14 +633,19 @@ namespace Genes40k
         {
             List<GeneDef> genedef = new List<GeneDef>
             {
-                Genes40kDefOf.BEWH_Custodes
+                Genes40kDefOf.BEWH_CustodesStature,
+                Genes40kDefOf.BEWH_CustodesExpertise,
+                Genes40kDefOf.BEWH_CustodesStrength,
+                Genes40kDefOf.BEWH_CustodesResilience,
+                Genes40kDefOf.BEWH_CustodesToughness,
+                Genes40kDefOf.BEWH_CustodesAnatomy
             };
             return genedef;
         }
 
         private bool IsCustodes(Pawn pawn)
         {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Custodes))
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_CustodesAnatomy))
             {
                 return true;
             }
@@ -633,7 +654,7 @@ namespace Genes40k
 
         private bool IsPrimarch(Pawn pawn)
         {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_Primarch))
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_CustodesAnatomy))
             {
                 return true;
             }
@@ -644,11 +665,11 @@ namespace Genes40k
         {
             if (IsCustodes(pawn))
             {
-                geneToAdd = Genes40kDefOf.BEWH_Primarch;
+                geneToAdd = Genes40kDefOf.BEWH_PrimarchStature;
             }
             else if (Genes40kUtils.IsPrimaris(pawn))
             {
-                geneToAdd = Genes40kDefOf.BEWH_Custodes;
+                geneToAdd = Genes40kDefOf.BEWH_CustodesStature;
             }
             else if (Genes40kUtils.IsSpaceMarine(pawn))
             {

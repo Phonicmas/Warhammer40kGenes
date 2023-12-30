@@ -135,6 +135,6 @@ namespace Genes40k
             }
             Log.Error("Could not drop item near " + pawn.PositionHeld);
         }
-    
+
     }
 }

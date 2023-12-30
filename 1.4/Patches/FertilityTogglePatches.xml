@@ -10,10 +10,10 @@
         <label>Restore custodes fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/statFactors/Fertility</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_CustodesAnatomy"]/statFactors/Fertility</xpath>
             </li>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Custodes"]/sterilize</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_CustodesAnatomy"]/sterilize</xpath>
             </li>
         </operations>
     </Operation>
@@ -44,10 +44,10 @@
         <label>Restore primarch fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/statFactors/Fertility</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_PrimarchAnatomy"]/statFactors/Fertility</xpath>
             </li>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Primarch"]/sterilize</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_PrimarchAnatomy"]/sterilize</xpath>
             </li>
         </operations>
     </Operation>

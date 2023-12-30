@@ -125,9 +125,7 @@
     <defName>BEWH_Sus_anMembraneStasis</defName>
     <label>stasis</label>
     <description>Carriers of the sus-an membrane can enter a state of suspended animation, keeping the them alive for years, even if they has suffered otherwise mortal wounds</description>
-    <jobDef>CastAbilityOnThing</jobDef>
     <targetRequired>False</targetRequired>
-    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/StasisIcon</iconPath>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
@@ -144,11 +142,6 @@
       <requireLineOfSight>False</requireLineOfSight>
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetAnimals>false</canTargetAnimals>
-        <canTargetHumans>false</canTargetHumans>
-        <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
     <comps>
@@ -196,8 +189,7 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="Genes40k.CompProperties_Remembrance">
-      </li>
+      <li Class="Genes40k.CompProperties_AbilityRemembrance"/>
     </comps>
   </AbilityDef>
 
@@ -214,7 +206,6 @@
     <description>Carriers of the belisarian furnace can produce a hyper-cocktail to boost their regrowth of tissue, bone and muscle</description>
     <jobDef>CastAbilityOnThing</jobDef>
     <targetRequired>False</targetRequired>
-    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/BelisarianFurnaceBoost</iconPath>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
@@ -234,11 +225,6 @@
       <requireLineOfSight>False</requireLineOfSight>
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetAnimals>false</canTargetAnimals>
-        <canTargetHumans>false</canTargetHumans>
-        <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
     <comps>

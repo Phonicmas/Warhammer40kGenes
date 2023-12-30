@@ -2,7 +2,6 @@
 <Defs>
 
     <!-- Sigma Pariah -->
-
     <ThoughtDef>
         <defName>BEWH_SigmaPariah</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -17,9 +16,7 @@
             </li>
         </stages>
     </ThoughtDef>
-
     <!-- Sigma Pariah Social -->
-
     <ThoughtDef>
         <defName>BEWH_SigmaPariahSocial</defName>
         <thoughtClass>Thought_SituationalSocial</thoughtClass>
@@ -31,15 +28,10 @@
                 <baseOpinionOffset>-6</baseOpinionOffset>
             </li>
         </stages>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>BEWH_SigmaPariah</pariahGene>
-            </li>
-        </modExtensions>
     </ThoughtDef>
 
-    <!-- Upsilon Pariah -->
 
+    <!-- Upsilon Pariah -->
     <ThoughtDef>
         <defName>BEWH_UpsilonPariah</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -54,9 +46,7 @@
             </li>
         </stages>
     </ThoughtDef>
-
     <!-- Upsilon Pariah Social -->
-
     <ThoughtDef>
         <defName>BEWH_UpsilonPariahSocial</defName>
         <thoughtClass>Thought_SituationalSocial</thoughtClass>
@@ -68,15 +58,10 @@
                 <baseOpinionOffset>-18</baseOpinionOffset>
             </li>
         </stages>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>BEWH_UpsilonPariah</pariahGene>
-            </li>
-        </modExtensions>
     </ThoughtDef>
 
-    <!-- Omega Pariah -->
 
+    <!-- Omega Pariah -->
     <ThoughtDef>
         <defName>BEWH_OmegaPariah</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -91,9 +76,7 @@
             </li>
         </stages>
     </ThoughtDef>
-
     <!-- Omega Pariah Social -->
-
     <ThoughtDef>
         <defName>BEWH_OmegaPariahSocial</defName>
         <thoughtClass>Thought_SituationalSocial</thoughtClass>
@@ -105,11 +88,6 @@
                 <baseOpinionOffset>-35</baseOpinionOffset>
             </li>
         </stages>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
-                <pariahGene>BEWH_OmegaPariah</pariahGene>
-            </li>
-        </modExtensions>
     </ThoughtDef>
 
 </Defs>

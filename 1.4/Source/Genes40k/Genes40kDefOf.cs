@@ -7,8 +7,19 @@ namespace Genes40k
     [DefOf]
     public static class Genes40kDefOf
     {
-        public static GeneDef BEWH_Custodes;
-        public static GeneDef BEWH_Primarch;
+        public static GeneDef BEWH_CustodesStature;
+        public static GeneDef BEWH_CustodesExpertise;
+        public static GeneDef BEWH_CustodesStrength;
+        public static GeneDef BEWH_CustodesResilience;
+        public static GeneDef BEWH_CustodesToughness;
+        public static GeneDef BEWH_CustodesAnatomy;
+
+        public static GeneDef BEWH_PrimarchStature;
+        public static GeneDef BEWH_PrimarchExpertise;
+        public static GeneDef BEWH_PrimarchStrength;
+        public static GeneDef BEWH_PrimarchResilience;
+        public static GeneDef BEWH_PrimarchToughness;
+        public static GeneDef BEWH_PrimarchAnatomy;
 
         public static GeneDef BEWH_SecondaryHeart;
         public static GeneDef BEWH_Ossmodula;
@@ -47,6 +58,10 @@ namespace Genes40k
         public static GeneDef BEWH_DeltaPsyker;
         public static GeneDef BEWH_BetaPsyker;
 
+        public static GeneDef BEWH_SigmaPariah;
+        public static GeneDef BEWH_UpsilonPariah;
+        public static GeneDef BEWH_OmegaPariah;
+
         public static XenotypeIconDef BEWH_DPUndividedIcon;
         public static XenotypeIconDef BEWH_DPSlaaneshIcon;
         public static XenotypeIconDef BEWH_DPTzeentchIcon;
@@ -71,6 +86,18 @@ namespace Genes40k
         public static ResearchProjectDef BEWH_PrimarchCreation;
 
         public static HediffDef BEWH_SecondGeneseedHarvest;
+        public static HediffDef BEWH_PsychicComa;
+
+        public static TraitDef BEWH_Genes;
+
+        public static AbilityDef BEWH_PsySensOff;
+        public static AbilityDef BEWH_PsySensOn;
+
+        public static LetterDef BEWH_NaturalBornX;
+
+        public static DamageDef BEWH_WarpEnergy;
+
+        public static WeatherDef BEWH_BloodRain;
 
         static Genes40kDefOf()
         {

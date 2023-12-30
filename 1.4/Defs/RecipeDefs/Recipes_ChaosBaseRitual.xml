@@ -68,8 +68,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>0.5</skillsScaleAmount>
-                <baseChance>10</baseChance>
                 <giftGiver>Undivided</giftGiver>
             </li>
         </modExtensions>
@@ -107,8 +105,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>10</baseChance>
                 <giftGiver>Khorne</giftGiver>
             </li>
         </modExtensions>
@@ -146,8 +142,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>10</baseChance>
                 <giftGiver>Tzeentch</giftGiver>
             </li>
         </modExtensions>
@@ -185,8 +179,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>10</baseChance>
                 <giftGiver>Nurgle</giftGiver>
             </li>
         </modExtensions>
@@ -224,8 +216,6 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>10</baseChance>
                 <giftGiver>Slaanesh</giftGiver>
             </li>
         </modExtensions>

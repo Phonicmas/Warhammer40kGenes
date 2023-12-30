@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -7,11 +8,11 @@ namespace Genes40k
 {
     public class MapComponent_DaemonPrince : MapComponent
     {
-        public const int checkingInterval = 10000;
+        private const int checkingInterval = 10000;
 
-        public const int deathTimer = 12000;
+        private const int deathTimer = 12000;
 
-        public int tickCounter = 0;
+        public List<Pawn> pawns = new List<Pawn>();
 
         public MapComponent_DaemonPrince(Map map)
             : base(map)
@@ -20,28 +21,27 @@ namespace Genes40k
 
         public override void MapComponentTick()
         {
-            base.MapComponentUpdate();
-            if (tickCounter >= checkingInterval)
+            if (!pawns.NullOrEmpty())
             {
-                tickCounter = 0;
-
-                foreach (Thing thing in map.spawnedThings)
+                if (map.IsHashIntervalTick(checkingInterval))
                 {
-                    if (thing != null && thing is Corpse corpse)
+                    for (int i = pawns.Count; i >= 0; i--)
                     {
-                        if (corpse.InnerPawn != null && corpse.InnerPawn.genes != null && corpse.InnerPawn.genes.HasGene(Genes40kDefOf.BEWH_DaemonMutation) && Find.TickManager.TicksGame - corpse.timeOfDeath >= deathTimer)
+                        if (pawns[i - 1].Corpse != null && (Find.TickManager.TicksGame - pawns[i - 1].Corpse.timeOfDeath) >= deathTimer)
                         {
+                            GenSpawn.Spawn(pawns[i - 1].Corpse, CellFinder.RandomCell(map), map);
                             Mesh boltMesh = LightningBoltMeshPool.RandomBoltMesh;
                             Material LightningMat = MatLoader.LoadMat("Weather/LightningBolt");
 
-                            DaemonDoStrike(corpse.Position, corpse.Map, ref boltMesh);
-                            Graphics.DrawMesh(boltMesh, corpse.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Weather), Quaternion.identity, FadedMaterialPool.FadedVersionOf(LightningMat, 1), 0);
-                            ResurrectionUtility.Resurrect(corpse.InnerPawn);
+                            DaemonDoStrike(pawns[i - 1].Corpse.Position, pawns[i - 1].Corpse.Map, ref boltMesh);
+                            Graphics.DrawMesh(boltMesh, pawns[i - 1].Corpse.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Weather), Quaternion.identity, FadedMaterialPool.FadedVersionOf(LightningMat, 1), 0);
+                            ResurrectionUtility.Resurrect(pawns[i - 1].Corpse.InnerPawn);
+                            pawns.RemoveAt(i - 1);
                         }
                     }
                 }
-            }
-            tickCounter++;
+            }   
+            base.MapComponentTick();
         }
 
         private static void DaemonDoStrike(IntVec3 strikeLoc, Map map, ref Mesh boltMesh)

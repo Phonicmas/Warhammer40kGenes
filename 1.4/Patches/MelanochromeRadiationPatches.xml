@@ -27,11 +27,9 @@
             <li>Dubs Rimatomics</li>
         </mods>
         <match Class="PatchOperationAdd">
-            <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]</xpath>
+            <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]/statFactors</xpath>
             <value>
-                <statFactors>
-                    <Radiation>0</Radiation>
-                </statFactors>
+                <Radiation>0</Radiation>
             </value>
         </match>
     </Operation>

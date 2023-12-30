@@ -84,7 +84,12 @@
     <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
     <combatPowerFactor>4</combatPowerFactor>
     <genes>
-      <li>BEWH_Custodes</li>
+      <li>BEWH_CustodesAnatomy</li>
+      <li>BEWH_CustodesExpertise</li>
+      <li>BEWH_CustodesStrength</li>
+      <li>BEWH_CustodesResilience</li>
+      <li>BEWH_CustodesToughness</li>
+      <li>BEWH_CustodesStature</li>
     </genes>
   </XenotypeDef>
 
@@ -97,7 +102,12 @@
     <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
     <combatPowerFactor>8</combatPowerFactor>
     <genes>
-      <li>BEWH_Primarch</li>
+      <li>BEWH_PrimarchAnatomy</li>
+      <li>BEWH_PrimarchExpertise</li>
+      <li>BEWH_PrimarchStrength</li>
+      <li>BEWH_PrimarchResilience</li>
+      <li>BEWH_PrimarchToughness</li>
+      <li>BEWH_PrimarchStature</li>
     </genes>
   </XenotypeDef>
 

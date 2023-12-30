@@ -16,14 +16,17 @@ namespace Genes40k
             {
                 return false;
             }
-            if (def.HasModExtension<DefModExtension_Pariah>())
+            if (other.genes != null)
             {
-                if (!other.genes.HasGene(def.GetModExtension<DefModExtension_Pariah>().pariahGene))
+                foreach (Gene gene in other.genes.GenesListForReading)
                 {
-                    return false;
+                    if (gene.def.HasModExtension<DefModExtension_Pariah>())
+                    {
+                        return true;
+                    }
                 }
             }
-            return true;
+            return false;
         }
     }
 }

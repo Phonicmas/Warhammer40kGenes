@@ -2,12 +2,13 @@
 <Defs>
 
     <!-- Iota Psyker -->
-
     <ThoughtDef>
         <defName>BEWH_IotaPsyker</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_IotaPsyker</hediff>
+        <requiredGenes>
+            <li>BEWH_IotaPsyker</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -19,12 +20,13 @@
     </ThoughtDef>
 
     <!-- Epsilon Psyker -->
-
     <ThoughtDef>
         <defName>BEWH_EpsilonPsyker</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_EpsilonPsyker</hediff>
+        <requiredGenes>
+            <li>BEWH_Psyker</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -35,14 +37,14 @@
         </stages>
     </ThoughtDef>
 
-
     <!-- Delta Psyker -->
-
     <ThoughtDef>
         <defName>BEWH_DeltaPsyker</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_DeltaPsyker</hediff>
+        <requiredGenes>
+            <li>BEWH_DeltaPsyker</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -55,12 +57,13 @@
 
 
     <!-- Beta Psyker -->
-
     <ThoughtDef>
         <defName>BEWH_BetaPsyker</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_BetaPsyker</hediff>
+        <requiredGenes>
+            <li>BEWH_BetaPsyker</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -70,6 +73,5 @@
             </li>
         </stages>
     </ThoughtDef>
-
 
 </Defs>

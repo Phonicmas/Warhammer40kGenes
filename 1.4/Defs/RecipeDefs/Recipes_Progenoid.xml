@@ -10,9 +10,7 @@
         <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
     </RecipeDef>
 
-
     <!-- Make geneseed base -->
-
     <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_AstartesPack</defName>
         <label>Make astartes genepack</label>
@@ -20,6 +18,7 @@
         <jobString>creating gene-seed from progenoid glands</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>2200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionSM</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
@@ -65,6 +64,7 @@
         <jobString>creating primaris gene-seed from progenoid glands</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>4200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionPM</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
@@ -115,6 +115,7 @@
         <removesHediff>BEWH_Sus_anMembraneStasis</removesHediff>
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+        <researchPrerequisite>BEWH_StasisResurrection</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>

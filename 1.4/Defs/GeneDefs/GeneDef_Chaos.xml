@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Gene Category -->
-
-    <GeneCategoryDef>
-        <defName>BEWHChaos</defName>
-        <label>chaos</label>
-        <displayPriorityInXenotype>537</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <!-- Parent Gene -->
-
-    <GeneDef Name="ChaosParent" Abstract="True">
-        <displayCategory>BEWHChaos</displayCategory>
-        <marketValueFactor>1.2</marketValueFactor>
-        <biostatCpx>2</biostatCpx>
-        <biostatMet>0</biostatMet>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
-    </GeneDef>
-
     <!-- Marks of Chaos Genes -->
 
     <!-- Mark of Khorne -->
-
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_KhorneMark</defName>
         <label>Mark of Khorne</label>
@@ -72,7 +53,6 @@
     </GeneDef>
 
     <!-- Mark of Nurgle -->
-
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_NurgleMark</defName>
         <label>Mark of Nurgle</label>
@@ -111,7 +91,6 @@
     </GeneDef>
 
     <!-- Mark of Tzeentch -->
-
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_TzeentchMark</defName>
         <label>Mark of Tzeentch</label>
@@ -156,7 +135,6 @@
     </GeneDef>
 
     <!-- Mark of Slaanesh -->
-
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_SlaaneshMark</defName>
         <label>Mark of Slaanesh</label>
@@ -193,7 +171,6 @@
     </GeneDef>
 
     <!-- Mark of Chaos -->
-
     <GeneDef ParentName="ChaosParent">
         <defName>BEWH_UndividedMark</defName>
         <label>Mark of Chaos</label>

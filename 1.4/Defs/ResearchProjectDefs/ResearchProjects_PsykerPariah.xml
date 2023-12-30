@@ -1,43 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Warp Potential Adjuster -->
-  <ResearchProjectDef>
-    <defName>BEWH_PotentialHarvesting</defName>
-    <label>potential harvesting</label>
-    <description>Unlocks the ability to harvest psychic potential and the blank potential from living specimen.</description>
+  <!-- Warp Potential Adjuster Base-->
+  <ResearchProjectDef Name="BEWH_WarpAdjusterBase" Abstract="True">
     <techLevel>Spacer</techLevel>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <tab>BEWH_WH40kTab</tab>
+    <baseCost>5000</baseCost>
+  </ResearchProjectDef>
+
+  <!-- Warp Potential Adjuster -->
+  <ResearchProjectDef ParentName="BEWH_WarpAdjusterBase">
+    <defName>BEWH_PotentialHarvesting</defName>
+    <label>Potential Harvesting</label>
+    <description>Unlocks the ability to harvest psychic potential and the blank potential from living specimen.</description>
     <prerequisites>
       <li>AdvancedFabrication</li>
       <li>Archogenetics</li>
     </prerequisites>
-    <baseCost>5000</baseCost>
     <researchViewX>0</researchViewX>
     <researchViewY>3</researchViewY>
   </ResearchProjectDef>
 
   <!-- Warp Potential Adjuster -->
-  <ResearchProjectDef>
+  <ResearchProjectDef ParentName="BEWH_WarpAdjusterBase">
     <defName>BEWH_WarpPotentialAdjuster</defName>
-    <label>warp potential adjuster</label>
+    <label>Warp Potential Adjuster</label>
     <description>Unlocks the psychic potential enhancer and the blank potential enhancer.</description>
-    <techLevel>Spacer</techLevel>
-    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchFacilities>
-      <li>MultiAnalyzer</li>
-    </requiredResearchFacilities>
-    <tab>BEWH_WH40kTab</tab>
     <prerequisites>
       <li>AdvancedFabrication</li>
       <li>Archogenetics</li>
       <li>BEWH_PotentialHarvesting</li>
     </prerequisites>
-    <baseCost>5000</baseCost>
     <researchViewX>1</researchViewX>
     <researchViewY>3</researchViewY>
   </ResearchProjectDef>

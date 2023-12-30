@@ -10,7 +10,7 @@
         <iconPath>UI/Icons/Genes/DaemonicMutationIcon</iconPath>
         <marketValueFactor>2</marketValueFactor>
         <displayOrderInCategory>11</displayOrderInCategory>
-        <geneClass>Gene_Clotting</geneClass>
+        <geneClass>Genes40k.Gene_DaemonPrince</geneClass>
         <dontMindRawFood>true</dontMindRawFood>
         <sterilize>true</sterilize>
         <selectionWeight>0.1</selectionWeight>
@@ -86,7 +86,6 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
-                <hediffToWholeBody>BEWH_DaemonPrince</hediffToWholeBody>
                 <bodyScaleFactor>(1.24, 1.24)</bodyScaleFactor>
                 <headScaleFactor>(1.24, 1.24)</headScaleFactor>
             </li>
@@ -218,6 +217,9 @@
             <drawOffsetNorth>(0.05, 0.2, -0.2)</drawOffsetNorth>
             <drawOffsetEast>(-0.5, -0.11, -0.05)</drawOffsetEast>
         </graphicData>
+        <customEffectDescriptions>
+            <li>Gives a tail attack</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
@@ -306,6 +308,9 @@
             <drawLoc>HeadTop</drawLoc>
             <drawOffsetNorth>(0, -0.1, 0)</drawOffsetNorth>
         </graphicData>
+        <customEffectDescriptions>
+            <li>Gives a horn attack</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>

@@ -27,9 +27,9 @@
 
   <NoValidPawns>No valid people</NoValidPawns>
 
-  <DevFinishProcedure>DEV: Finish procedure</DevFinishProcedure> 
+  <DevFinishProcedure>DEV: Finish procedure</DevFinishProcedure>
 
-  <PotentialHarvestKillChance>Chance to kill when harvesting potential.</PotentialHarvestKillChance> 
+  <PotentialHarvestKillChance>Chance to kill when harvesting potential.</PotentialHarvestKillChance>
 
   <GenetorCycleTimeSM>Genetor cycle time (Space Marine): {0} days</GenetorCycleTimeSM>
   <GenetorCycleTimePM>Genetor cycle time (Primaris Marine): {0} days</GenetorCycleTimePM>
@@ -44,6 +44,8 @@
 
   <progenoidHarvestsAllXenogenes>Enabling this will allow the harvest of the progenoid gland to include all xenogenes of the pawn instead of only space marine genes.</progenoidHarvestsAllXenogenes>
 
+  <UnbreakingLoyaltySpaceMarine>Enabling this makes all space marines unrecruitable and unable to be enslaved, meaning you cannot imprison them and then recruit or enslave them.</UnbreakingLoyaltySpaceMarine>
+
   <ModSettingsNameGenes>Warhammer 40k - Genes</ModSettingsNameGenes>
 
   <SpaceMarine>Space marine</SpaceMarine>
@@ -54,5 +56,12 @@
   <AddsGene>Adds Gene: {0}</AddsGene>
 
   <MustBeSpaceMarine>Must be a Space Marine</MustBeSpaceMarine>
+
+  <CannotRecruitLetter>Unbreakable Loyalty</CannotRecruitLetter>
+  <CannotRecruitMessage>{1} tried to recruit {0}, but {0}'s unbreakable loyalty to their faction made them resist all attempts.\n\n{0} cannot be recruited.</CannotRecruitMessage>
+  <CannotEnslaveMessage>{1} tried to enslave {0}, but {0}'s unbreakable loyalty to their faction made them resist all attempts.\n\n{0} cannot be enslaved.</CannotEnslaveMessage>
+
+  <NaturalBornXLetter>Natural Born {0}</NaturalBornXLetter>
+  <NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a natural {2}.</NaturalBornXMessage>
 
 </LanguageData>

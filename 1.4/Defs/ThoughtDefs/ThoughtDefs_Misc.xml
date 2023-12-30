@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Soaked in blood -->
+    <ThoughtDef>
+        <defName>BEWH_BloodSoaked</defName>
+        <durationDays>0.1</durationDays>
+        <stackLimit>1</stackLimit>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <nullifyingGenes>
+            <li>BEWH_UndividedMark</li>
+            <li>BEWH_KhorneMark</li>
+        </nullifyingGenes>
+        <stages>
+            <li>
+                <label>soaked in blood</label>
+                <description>I'm soaking in blood...</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

@@ -7,7 +7,7 @@ namespace Genes40k
     {
         public CompProperties_AbilityGeneseedHarvest()
         {
-            compClass = typeof(Comp_AbilityGeneseedHarvest);
+            compClass = typeof(CompAbilityEffect_GeneseedHarvest);
         }
     }
 }

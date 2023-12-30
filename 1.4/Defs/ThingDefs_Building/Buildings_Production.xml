@@ -2,7 +2,6 @@
 <Defs>
 
     <!-- Parent ritual spot -->
-
     <DesignatorDropdownGroupDef>
         <defName>RitualSpots</defName>
     </DesignatorDropdownGroupDef>
@@ -57,7 +56,6 @@
     </ThingDef>
 
     <!-- Undivided -->
-
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_UndividedRitualSpot</defName>
         <label>Undivided ritual spot</label>
@@ -70,7 +68,6 @@
     </ThingDef>
 
     <!-- Khorne -->
-
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_KhorneRitualSpot</defName>
         <label>Khorne ritual spot</label>
@@ -83,7 +80,6 @@
     </ThingDef>
 
     <!-- Tzeentch -->
-
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_TzeentchRitualSpot</defName>
         <label>Tzeentch ritual spot</label>
@@ -96,7 +92,6 @@
     </ThingDef>
 
     <!-- Nurgle -->
-
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_NurgleRitualSpot</defName>
         <label>Nurgle ritual spot</label>
@@ -109,7 +104,6 @@
     </ThingDef>
 
     <!-- Slaanesh -->
-
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_SlaaneshRitualSpot</defName>
         <label>Slaanesh ritual spot</label>

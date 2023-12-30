@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Geneseed Extraction (Space Marine) -->
+  <ResearchProjectDef ParentName="BEWH_GeneseedBase">
+    <defName>BEWH_GeneseedExtractionSM</defName>
+    <label>Geneseed Extraction (Space Marine)</label>
+    <description>Unlocks the surgery to be able to extract geneseeds from progenoid glands of space marines.</description>
+    <prerequisites>
+      <li>GeneProcessor</li>
+    </prerequisites>
+    <baseCost>2500</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Geneseed Extraction (Priamris Marine) -->
+  <ResearchProjectDef ParentName="BEWH_GeneseedBase">
+    <defName>BEWH_GeneseedExtractionPM</defName>
+    <label>Geneseed Extraction (Primaris Marine)</label>
+    <description>Unlocks the surgery to be able to extract geneseeds from progenoid glands of primaris marines.</description>
+    <prerequisites>
+      <li>GeneProcessor</li>
+      <li>BEWH_GeneseedExtractionSM</li>
+    </prerequisites>
+    <baseCost>3500</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Stasis Resurrection -->
+  <ResearchProjectDef ParentName="BEWH_GeneseedBase">
+    <defName>BEWH_StasisResurrection</defName>
+    <label>Stasis Resurrection</label>
+    <description>Unlocks the surgery to be able to revive Space Marines from their stasis ability.</description>
+    <prerequisites>
+      <li>MedicineProduction</li>
+    </prerequisites>
+    <baseCost>1000</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

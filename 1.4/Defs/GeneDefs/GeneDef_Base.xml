@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Gene Category -->
+    <!-- Chaos -->
+    <GeneCategoryDef>
+        <defName>BEWHChaos</defName>
+        <label>chaos</label>
+        <displayPriorityInXenotype>537</displayPriorityInXenotype>
+    </GeneCategoryDef>
+    <!-- Mankind Finest -->
+    <GeneCategoryDef>
+        <defName>BEWHMankindsFinest</defName>
+        <label>mandkinds finest</label>
+        <displayPriorityInXenotype>539</displayPriorityInXenotype>
+    </GeneCategoryDef>
+    <!-- Pariah -->
+    <GeneCategoryDef>
+        <defName>BEWHPariah</defName>
+        <label>pariah</label>
+        <displayPriorityInXenotype>536</displayPriorityInXenotype>
+    </GeneCategoryDef>
+    <!-- Psyker -->
+    <GeneCategoryDef>
+        <defName>BEWHSpaceMarinePsyker</defName>
+        <label>psyker</label>
+        <displayPriorityInXenotype>538</displayPriorityInXenotype>
+    </GeneCategoryDef>
+    <!-- Space Marine -->
+    <GeneCategoryDef>
+        <defName>BEWHSpaceMarine</defName>
+        <label>space marine</label>
+        <displayPriorityInXenotype>540</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!-- Parent Genes -->
+    <!-- Chaos -->
+    <GeneDef Name="ChaosParent" Abstract="True">
+        <displayCategory>BEWHChaos</displayCategory>
+        <marketValueFactor>1.2</marketValueFactor>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    </GeneDef>
+    <!-- Pariah -->
+    <GeneDef Name="PariahParent" Abstract="True">
+        <displayCategory>BEWHPariah</displayCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <suppressedTraits>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>1</degree>
+            </li>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>2</degree>
+            </li>
+        </suppressedTraits>
+        <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+        <exclusionTags>
+            <li>Psyker</li>
+            <li>Pariah</li>
+        </exclusionTags>
+    </GeneDef>
+    <!-- Psyker -->
+    <GeneDef Name="PsykerParent" Abstract="True">
+        <displayCategory>BEWHSpaceMarinePsyker</displayCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <suppressedTraits>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>Psyker</li>
+            <li>Pariah</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+    <!-- Space Marine -->
+    <GeneDef Name="SpaceMarineParent" Abstract="True">
+        <displayCategory>BEWHSpaceMarine</displayCategory>
+        <marketValueFactor>1.1</marketValueFactor>
+        <biostatCpx>2</biostatCpx>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    </GeneDef>
+    <!-- Primaris Marine -->
+    <GeneDef Name="PrimarisSpaceMarineParent" Abstract="True">
+        <displayCategory>BEWHSpaceMarine</displayCategory>
+        <marketValueFactor>1.4</marketValueFactor>
+        <biostatCpx>3</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    </GeneDef>
+
+</Defs>

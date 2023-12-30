@@ -10,18 +10,9 @@
 		<disablesNeeds>
 			<li>Food</li>
 			<li>Rest</li>
+			<li>Mood</li>
 			<li>Joy</li>
 		</disablesNeeds>
-		<isBad>false</isBad>
-	</HediffDef>
-
-	<!-- Daemon Prince -->
-	<HediffDef>
-		<defName>BEWH_DaemonPrince</defName>
-		<label>daemon prince</label>
-		<description>This pawn has ascended to daemonhood.</description>
-		<everCurableByItem>false</everCurableByItem>
-		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
 		<isBad>false</isBad>
 	</HediffDef>
 
@@ -94,14 +85,69 @@
 	</HediffDef>
 
 	<!-- 2nd Geneseed Harvested -->
-    <HediffDef>
-        <defName>BEWH_SecondGeneseedHarvest</defName>
-        <label>secondary geneseed harvested</label>
-        <description>This pawn has had their second geneseed harvested after death.</description>
-        <scenarioCanAdd>false</scenarioCanAdd>
+	<HediffDef>
+		<defName>BEWH_SecondGeneseedHarvest</defName>
+		<label>secondary geneseed harvested</label>
+		<description>This pawn has had their second geneseed harvested after death.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
 		<everCurableByItem>false</everCurableByItem>
-        <maxSeverity>1.0</maxSeverity>
-        <isBad>false</isBad>
-    </HediffDef>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- Custodes Warp Shield-->
+	<HediffDef>
+		<defName>BEWH_WarpShield</defName>
+		<label>Warp Influence</label>
+		<description>This pawn can open and close their senses to the warp at will.</description>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>1</minSeverity>
+		<maxSeverity>2</maxSeverity>
+		<stages>
+			<li>
+				<label>Shielded</label>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<PsychicSensitivity>0</PsychicSensitivity>
+				</statFactors>
+			</li>
+			<li>
+				<label>Unshielded</label>
+				<minSeverity>2</minSeverity>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="Genes40k.DefModExtension_Custodes"/>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- Psychic Coma-->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>BEWH_PsychicComa</defName>
+		<label>psychic coma</label>
+		<description>This pawn has been exposed to a great deal of warp energy and as a result has fallen into a coma.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>psychic coma</label>
+				<painFactor>0</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 
 </Defs>
