@@ -21,6 +21,7 @@ namespace Genes40k
 
         public override void MapComponentTick()
         {
+            return;
             if (!pawns.NullOrEmpty())
             {
                 if (map.IsHashIntervalTick(checkingInterval))

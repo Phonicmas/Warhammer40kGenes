@@ -38,7 +38,7 @@ namespace Genes40k
             for (int i = 0; i < pawns.Count; i++)
             {
                 Pawn pawn = pawns[i];
-                if (p == pawn || !p.RaceProps.Humanlike || pawn == null || pawn.needs == null || pawn.needs.mood == null || pawn.needs.mood.thoughts == null || pawn.Position.DistanceTo(p.Position) > Props.radius || pawn.health.hediffSet.HasHediff(HediffDefOf.PsychicHarmonizer))
+                if (p == pawn || !p.RaceProps.Humanlike || pawn == null || pawn.needs == null || pawn.needs.mood == null || pawn.needs.mood.thoughts == null || pawn.Position.DistanceTo(p.Position) > Props.radius)
                 {
                     continue;
                 }

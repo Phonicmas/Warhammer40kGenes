@@ -10,9 +10,9 @@ namespace Genes40k
 {
     public class GameComponent_DaemonPrince : GameComponent
     {
-        private const int checkingInterval = 10000;
+        private const int checkingInterval = 600;
 
-        private const int deathTimer = 12000;
+        private const int deathTimer = 1200;
 
         public Dictionary<Pawn, Map> pawns = new Dictionary<Pawn, Map>();
 
@@ -65,7 +65,8 @@ namespace Genes40k
                     {
                         pawns.Remove(pawn);
                     }
-                }                
+                }
+                resurrectedPawns = new List<Pawn>();
             }   
             base.GameComponentTick();
         }

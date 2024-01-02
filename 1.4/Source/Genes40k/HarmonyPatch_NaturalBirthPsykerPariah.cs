@@ -91,7 +91,8 @@ namespace Genes40k
                     lookTargets = pawn,
                     def = Genes40kDefOf.BEWH_NaturalBornX,
                     Text = "NaturalBornXMessage".Translate(geneticMother.Named("PAWN"), pawn.Named("PAWN"), typeBorn),
-                    title = "NaturalBornXLetter".Translate(typeBorn)
+                    Label = "NaturalBornXLetter".Translate(typeBorn),
+                    
                 };
 
                 Find.LetterStack.ReceiveLetter(letter);

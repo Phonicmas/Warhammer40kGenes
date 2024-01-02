@@ -4,7 +4,7 @@
     <WeatherDef>
         <defName>BEWH_BloodRain</defName>
         <label>blood rain</label>
-        <description>Rain reduces the accuracy of ranged weapons, extinguishes fire, slows people down and decreases their mood.</description>
+        <description>Blood rain reduces the accuracy of ranged weapons, extinguishes fire, slows people down and decreases their mood.</description>
         <temperatureRange>0~100</temperatureRange>
         <windSpeedFactor>0</windSpeedFactor>
         <favorability>Bad</favorability>

@@ -73,7 +73,7 @@
     <Compile Include="HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatch_NaturalBirthPsykerPariah.cs" />
     <Compile Include="Gene_DaemonPrince.cs" />
-    <Compile Include="GameComponent_DaemonPrince.cs" />
+    <Compile Include="GameComponent_Resurrection.cs" />
     <Compile Include="RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="CompAbilityEffect_GeneseedHarvest.cs" />
     <Compile Include="CompProperties_AbilityGeneseedHarvest.cs" />

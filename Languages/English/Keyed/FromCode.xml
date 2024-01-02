@@ -64,4 +64,15 @@
   <NaturalBornXLetter>Natural Born {0}</NaturalBornXLetter>
   <NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a natural {2}.</NaturalBornXMessage>
 
+  <PsychicPhenomena>Psychic Phenomena</PsychicPhenomena>
+  <PerilsOfTheWarp>Perils of the Warp</PerilsOfTheWarp>
+
+  <Annihilation>A psychic blast surged through {0} and into the world, causing a warp explosion completely annihilating {0} and severely damaging everything around them.</Annihilation>
+  <DaemonHost>A strong link was established between {0} and one of the chaos gods, allowing them to send in some daemons.</DaemonHost>
+  <UncontrollablePowers>In a temporary loss of control over their powers, {0} caused a warp explosion, causing damage to everyone near them.</UncontrollablePowers>
+  <PsychicComa>Overwhelmed by the warp made {0} fell into a psychic coma.</PsychicComa>
+  <PsychicConnectionSevered>In an instant {0} no longer felt any connection to the warp, as if completely cut off.</PsychicConnectionSevered>
+  <BloodRain>As if a cruel joke, blood suddenly starts raining.</BloodRain>
+  <PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</PlantRot>
+
 </LanguageData>

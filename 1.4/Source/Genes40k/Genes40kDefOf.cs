@@ -87,6 +87,7 @@ namespace Genes40k
 
         public static HediffDef BEWH_SecondGeneseedHarvest;
         public static HediffDef BEWH_PsychicComa;
+        public static HediffDef BEWH_PsychicConnectionSevered;
 
         public static TraitDef BEWH_Genes;
 

@@ -20,14 +20,6 @@
             </li>
         </capMods>
         <marketValueFactor>2</marketValueFactor>
-        <minAgeActive>6</minAgeActive>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <!--<hediffToWholeBody>BEWH_IotaPsyker</hediffToWholeBody>-->
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
-            </li>
-            <li Class="Genes40k.DefModExtension_Psyker"/>
-        </modExtensions>
     </GeneDef>
 
     <!-- Epsilon Psyker -->
@@ -49,14 +41,6 @@
             </li>
         </capMods>
         <marketValueFactor>1.5</marketValueFactor>
-        <minAgeActive>6</minAgeActive>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <!--<hediffToWholeBody>BEWH_EpsilonPsyker</hediffToWholeBody>-->
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
-            </li>
-            <li Class="Genes40k.DefModExtension_Psyker"/>
-        </modExtensions>
     </GeneDef>
 
     <!-- Delta Psyker -->
@@ -78,14 +62,6 @@
             </li>
         </capMods>
         <marketValueFactor>3.5</marketValueFactor>
-        <minAgeActive>6</minAgeActive>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <!--<hediffToWholeBody>BEWH_DeltaPsyker</hediffToWholeBody>-->
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
-            </li>
-            <li Class="Genes40k.DefModExtension_Psyker"/>
-        </modExtensions>
     </GeneDef>
 
     <!-- Beta Psyker -->
@@ -107,14 +83,6 @@
             </li>
         </capMods>
         <marketValueFactor>6</marketValueFactor>
-        <minAgeActive>6</minAgeActive>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <!--<hediffToWholeBody>BEWH_BetaPsyker</hediffToWholeBody>-->
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
-            </li>
-            <li Class="Genes40k.DefModExtension_Psyker"/>
-        </modExtensions>
     </GeneDef>
 
 </Defs>

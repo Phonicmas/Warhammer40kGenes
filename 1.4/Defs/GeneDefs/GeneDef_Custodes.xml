@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+    <!-- Just in case -->
+    <GeneDef>
+        <defName>BEWH_Custodes</defName>
+        <label>don't use, outdated</label>
+        <description>Outdated, replace with newer custodes genes, only here to preserve saves</description>
+        <displayCategory>BEWHMankindsFinest</displayCategory>
+        <displayOrderInCategory>999</displayOrderInCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0</selectionWeight>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <biostatArc>0</biostatArc>
+        <iconPath>UI/Icons/Genes/CustodesIcon</iconPath>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hideGene>true</hideGene>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
     <!-- Custodes: Base -->
     <GeneDef Name="BEWH_CustodesBase" Abstract="True">
         <displayCategory>BEWHMankindsFinest</displayCategory>

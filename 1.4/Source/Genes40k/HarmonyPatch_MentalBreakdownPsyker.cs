@@ -3,6 +3,8 @@ using Genes40k;
 using HarmonyLib;
 using RimWorld;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using Verse.AI;
 
@@ -30,45 +32,76 @@ namespace Mutations40k
             {
                 if (gene.def.HasModExtension<DefModExtension_Psyker>())
                 {
+                    if (!gene.Active)
+                    {
+                        continue;
+                    }
+                    Letter_JumpTo letter = new Letter_JumpTo
+                    {
+                        lookTargets = pawn,
+                        def = Genes40kDefOf.BEWH_NaturalBornX,
+                    };
+                    bool sendLetter = true;
                     Random rand = new Random();
                     int roll = rand.Next(1, 100);
+                    roll += (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity);
                     switch (roll)
                     {
-                        case int n when (n >= 1 && n <=10):
-                            //Makew new Harmless stuff
-                            pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                            break;
-                        case int n when (n >= 11 && n <= 24):
-                            //Make new Basically Harmless
-                            pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                            break;
-                        case int n when (n >= 25 && n <= 39):
-                            pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                            break;
-                        case int n when (n >= 40 && n <= 54):
-                            ReappearLaterRandomly(pawn);
-                            break;
-                        case int n when (n >= 55 && n <= 69):
-                            //Make newSome annoyance, not harmless
-                            pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                            break;
-                        case int n when (n >= 70 && n <= 84):
-                            pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
-                            break;
-                        case int n when (n >= 85 && n <= 94):
-                            GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 2, Genes40kDefOf.BEWH_WarpEnergy, pawn);
-                            break;
-                        case int n when (n >= 95 && n <= 99):
-                            SummonDaemons(pawn);
-                            break;
                         case 100:
                             pawn.Kill(null);
-                            GenExplosion.DoExplosion(pawn.Corpse.Position, pawn.Corpse.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: 40, armorPenetration: 1.5f);
+                            GenExplosion.DoExplosion(pawn.Corpse.Position, pawn.Corpse.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: (int)(pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 100), armorPenetration: 10f);
+                            letter.Text = "Annihilation".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PerilsOfTheWarp".Translate();
+                            break;
+                        case int n when n >= 99:
+                            SummonDaemons(pawn);
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PerilsOfTheWarp".Translate();
+                            break;
+                        case int n when n >= 95:
+                            GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 2, Genes40kDefOf.BEWH_WarpEnergy, pawn);
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "UncontrollablePowers".Translate();
+                            break;
+                        case int n when n >= 90:
+                            pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PsychicComa".Translate();
+                            break;
+                        /*case int n when n >= 80:
+                            //??
+                            break;*/
+                        case int n when n >= 70:
+                            pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered);
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PsychicConnectionSevered".Translate();
+                            break;
+                        case int n when n >= 60:
+                            pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "BloodRain".Translate();
+                            break;
+                        case int n when n >= 30:
+                            IEnumerable<IntVec3> t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
+                            foreach (IntVec3 c in t)
+                            {
+                                Plant plant = c.GetPlant(pawn.Map);
+                                if (plant != null)
+                                {
+                                    plant.Kill();
+                                }
+                            }
+                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PlantRot".Translate();
                             break;
                         default:
+                            sendLetter = false;
                             break;
                     }
-                    
+                    if (sendLetter)
+                    {
+                        Find.LetterStack.ReceiveLetter(letter);
+                    }
                     return;
                 }
             }
@@ -107,9 +140,5 @@ namespace Mutations40k
             }
         }
     
-        private static void ReappearLaterRandomly(Pawn pawn)
-        {
-            //attach pawn to game comp?
-        }
     }
 }
