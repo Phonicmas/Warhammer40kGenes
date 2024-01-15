@@ -16,10 +16,10 @@ namespace Genes40k
 
         private int powerCutTicks;
 
-        private int SpaceMarineFuel = 1;
-        private int PrimarisMarineFuel = 5;
-        private int CustodesFuel = 20;
-        private int PrimarchFuel = 40;
+        private readonly int SpaceMarineFuel = 1;
+        private readonly int PrimarisMarineFuel = 5;
+        private readonly int CustodesFuel = 20;
+        private readonly int PrimarchFuel = 40;
 
         private GeneDef geneToAdd = null;
 
@@ -297,14 +297,14 @@ namespace Genes40k
 
             bool fullyElevated = false;
 
-            if (geneToAdd == Genes40kDefOf.BEWH_PrimarchAnatomy)
+            if (geneToAdd == Genes40kDefOf.BEWH_PrimarchStature)
             {
                 genesToRemove = CustodesGenes();
                 elevatedTo = "Primarch".Translate();
                 xenoIcon = Genes40kDefOf.BEWH_PrimarchIcon;
                 fullyElevated = true;
             }
-            if (geneToAdd == Genes40kDefOf.BEWH_CustodesAnatomy)
+            if (geneToAdd == Genes40kDefOf.BEWH_CustodesStature)
             {
                 genesToRemove = Genes40kUtils.SpaceMarineGenes();
                 genesToRemove.AddRange(Genes40kUtils.PrimarisGenes());
@@ -407,15 +407,15 @@ namespace Genes40k
                 {
                     Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
                     startTick = Find.TickManager.TicksGame;
-                    if (Genes40kUtils.IsSpaceMarine(pawn))
-                    {
-                        ticksRemaining = (int)modSettings.primarisMarineTime;
-                        Fuel.ConsumeFuel(PrimarisMarineFuel);
-                    }
                     if (Genes40kUtils.IsPrimaris(pawn))
                     {
                         ticksRemaining = (int)modSettings.custodesTime;
                         Fuel.ConsumeFuel(CustodesFuel);
+                    }
+                    else if (Genes40kUtils.IsSpaceMarine(pawn))
+                    {
+                        ticksRemaining = (int)modSettings.primarisMarineTime;
+                        Fuel.ConsumeFuel(PrimarisMarineFuel);
                     }
                     else if (IsCustodes(pawn))
                     {
@@ -599,13 +599,13 @@ namespace Genes40k
                 }
 
                 string elevatingTo = "";
-                if (Genes40kUtils.IsSpaceMarine(selectedPawn))
-                {
-                    elevatingTo = "Primaris Marine";
-                }
-                else if (Genes40kUtils.IsPrimaris(selectedPawn))
+                if (Genes40kUtils.IsPrimaris(selectedPawn))
                 {
                     elevatingTo = "Custodes";
+                }
+                else if (Genes40kUtils.IsSpaceMarine(selectedPawn))
+                {
+                    elevatingTo = "Primaris Marine";
                 }
                 else if (IsCustodes(selectedPawn))
                 {
@@ -654,7 +654,7 @@ namespace Genes40k
 
         private bool IsPrimarch(Pawn pawn)
         {
-            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_CustodesAnatomy))
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_PrimarchAnatomy))
             {
                 return true;
             }

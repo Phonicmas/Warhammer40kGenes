@@ -78,6 +78,15 @@ namespace Genes40k
             return false;
         }
 
+        public static bool IsPariah(Pawn pawn)
+        {
+            if (pawn.genes.HasGene(Genes40kDefOf.BEWH_OmegaPariah) || pawn.genes.HasGene(Genes40kDefOf.BEWH_SigmaPariah) || pawn.genes.HasGene(Genes40kDefOf.BEWH_UpsilonPariah))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static bool IsDaemonPrince(Pawn pawn)
         {
             if (pawn.genes.HasGene(Genes40kDefOf.BEWH_DaemonMutation))

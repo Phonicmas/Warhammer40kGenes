@@ -18,6 +18,11 @@ namespace Genes40k
 
 		public static void Postfix(ref Thing __result, Pawn geneticMother)
         {
+            Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+            if (!modSettings.psykerPariahBirth)
+            {
+                return;
+            }
             Pawn pawn = (Pawn)__result;
             if (pawn.Faction != Faction.OfPlayer)
             {

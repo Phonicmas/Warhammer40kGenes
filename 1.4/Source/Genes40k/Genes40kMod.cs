@@ -42,6 +42,10 @@ namespace Genes40k
 
             listingStandard.CheckboxLabeled("progenoidHarvestsAllXenogenes".Translate(), ref settings.progenoidHarvestsAllXenogenes);
 
+            listingStandard.CheckboxLabeled("psykerPariahBirth".Translate(), ref settings.psykerPariahBirth);
+
+            listingStandard.CheckboxLabeled("psychicPhenomena".Translate(), ref settings.psychicPhenomena);
+
             listingStandard.Label("\n" + "CheckVEFPatches".Translate());
 
             listingStandard.End();

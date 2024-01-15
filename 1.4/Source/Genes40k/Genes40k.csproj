@@ -70,6 +70,7 @@
     <Compile Include="DefModExtension_Primarch.cs" />
     <Compile Include="DefModExtension_Custodes.cs" />
     <Compile Include="DefModExtension_Psyker.cs" />
+    <Compile Include="Gene_Pariah.cs" />
     <Compile Include="HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatch_NaturalBirthPsykerPariah.cs" />
     <Compile Include="Gene_DaemonPrince.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="DefModExtension_Pariah.cs" />
     <Compile Include="Genes40kMod.cs" />
     <Compile Include="Genes40kModSettings.cs" />
-    <Compile Include="MapComponent_DaemonPrince.cs" />
     <Compile Include="ThoughtWorker_Precept_Psyker_Social.cs" />
     <Compile Include="ThoughtWorker_Precept_Psyker.cs" />
     <Compile Include="Verb_CastAbility_DaemonSummon.cs" />

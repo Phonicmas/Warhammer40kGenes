@@ -1,126 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!--===== ON PARIAH PAWN ======-->
-    <!-- Sigma Pariah -->
     <HediffDef>
-        <defName>BEWH_SigmaPariah</defName>
+        <defName>BEWH_PariahEffecter</defName>
+        <label>Pariah nearby</label>
+        <labelNoun>Pariah nearby</labelNoun>
+        <description>A Pariah is nearby, decreasing their connection to the warp</description>
         <hediffClass>HediffWithComps</hediffClass>
-        <label>Sigma Pariah</label>
-        <labelNoun>Sigma Pariah</labelNoun>
-        <description>Sigma Pariah</description>
         <scenarioCanAdd>false</scenarioCanAdd>
-        <stages>
-            <li>
-                <label>Sigma Pariah</label>
-                <becomeVisible>False</becomeVisible>
-            </li>
-        </stages>
-        <isBad>false</isBad>
-        <comps>
-            <li Class="Genes40k.HediffCompProperties_Aura">
-                <radius>20</radius>
-                <hediff>BEWH_SigmaPariahEffecter</hediff>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <!-- Upsilon Pariah -->
-    <HediffDef>
-        <defName>BEWH_UpsilonPariah</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <label>Upsilon Pariah</label>
-        <labelNoun>Upsilon Pariah</labelNoun>
-        <description>Upsilon Pariah</description>
+        <makesSickThought>false</makesSickThought>
         <everCurableByItem>false</everCurableByItem>
-        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>3</maxSeverity>
         <stages>
             <li>
-                <label>Upsilon Pariah</label>
-                <becomeVisible>False</becomeVisible>
-            </li>
-        </stages>
-        <isBad>false</isBad>
-        <comps>
-            <li Class="Genes40k.HediffCompProperties_Aura">
-                <radius>20</radius>
-                <hediff>BEWH_UpsilonPariahEffecter</hediff>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <!-- Omega Pariah -->
-    <HediffDef>
-        <defName>BEWH_OmegaPariah</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <label>Omega Pariah</label>
-        <labelNoun>Omega Pariah</labelNoun>
-        <description>Omega Pariah</description>
-        <everCurableByItem>false</everCurableByItem>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <stages>
-            <li>
-                <label>Omega Pariah</label>
-                <becomeVisible>False</becomeVisible>
-            </li>
-        </stages>
-        <isBad>false</isBad>
-        <comps>
-            <li Class="Genes40k.HediffCompProperties_Aura">
-                <radius>20</radius>
-                <hediff>BEWH_OmegaPariahEffecter</hediff>
-            </li>
-        </comps>
-    </HediffDef>
-
-
-    <!--===== ON AFFECTED PAWNS =====-->
-    <!-- Sigma Pariah Effecter -->
-    <HediffDef>
-        <defName>BEWH_SigmaPariahEffecter</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <label>Sigma Pariah</label>
-        <labelNoun>Sigma Pariah</labelNoun>
-        <description>Sigma Pariah nearby</description>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <makesSickThought>true</makesSickThought>
-        <maxSeverity>1.0</maxSeverity>
-        <stages>
-            <li>
-                <label>Sigma Pariah nearby</label>
-                <becomeVisible>False</becomeVisible>
+                <minSeverity>1</minSeverity>
                 <statFactors>
                     <PsychicSensitivity>0.55</PsychicSensitivity>
                     <PsychicEntropyRecoveryRate>0.55</PsychicEntropyRecoveryRate>
                 </statFactors>
                 <painOffset>0.1</painOffset>
             </li>
-        </stages>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-48</severityPerDay>
-            </li>
-        </comps>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah" />
-        </modExtensions>
-    </HediffDef>
-
-    <!-- Upsilon Pariah Effecter-->
-    <HediffDef>
-        <defName>BEWH_UpsilonPariahEffecter</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <label>Upsilon Pariah</label>
-        <labelNoun>Upsilon Pariah</labelNoun>
-        <description>Upsilon Pariah nearby</description>
-        <everCurableByItem>false</everCurableByItem>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <makesSickThought>true</makesSickThought>
-        <maxSeverity>1.0</maxSeverity>
-        <stages>
             <li>
-                <label>Upsilon Pariah nearby</label>
-                <becomeVisible>False</becomeVisible>
+                <minSeverity>2</minSeverity>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
@@ -133,32 +34,8 @@
                 </statFactors>
                 <painOffset>0.2</painOffset>
             </li>
-        </stages>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-48</severityPerDay>
-            </li>
-        </comps>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah" />
-        </modExtensions>
-    </HediffDef>
-
-    <!-- Omega Pariah Effecter-->
-    <HediffDef>
-        <defName>BEWH_OmegaPariahEffecter</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <label>Omega Pariah</label>
-        <labelNoun>Omega Pariah</labelNoun>
-        <description>Omega Pariah nearby</description>
-        <everCurableByItem>false</everCurableByItem>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <makesSickThought>true</makesSickThought>
-        <maxSeverity>1.0</maxSeverity>
-        <stages>
             <li>
-                <label>Omega Pariah nearby</label>
-                <becomeVisible>False</becomeVisible>
+                <minSeverity>3</minSeverity>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
@@ -173,8 +50,9 @@
             </li>
         </stages>
         <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-48</severityPerDay>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
             </li>
         </comps>
         <modExtensions>

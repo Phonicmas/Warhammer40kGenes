@@ -100,6 +100,8 @@ namespace Genes40k
 
         public static WeatherDef BEWH_BloodRain;
 
+        public static HediffDef BEWH_PariahEffecter;
+
         static Genes40kDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

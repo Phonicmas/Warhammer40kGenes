@@ -47,6 +47,8 @@
         <displayCategory>BEWHPariah</displayCategory>
         <biostatCpx>5</biostatCpx>
         <biostatMet>-2</biostatMet>
+        <marketValueFactor>2</marketValueFactor>
+        <geneClass>Genes40k.Gene_Pariah</geneClass>
         <suppressedTraits>
             <li>
                 <def>PsychicSensitivity</def>
@@ -58,6 +60,7 @@
             </li>
         </suppressedTraits>
         <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+        
         <exclusionTags>
             <li>Psyker</li>
             <li>Pariah</li>

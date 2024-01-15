@@ -5,7 +5,7 @@
   <ResearchProjectDef ParentName="BEWH_GeneseedBase">
     <defName>BEWH_GeneseedExtractionSM</defName>
     <label>Geneseed Extraction (Space Marine)</label>
-    <description>Unlocks the surgery to be able to extract geneseeds from progenoid glands of space marines.</description>
+    <description>Unlocks the surgery to be able to extract geneseeds from grown progenoid glands of space marines.</description>
     <prerequisites>
       <li>GeneProcessor</li>
     </prerequisites>
@@ -18,7 +18,7 @@
   <ResearchProjectDef ParentName="BEWH_GeneseedBase">
     <defName>BEWH_GeneseedExtractionPM</defName>
     <label>Geneseed Extraction (Primaris Marine)</label>
-    <description>Unlocks the surgery to be able to extract geneseeds from progenoid glands of primaris marines.</description>
+    <description>Unlocks the surgery to be able to extract geneseeds from grown progenoid glands of primaris marines.</description>
     <prerequisites>
       <li>GeneProcessor</li>
       <li>BEWH_GeneseedExtractionSM</li>

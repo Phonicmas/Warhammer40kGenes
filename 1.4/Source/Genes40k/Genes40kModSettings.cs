@@ -16,6 +16,10 @@ namespace Genes40k
 
         public bool progenoidHarvestsAllXenogenes = false;
 
+        public bool psykerPariahBirth = true;
+
+        public bool psychicPhenomena = true;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref spaceMarineTime, "SpaceMarineTime", 60000);
@@ -25,6 +29,8 @@ namespace Genes40k
             Scribe_Values.Look(ref warpTime, "WarpTime", 100000);
             Scribe_Values.Look(ref killChance, "PotentialHarvestKillChance", 35);
             Scribe_Values.Look(ref progenoidHarvestsAllXenogenes, "progenoidHarvestsAllXenogenes", false);
+            Scribe_Values.Look(ref psykerPariahBirth, "psykerPariahBirth", true);
+            Scribe_Values.Look(ref psychicPhenomena, "psychicPhenomena", true);
             base.ExposeData();
         }
     }

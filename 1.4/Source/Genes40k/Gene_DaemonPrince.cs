@@ -29,9 +29,13 @@ namespace Genes40k
 
         public override void Notify_PawnDied()
         {
+            if (pawn.Faction != Faction.OfPlayer)
+            {
+                return;
+            }
             GameComponent_DaemonPrince gameComp = Current.Game.GetComponent<GameComponent_DaemonPrince>();
             pawn.Corpse.Strip();
-            gameComp.pawns.Add(pawn, pawn.Map);
+            gameComp.pawns.Add(pawn, pawn.Corpse.Map);
             pawn.Corpse.DeSpawn();
             base.Notify_PawnDied();
         }

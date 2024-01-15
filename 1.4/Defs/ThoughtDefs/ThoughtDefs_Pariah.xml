@@ -4,9 +4,11 @@
     <!-- Sigma Pariah -->
     <ThoughtDef>
         <defName>BEWH_SigmaPariah</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_SigmaPariah</hediff>
+        <requiredGenes>
+            <li>BEWH_SigmaPariah</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -28,15 +30,22 @@
                 <baseOpinionOffset>-6</baseOpinionOffset>
             </li>
         </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_SigmaPariah</pariahGene>
+            </li>
+        </modExtensions>
     </ThoughtDef>
 
 
     <!-- Upsilon Pariah -->
     <ThoughtDef>
         <defName>BEWH_UpsilonPariah</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_UpsilonPariah</hediff>
+        <requiredGenes>
+            <li>BEWH_UpsilonPariah</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -58,15 +67,22 @@
                 <baseOpinionOffset>-18</baseOpinionOffset>
             </li>
         </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_UpsilonPariah</pariahGene>
+            </li>
+        </modExtensions>
     </ThoughtDef>
 
 
     <!-- Omega Pariah -->
     <ThoughtDef>
         <defName>BEWH_OmegaPariah</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
-        <hediff>BEWH_OmegaPariah</hediff>
+        <requiredGenes>
+            <li>BEWH_OmegaPariah</li>
+        </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -88,6 +104,11 @@
                 <baseOpinionOffset>-35</baseOpinionOffset>
             </li>
         </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_OmegaPariah</pariahGene>
+            </li>
+        </modExtensions>
     </ThoughtDef>
 
 </Defs>

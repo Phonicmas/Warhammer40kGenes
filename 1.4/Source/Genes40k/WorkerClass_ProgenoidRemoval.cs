@@ -38,14 +38,14 @@ namespace Genes40k
             {
                 if ((!recipe.targetsBodyPart || hediffs[index].Part != null) && hediffs[index].def == recipe.removesHediff && hediffs[index].Visible)
                 {
-                    if (hediffs[index].Severity >= 1f)
+                    if (hediffs[index].Severity < 1f)
                     {
-                        return true;
+                        return false;
                     }
                         
                 }
             }
-            return false;
+            return true;
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)

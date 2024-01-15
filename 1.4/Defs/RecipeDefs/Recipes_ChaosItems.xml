@@ -23,6 +23,8 @@
         <workAmount>3000</workAmount>
         <recipeUsers>
             <li>CraftingSpot</li>
+            <li>BEWH_SlaaneshRitualSpot</li>
+            <li>BEWH_UndividedRitualSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -70,6 +72,8 @@
         <workAmount>8000</workAmount>
         <recipeUsers>
             <li>CraftingSpot</li>
+            <li>BEWH_TzeentchRitualSpot</li>
+            <li>BEWH_UndividedRitualSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -117,6 +121,8 @@
         <workAmount>7000</workAmount>
         <recipeUsers>
             <li>CraftingSpot</li>
+            <li>BEWH_NurgleItem</li>
+            <li>BEWH_UndividedRitualSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -183,6 +189,8 @@
         <workAmount>5000</workAmount>
         <recipeUsers>
             <li>CraftingSpot</li>
+            <li>BEWH_KhorneRitualSpot</li>
+            <li>BEWH_UndividedRitualSpot</li>
         </recipeUsers>
         <ingredients>
             <li>

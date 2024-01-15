@@ -20,9 +20,16 @@ namespace Genes40k
             {
                 foreach (Gene gene in other.genes.GenesListForReading)
                 {
-                    if (gene.def.HasModExtension<DefModExtension_Pariah>())
+                    if (gene.def.HasModExtension<DefModExtension_Pariah>() && def.HasModExtension<DefModExtension_Pariah>())
                     {
-                        return true;
+                        if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
+                        {
+                            if (Genes40kUtils.IsPariah(pawn))
+                            {
+                                return false;
+                            }
+                            return true;
+                        }
                     }
                 }
             }

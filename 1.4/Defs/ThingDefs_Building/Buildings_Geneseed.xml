@@ -52,7 +52,7 @@
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.0</fuelConsumptionRate>
+        <fuelConsumptionRate>0</fuelConsumptionRate>
         <fuelCapacity>40</fuelCapacity>
         <initialFuelPercent>0</initialFuelPercent>
         <fuelFilter>

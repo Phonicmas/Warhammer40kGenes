@@ -10,9 +10,9 @@ namespace Genes40k
 {
     public class GameComponent_DaemonPrince : GameComponent
     {
-        private const int checkingInterval = 600;
+        private const int checkingInterval = 60000;
 
-        private const int deathTimer = 1200;
+        private const int deathTimer = 120000;
 
         public Dictionary<Pawn, Map> pawns = new Dictionary<Pawn, Map>();
 
@@ -39,13 +39,19 @@ namespace Genes40k
                         {
                             pawns.SetOrAdd(pair.Key, map);
                         }
-                        List<Map> maps = Find.Maps;
-                        if (maps != null)
+                        else
                         {
-                            pawns.SetOrAdd(pair.Key, maps.RandomElement());
+                            List<Map> maps = Find.Maps;
+                            if (maps != null)
+                            {
+                                pawns.SetOrAdd(pair.Key, maps.RandomElement());
+                            }
+                            else 
+                            {
+                                Map lastResort = MapGenerator.GenerateMap(new IntVec3(50, 50, 50), Find.WorldObjects.MapParentAt(TileFinder.RandomStartingTile()), MapGeneratorDefOf.Base_Player);
+                                pawns.SetOrAdd(pair.Key, lastResort);
+                            }
                         }
-                        Map lastResort = MapGenerator.GenerateMap(new IntVec3(50, 50, 50), Find.WorldObjects.MapParentAt(TileFinder.RandomStartingTile()), MapGeneratorDefOf.Base_Player);
-                        pawns.SetOrAdd(pair.Key, lastResort);
                     }
                     if (pair.Key.Corpse != null && (Find.TickManager.TicksGame - pair.Key.Corpse.timeOfDeath) >= deathTimer)
                     {
@@ -63,7 +69,10 @@ namespace Genes40k
                 {
                     foreach (Pawn pawn in resurrectedPawns)
                     {
-                        pawns.Remove(pawn);
+                        if (!pawns.Remove(pawn))
+                        {
+                            Log.Error("Could not remove pawn on daemon resurrection - Report this to Phonicmas if you see it");
+                        }
                     }
                 }
                 resurrectedPawns = new List<Pawn>();

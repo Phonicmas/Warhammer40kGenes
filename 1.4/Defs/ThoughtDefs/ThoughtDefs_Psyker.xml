@@ -4,7 +4,7 @@
     <!-- Iota Psyker -->
     <ThoughtDef>
         <defName>BEWH_IotaPsyker</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
         <requiredGenes>
             <li>BEWH_IotaPsyker</li>
@@ -22,7 +22,7 @@
     <!-- Epsilon Psyker -->
     <ThoughtDef>
         <defName>BEWH_EpsilonPsyker</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
         <requiredGenes>
             <li>BEWH_Psyker</li>
@@ -40,7 +40,7 @@
     <!-- Delta Psyker -->
     <ThoughtDef>
         <defName>BEWH_DeltaPsyker</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
         <requiredGenes>
             <li>BEWH_DeltaPsyker</li>
@@ -59,7 +59,7 @@
     <!-- Beta Psyker -->
     <ThoughtDef>
         <defName>BEWH_BetaPsyker</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
         <requiredGenes>
             <li>BEWH_BetaPsyker</li>

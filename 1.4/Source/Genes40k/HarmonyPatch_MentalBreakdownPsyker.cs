@@ -15,6 +15,11 @@ namespace Mutations40k
     {
         public static void Postfix(MentalStateDef stateDef, MentalStateHandler __instance, bool __result)
         {
+            Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+            if (!modSettings.psychicPhenomena)
+            {
+                return;
+            }
             //Mental state didn't start, skip
             if (!__result)
             {
@@ -60,26 +65,26 @@ namespace Mutations40k
                             break;
                         case int n when n >= 95:
                             GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 2, Genes40kDefOf.BEWH_WarpEnergy, pawn);
-                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
-                            letter.Label = "UncontrollablePowers".Translate();
+                            letter.Text = "UncontrollablePowers".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PerilsOfTheWarp".Translate();
                             break;
                         case int n when n >= 90:
                             pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
-                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
-                            letter.Label = "PsychicComa".Translate();
+                            letter.Text = "PsychicComa".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PerilsOfTheWarp".Translate();
                             break;
                         /*case int n when n >= 80:
                             //??
                             break;*/
                         case int n when n >= 70:
                             pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered);
-                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
-                            letter.Label = "PsychicConnectionSevered".Translate();
+                            letter.Text = "PsychicConnectionSevered".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PsychicPhenomena".Translate();
                             break;
                         case int n when n >= 60:
                             pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
-                            letter.Label = "BloodRain".Translate();
+                            letter.Text = "BloodRain".Translate();
+                            letter.Label = "PsychicPhenomena".Translate();
                             break;
                         case int n when n >= 30:
                             IEnumerable<IntVec3> t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
@@ -91,8 +96,8 @@ namespace Mutations40k
                                     plant.Kill();
                                 }
                             }
-                            letter.Text = "DaemonHost".Translate(pawn.Named("PAWN"));
-                            letter.Label = "PlantRot".Translate();
+                            letter.Text = "PlantRot".Translate(pawn.Named("PAWN"));
+                            letter.Label = "PsychicPhenomena".Translate();
                             break;
                         default:
                             sendLetter = false;

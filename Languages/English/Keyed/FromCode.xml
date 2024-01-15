@@ -44,6 +44,10 @@
 
   <progenoidHarvestsAllXenogenes>Enabling this will allow the harvest of the progenoid gland to include all xenogenes of the pawn instead of only space marine genes.</progenoidHarvestsAllXenogenes>
 
+  <psykerPariahBirth>Enabling this will allow children to be rarely and randomly born as psykers and pariahs.</psykerPariahBirth>
+
+  <psychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenoma.</psychicPhenomena>
+
   <UnbreakingLoyaltySpaceMarine>Enabling this makes all space marines unrecruitable and unable to be enslaved, meaning you cannot imprison them and then recruit or enslave them.</UnbreakingLoyaltySpaceMarine>
 
   <ModSettingsNameGenes>Warhammer 40k - Genes</ModSettingsNameGenes>
@@ -70,7 +74,7 @@
   <Annihilation>A psychic blast surged through {0} and into the world, causing a warp explosion completely annihilating {0} and severely damaging everything around them.</Annihilation>
   <DaemonHost>A strong link was established between {0} and one of the chaos gods, allowing them to send in some daemons.</DaemonHost>
   <UncontrollablePowers>In a temporary loss of control over their powers, {0} caused a warp explosion, causing damage to everyone near them.</UncontrollablePowers>
-  <PsychicComa>Overwhelmed by the warp made {0} fell into a psychic coma.</PsychicComa>
+  <PsychicComa>Overwhelmed by the warp made {0} fall into a psychic coma.</PsychicComa>
   <PsychicConnectionSevered>In an instant {0} no longer felt any connection to the warp, as if completely cut off.</PsychicConnectionSevered>
   <BloodRain>As if a cruel joke, blood suddenly starts raining.</BloodRain>
   <PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</PlantRot>
