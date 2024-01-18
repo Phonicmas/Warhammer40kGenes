@@ -64,12 +64,14 @@
     <Compile Include="Building_WarpAdjuster.cs" />
     <Compile Include="Building_GeneseedGenetor.cs" />
     <Compile Include="CompAbilityEffect_WarpShieldOff.cs" />
+    <Compile Include="CompProperties_GivesAbility.cs" />
     <Compile Include="CompProperties_AbilityWarpShieldOff.cs" />
     <Compile Include="CompProperties_AbilityWarpShieldOn.cs" />
     <Compile Include="CompAbilityEffect_WarpShieldOn.cs" />
     <Compile Include="DefModExtension_Primarch.cs" />
     <Compile Include="DefModExtension_Custodes.cs" />
     <Compile Include="DefModExtension_Psyker.cs" />
+    <Compile Include="CompGivesAbility.cs" />
     <Compile Include="Gene_Pariah.cs" />
     <Compile Include="HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatch_NaturalBirthPsykerPariah.cs" />
@@ -91,8 +93,6 @@
     <Compile Include="WorkerClass_PotentialHarvest.cs" />
     <Compile Include="WorkerClass_ProgenoidRemoval.cs" />
     <Compile Include="ThoughtWorker_Pariah.cs" />
-    <Compile Include="HediffCompProperties_Aura.cs" />
-    <Compile Include="HediffComp_Aura.cs" />
     <Compile Include="Genes40kUtils.cs" />
     <Compile Include="Genes40kDefOf.cs" />
     <Compile Include="HarmonyPatch_Carapace.cs" />

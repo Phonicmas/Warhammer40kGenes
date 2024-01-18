@@ -75,7 +75,7 @@ namespace Genes40k
         {
             Thing harvestedItem = ThingMaker.MakeThing(defModExtension.harvestedItem);
 
-            int harvestNum = 1;
+            int harvestNum = 0;
 
             for (int i = 0; i < defModExtension.mustHaveOne.Count; i++)
             {

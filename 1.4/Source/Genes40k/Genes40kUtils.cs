@@ -45,6 +45,34 @@ namespace Genes40k
             return genedef;
         }
 
+        public static List<GeneDef> CustodesGenes()
+        {
+            List<GeneDef> genedef = new List<GeneDef>
+            {
+                Genes40kDefOf.BEWH_CustodesAnatomy,
+                Genes40kDefOf.BEWH_CustodesResilience,
+                Genes40kDefOf.BEWH_CustodesToughness,
+                Genes40kDefOf.BEWH_CustodesExpertise,
+                Genes40kDefOf.BEWH_CustodesStrength,
+                Genes40kDefOf.BEWH_CustodesAnatomy
+            };
+            return genedef;
+        }
+
+        public static List<GeneDef> PrimarchGenes()
+        {
+            List<GeneDef> genedef = new List<GeneDef>
+            {
+                Genes40kDefOf.BEWH_PrimarchAnatomy,
+                Genes40kDefOf.BEWH_PrimarchResilience,
+                Genes40kDefOf.BEWH_PrimarchToughness,
+                Genes40kDefOf.BEWH_PrimarchExpertise,
+                Genes40kDefOf.BEWH_PrimarchStrength,
+                Genes40kDefOf.BEWH_PrimarchAnatomy
+            };
+            return genedef;
+        }
+
         public static bool IsSpaceMarine(Pawn pawn)
         {
             foreach (GeneDef geneDef in SpaceMarineGenes())

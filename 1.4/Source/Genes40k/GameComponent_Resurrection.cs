@@ -53,7 +53,7 @@ namespace Genes40k
                             }
                         }
                     }
-                    if (pair.Key.Corpse != null && (Find.TickManager.TicksGame - pair.Key.Corpse.timeOfDeath) >= deathTimer)
+                    if (pair.Key.Corpse != null && (Find.TickManager.TicksGame - pair.Key.Corpse.timeOfDeath) >= deathTimer && !pair.Key.Spawned)
                     {
                         GenSpawn.Spawn(pair.Key.Corpse, CellFinder.RandomCell(pair.Value), pair.Value);
                         Mesh boltMesh = LightningBoltMeshPool.RandomBoltMesh;

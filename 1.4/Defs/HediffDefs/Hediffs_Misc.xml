@@ -95,7 +95,7 @@
 		<isBad>false</isBad>
 	</HediffDef>
 
-	<!-- Custodes Warp Shield-->
+	<!-- Warp Shield-->
 	<HediffDef>
 		<defName>BEWH_WarpShield</defName>
 		<label>Warp Influence</label>
@@ -103,6 +103,9 @@
 		<initialSeverity>1</initialSeverity>
 		<minSeverity>1</minSeverity>
 		<maxSeverity>2</maxSeverity>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
 		<stages>
 			<li>
 				<label>Shielded</label>

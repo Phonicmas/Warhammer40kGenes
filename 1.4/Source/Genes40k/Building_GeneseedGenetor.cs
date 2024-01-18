@@ -288,10 +288,9 @@ namespace Genes40k
             {
                 ContainedPawn.health.RemoveHediff(ContainedPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_GenetorGrowing));
             }
-            List<GeneDef> genesToRemove = null;
             string elevatedTo = "";
             string progressTo = "";
-            XenotypeIconDef xenoIcon = null;
+            XenotypeDef newXenotype = null;
 
             NextGeneToAdd(containedPawn);
 
@@ -299,55 +298,35 @@ namespace Genes40k
 
             if (geneToAdd == Genes40kDefOf.BEWH_PrimarchStature)
             {
-                genesToRemove = CustodesGenes();
                 elevatedTo = "Primarch".Translate();
-                xenoIcon = Genes40kDefOf.BEWH_PrimarchIcon;
                 fullyElevated = true;
+                newXenotype = Genes40kDefOf.BEWH_Primarch;
             }
-            if (geneToAdd == Genes40kDefOf.BEWH_CustodesStature)
+            else if (geneToAdd == Genes40kDefOf.BEWH_CustodesStature)
             {
-                genesToRemove = Genes40kUtils.SpaceMarineGenes();
-                genesToRemove.AddRange(Genes40kUtils.PrimarisGenes());
                 elevatedTo = "Custodes".Translate();
-                xenoIcon = Genes40kDefOf.BEWH_CustodesIcon;
                 fullyElevated = true;
+                newXenotype = Genes40kDefOf.BEWH_Custodes;
             }
-            if (geneToAdd == Genes40kDefOf.BEWH_BelisarianFurnace)
+            else if (geneToAdd == Genes40kDefOf.BEWH_BelisarianFurnace)
             {
                 elevatedTo = "PrimarisMarine".Translate();
-                xenoIcon = Genes40kDefOf.BEWH_PrimarisIcon;
                 fullyElevated = true;
+                newXenotype = Genes40kDefOf.BEWH_PrimarisSpaceMarine;
             }
-            if (geneToAdd == Genes40kDefOf.BEWH_BlackCarapace)
+            else if (geneToAdd == Genes40kDefOf.BEWH_BlackCarapace)
             {
                 elevatedTo = "SpaceMarine".Translate();
-                xenoIcon = Genes40kDefOf.BEWH_AstartesIcon;
                 fullyElevated = true;
+                newXenotype = Genes40kDefOf.BEWH_SpaceMarine;
             }
-            if (Genes40kUtils.SpaceMarineGenes().Contains(geneToAdd))
+            else if (Genes40kUtils.SpaceMarineGenes().Contains(geneToAdd))
             {
                 progressTo = "SpaceMarine".Translate();
             }
-            if (Genes40kUtils.PrimarisGenes().Contains(geneToAdd))
+            else if (Genes40kUtils.PrimarisGenes().Contains(geneToAdd))
             {
                 progressTo = "PrimarisMarine".Translate();
-            }
-
-
-            if (!genesToRemove.NullOrEmpty())
-            {
-                List<Gene> removeThese = new List<Gene>();
-                foreach (Gene gene in containedPawn.genes.Xenogenes)
-                {
-                    if (genesToRemove.Contains(gene.def))
-                    {
-                        removeThese.Add(gene);
-                    }
-                }
-                foreach (Gene gene in removeThese)
-                {
-                    containedPawn.genes.RemoveGene(gene);
-                }
             }
 
             
@@ -370,15 +349,28 @@ namespace Genes40k
                     containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchStrength, true);
                     containedPawn.genes.AddGene(Genes40kDefOf.BEWH_PrimarchAnatomy, true);
                 }
-                if (fullyElevated)
+                
+                if (newXenotype != null)
                 {
-                    if (xenoIcon != null)
+                    List<GeneDef> xenogenes = new List<GeneDef>();
+                    foreach (Gene gene in containedPawn.genes.Xenogenes)
                     {
-                        containedPawn.genes.iconDef = xenoIcon;
+                        if (Genes40kUtils.SpaceMarineGenes().Contains(gene.def) || Genes40kUtils.PrimarisGenes().Contains(gene.def) || Genes40kUtils.CustodesGenes().Contains(gene.def) || Genes40kUtils.PrimarchGenes().Contains(gene.def))
+                        {
+                            continue;
+                        }
+                        xenogenes.Add(gene.def);
                     }
-                    if (elevatedTo != "")
+                    containedPawn.genes.SetXenotype(newXenotype);
+                    if (!xenogenes.NullOrEmpty())
                     {
-                        containedPawn.genes.xenotypeName = elevatedTo;
+                        foreach (GeneDef geneDef in xenogenes)
+                        {
+                            if (!containedPawn.genes.HasGene(geneDef))
+                            {
+                                containedPawn.genes.AddGene(geneDef, true);
+                            }
+                        }
                     }
                 }
             }

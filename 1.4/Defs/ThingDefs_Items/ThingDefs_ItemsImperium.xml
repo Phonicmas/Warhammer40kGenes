@@ -2,7 +2,6 @@
 <Defs>
 
   <!-- Geneseed Capsule -->
-
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_GeneseedCapsules</defName>
     <label>geneseed capsule</label>

@@ -75,6 +75,11 @@ namespace Genes40k
         public static XenotypeIconDef BEWH_CustodesIcon;
         public static XenotypeIconDef BEWH_PrimarchIcon;
 
+        public static XenotypeDef BEWH_SpaceMarine;
+        public static XenotypeDef BEWH_PrimarisSpaceMarine;
+        public static XenotypeDef BEWH_Custodes;
+        public static XenotypeDef BEWH_Primarch;
+
         public static PawnKindDef BEWH_SummonedBloodletter;
         public static PawnKindDef BEWH_SummonedPlaguebearer;
         public static PawnKindDef BEWH_SummonedDaemonette;
@@ -84,6 +89,9 @@ namespace Genes40k
         public static ResearchProjectDef BEWH_PrimarisMarineCreation;
         public static ResearchProjectDef BEWH_CustodesCreation;
         public static ResearchProjectDef BEWH_PrimarchCreation;
+
+        public static ResearchProjectDef BEWH_GeneseedExtractionSM;
+        public static ResearchProjectDef BEWH_GeneseedExtractionPM;
 
         public static HediffDef BEWH_SecondGeneseedHarvest;
         public static HediffDef BEWH_PsychicComa;

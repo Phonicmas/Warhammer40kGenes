@@ -79,4 +79,9 @@
   <BloodRain>As if a cruel joke, blood suddenly starts raining.</BloodRain>
   <PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</PlantRot>
 
+  <SMGeneseedExtractionNotResearched>Space Marine geneseed extraction not researched</SMGeneseedExtractionNotResearched>
+  <NoProgenoidGlands>Does not have any progenoid glands</NoProgenoidGlands>
+  <SecondaryGlandsAlreadyHarvested>Secondary progenoid glands already harvested</SecondaryGlandsAlreadyHarvested>
+  <PMGeneseedExtractionNotResearched>Primaris Marine geneseed extraction not researched</PMGeneseedExtractionNotResearched>
+
 </LanguageData>
