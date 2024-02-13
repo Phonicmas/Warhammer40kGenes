@@ -79,6 +79,8 @@
         <minAgeActive>18</minAgeActive>
         <biologicalAgeTickFactorFromAgeCurve>
             <points>
+                <li>(0, 1)</li>
+                <li>(20, 1)</li>
                 <li>(21, 0)</li>
             </points>
         </biologicalAgeTickFactorFromAgeCurve>

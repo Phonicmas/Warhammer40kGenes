@@ -37,11 +37,6 @@
             </buildingTags>
         </building>
         <comps>
-            <li Class="CompProperties_AffectedByFacilities">
-                <linkableFacilities>
-                    <li>ToolCabinet</li>
-                </linkableFacilities>
-            </li>
             <li>
                 <compClass>CompReportWorkSpeed</compClass>
             </li>

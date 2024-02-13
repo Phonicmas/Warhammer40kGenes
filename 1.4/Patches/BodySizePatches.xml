@@ -76,7 +76,7 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40k - Genes and Psycasts</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <label>Remove Gene Size Increase:</label>
         <operations>
@@ -112,7 +112,7 @@
                         <li Class="PatchOperationRemove">
                             <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/statFactors/SM_BodySizeMultiplier</xpath>
                         </li>
-                        
+
                     </operations>
                 </match>
 
@@ -123,22 +123,22 @@
                             <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
                         </li>
 
-        
+
                         <li Class="PatchOperationRemove">
                             <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
                         </li>
 
-        
+
                         <li Class="PatchOperationRemove">
                             <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
                         </li>
-        
-        
+
+
                         <li Class="PatchOperationRemove">
                             <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
-                        </li> 
+                        </li>
 
-        
+
                         <li Class="PatchOperationRemove">
                             <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]/bodyScaleFactor</xpath>
                         </li>
