@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Chaos (Warhammer 40k) Unofficial 1.4</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Chaos Space Marine-->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[@Name = "CHMarineBase"]/techHediffsRequired</xpath>
+				</li>
+				<!-- Deathguard -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "DGMarine"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_NurgleMarine>1</BEWH_NurgleMarine>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- Emperor's Children -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "ECMarine"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_SlaaneshMarine>1</BEWH_SlaaneshMarine>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- Thousand Sons -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "TSMarine"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_TzeentchMarine>1</BEWH_TzeentchMarine>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<!-- World Eaters -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "WEMarine"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<BEWH_KhorneMarine>1</BEWH_KhorneMarine>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

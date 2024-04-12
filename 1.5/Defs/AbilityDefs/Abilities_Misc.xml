@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>BEWH_PsySensOff</defName>
+    <label>shield mind from the warp</label>
+    <description>Shield mind from the warp.</description>
+    <iconPath>UI/Abilities/MindShieldOff</iconPath>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <hostile>false</hostile>
+    <category>SpaceMarine</category>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityWarpShieldOff"/>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>BEWH_PsySensOn</defName>
+    <label>open mind to the warp</label>
+    <description>Open mind to the warp.</description>
+    <iconPath>UI/Abilities/MindShieldOn</iconPath>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <hostile>false</hostile>
+    <category>SpaceMarine</category>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityWarpShieldOn"/>
+    </comps>
+  </AbilityDef>
+
+</Defs>

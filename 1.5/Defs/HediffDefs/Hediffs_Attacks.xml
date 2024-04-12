@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Daemonic Horn Attack -->
+
+    <HediffDef>
+        <defName>BEWH_DaemonicHornAttack</defName>
+        <label>daemonic horns</label>
+        <description>These daemonic horns are not only for show, they can be used as a deadly weapon should the daemon need it.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>daemonic horns</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>19</power>
+                        <cooldownTime>1.8</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Daemonic Tail Attack -->
+
+    <HediffDef>
+        <defName>BEWH_DaemonicTailAttack</defName>
+        <label>daemonic tail</label>
+        <description>This daemonic tail, whilst useful for manipulation of items, can also be used as a weapon should the daemon need it.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>daemonic tail</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>6</power>
+                        <cooldownTime>0.8</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

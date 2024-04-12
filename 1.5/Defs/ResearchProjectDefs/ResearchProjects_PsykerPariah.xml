@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warp Potential Adjuster Base-->
+  <ResearchProjectDef Name="BEWH_WarpAdjusterBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>BEWH_WH40kTab</tab>
+    <baseCost>5000</baseCost>
+  </ResearchProjectDef>
+
+  <!-- Warp Potential Adjuster -->
+  <ResearchProjectDef ParentName="BEWH_WarpAdjusterBase">
+    <defName>BEWH_PotentialHarvesting</defName>
+    <label>Potential Harvesting</label>
+    <description>Unlocks the ability to harvest psychic potential and the blank potential from living specimen.</description>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>Archogenetics</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Warp Potential Adjuster -->
+  <ResearchProjectDef ParentName="BEWH_WarpAdjusterBase">
+    <defName>BEWH_WarpPotentialAdjuster</defName>
+    <label>Warp Potential Adjuster</label>
+    <description>Unlocks the psychic potential enhancer and the blank potential enhancer.</description>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>Archogenetics</li>
+      <li>BEWH_PotentialHarvesting</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

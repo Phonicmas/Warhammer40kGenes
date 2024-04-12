@@ -19,7 +19,7 @@
   <IncreasingEffectiveness>{0}'s {1} potential is being increased.</IncreasingEffectiveness>
   <EnhanceComplete>{0}'s {1} potential has been increased.</EnhanceComplete>
   <CannotIncreaseEffectiveness>Cannot increase {0}'s potential, it is already maxed.</CannotIncreaseEffectiveness>
-  <MayNotHaveGene>Cannot increase {0}'s {1} potential. {0} may not have the {2} gene.</MayNotHaveGene>
+  <MayNotHaveGenePotential>Cannot increase {0}'s {1} potential. {0} may not have the {2} gene.</MayNotHaveGenePotential>
 
   <CommandCancelProcedure>Cancel procedure</CommandCancelProcedure>
   <CommandCancelProcedureDesc>Cancel the procedure. The contained person will be ejected.</CommandCancelProcedureDesc>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>Chaos</defName>
+    <displayOrder>1000</displayOrder>
+  </AbilityCategoryDef>
+
+  <!-- Daemonic Flight -->
+
+  <AbilityGroupDef>
+    <defName>BEWH_CFlight</defName>
+    <cooldownTicks>240</cooldownTicks>
+  </AbilityGroupDef>
+
+  <AbilityDef>
+    <defName>BEWH_DaemonicFlight</defName>
+    <label>daemonic flight</label>
+    <description>This pawn is granted flight by their wings.</description>
+    <iconPath>UI/Abilities/DaemonicFlightIcon</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>BEWH_CFlight</groupDef>
+    <category>Chaos</category>
+    <uiOrder>1</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>daemonic flight</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>1</warmupTime>
+      <range>80</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- Khorne Daemonic Summoning -->
+
+  <AbilityGroupDef>
+    <defName>BEWH_KSummon</defName>
+    <cooldownTicks>20000</cooldownTicks>
+  </AbilityGroupDef>
+
+  <AbilityDef>
+    <defName>BEWH_KhorneSummon</defName>
+    <label>summon bloodletter</label>
+    <description>This pawn can summon bloodletters to help them in combat.</description>
+    <iconPath>Abilities/Khorne/SummonDaemonKhorne</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>BEWH_KSummon</groupDef>
+    <category>Chaos</category>
+    <uiOrder>2</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
+      <label>summon bloodletter</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <range>30.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>BEWH_NoSound</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedBloodletter</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Melee</li>
+        </statScale>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- Tzeentch Daemonic Summoning -->
+
+  <AbilityDef>
+    <defName>BEWH_TzeentchSummon</defName>
+    <label>summon pink horror</label>
+    <description>This pawn can summon pink horrors to help them in combat.</description>
+    <iconPath>Abilities/Tzeentch/SummonDaemonTzeentch</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>BEWH_KSummon</groupDef>
+    <category>Chaos</category>
+    <uiOrder>2</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
+      <label>summon pink horror</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <range>30.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>BEWH_NoSound</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPinkHorror</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Intellectual</li>
+        </statScale>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- Nurgle Daemonic Summoning -->
+
+  <AbilityDef>
+    <defName>BEWH_NurgleSummon</defName>
+    <label>summon plaguebearer</label>
+    <description>This pawn can summon plaguebearers to help them in combat.</description>
+    <iconPath>Abilities/Nurgle/SummonDaemonNurgle</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>BEWH_KSummon</groupDef>
+    <category>Chaos</category>
+    <uiOrder>2</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
+      <label>summon plaguebearer</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <range>30.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>BEWH_NoSound</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPlaguebearer</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Cooking</li>
+        </statScale>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- Slaanesh Daemonic Summoning -->
+
+  <AbilityDef>
+    <defName>BEWH_SlaaneshSummon</defName>
+    <label>summon daemonette</label>
+    <description>This pawn can summon daemonettes to help them in combat.</description>
+    <iconPath>Abilities/Slaanesh/SummonDaemonSlaanesh</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>BEWH_KSummon</groupDef>
+    <category>Chaos</category>
+    <uiOrder>2</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Genes40k.Verb_CastAbility_DaemonSummon</verbClass>
+      <label>summon daemonette</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <range>30.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>BEWH_NoSound</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedDaemonette</li>
+        </daemonToSummon>
+        <statScale>
+          <li>Social</li>
+        </statScale>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+</Defs>

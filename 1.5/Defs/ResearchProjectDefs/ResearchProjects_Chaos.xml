@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Chaos Research Base -->
+  <ResearchProjectDef Name="BEWH_ChaosResearchBase" Abstract="True">
+    <techLevel>Neolithic</techLevel>
+    <tab>BEWH_WH40kTab</tab>
+    <baseCost>3000</baseCost>
+  </ResearchProjectDef>
+
+  <!-- Chaos Research High Tech Base -->
+  <ResearchProjectDef Name="BEWH_ChaosResearchHighTechBase" ParentName="BEWH_ChaosResearchBase" Abstract="True">
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <!-- Undivided -->
+  <ResearchProjectDef ParentName="BEWH_ChaosResearchBase">
+    <defName>BEWH_UndividedResearch</defName>
+    <label>Secrets of the Undivided</label>
+    <description>Unlocks the secrets of the Undivided necessary to begin the path to chaos.</description>
+    <researchViewX>0</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Slaanesh -->
+  <!--<ResearchProjectDef ParentName="BEWH_ChaosResearchBase">
+    <defName>BEWH_SlaaneshResearch</defName>
+    <label>Secrets of Slaanesh</label>
+    <description>Unlocks the secrets of Slaanesh necessary to begin the path to excess. (DOES NOTHING YET)</description>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>-->
+
+  <!-- Khorne -->
+  <!--<ResearchProjectDef ParentName="BEWH_ChaosResearchBase">
+    <defName>BEWH_KhorneResearch</defName>
+    <label>Secrets of Khorne</label>
+    <description>Unlocks the secrets of Khorne necessary to begin the path to wrath. (DOES NOTHING YET)</description>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>-->
+
+  <!-- Nurgle -->
+  <!--<ResearchProjectDef ParentName="BEWH_ChaosResearchBase">
+    <defName>BEWH_NurgleResearch</defName>
+    <label>Secrets of Nurgle</label>
+    <description>Unlocks the secrets of Nurgle necessary to begin the path to decay. (DOES NOTHING YET)</description>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>-->
+
+  <!-- Tzeentch -->
+  <!--<ResearchProjectDef ParentName="BEWH_ChaosResearchBase">
+    <defName>BEWH_TzeentchResearch</defName>
+    <label>Secrets of Tzeentch</label>
+    <description>Unlocks the secrets of Tzeentch necessary to begin the path to change. (DOES NOTHING YET)</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>-->
+
+</Defs>

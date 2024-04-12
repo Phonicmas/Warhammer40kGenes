@@ -224,7 +224,7 @@ namespace Genes40k
 
             if (hasIllegalGene)
             {
-                return "MayNotHaveGene".Translate(pawn.Named("PAWN"), defModExtension.potentialType, forbiddenGene.label);
+                return "MayNotHaveGenePotential".Translate(pawn.Named("PAWN"), defModExtension.potentialType, forbiddenGene.label);
             }
 
             if (Fuel.Fuel < nextFuelConsumption)

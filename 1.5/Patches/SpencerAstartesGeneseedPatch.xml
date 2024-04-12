@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Adeptus Astartes (Space Marines 40k) Unofficial 1.4</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- UM Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "UMSpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "UMSpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- UM Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "UMScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "UMScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- UM Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "UMTerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "UMTerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- UM Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "UltramarineCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- SW Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SWSpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SWSpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SW Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SWScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SWScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SW Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SWTerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SWTerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SW Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "SpaceWolfCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- SA Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SASpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SASpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SA Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SAScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SAScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SA Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "SATerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "SATerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- SA Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "SalamanderCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- IF Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "IFSpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "IFSpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- IF Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "IFScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "IFScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- IF Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "IFTerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "IFTerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- IF Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "ImperialFistCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- DA Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "DASpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "DASpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- DA Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "DAScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "DAScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- DA Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "DATerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "DATerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- DA Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "DarkAngelCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- BA Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BASpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BASpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BA Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BAScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BAScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BA Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BATerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BATerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BA Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "BloodAngelCaptain"]/techHediffsRequired</xpath>
+                </li>
+
+                <!-- BT Space Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BTSpaceMarineBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BTSpaceMarineBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BT Scout Marine-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BTScoutBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BTScoutBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BT Primaris Terminator-->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[@Name = "BTTerminatorBase"]/techHediffsRequired</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[@Name = "BTTerminatorBase"]</xpath>
+                    <value>
+                        <xenotypeSet>
+                            <xenotypeChances>
+                                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                            </xenotypeChances>
+                        </xenotypeSet>
+                    </value>
+                </li>
+                <!-- BT Leader -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/PawnKindDef[defName = "BlackTemplarCaptain"]/techHediffsRequired</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
