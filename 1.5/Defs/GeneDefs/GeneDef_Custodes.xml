@@ -54,6 +54,7 @@
             <LeatherAmount>1.45</LeatherAmount>
             <MeatAmount>1.45</MeatAmount>
             <Mass>1.45</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.22</VEF_CosmeticBodySize_Multiplier>
         </statFactors>
 
         <forcedTraits>
@@ -84,8 +85,6 @@
 
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <bodyScaleFactor>(1.22, 1.22)</bodyScaleFactor>
-                <headScaleFactor>(1.22, 1.22)</headScaleFactor>
             </li>
             <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
@@ -249,7 +248,6 @@
 
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <caravanCarryingFactor>3</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
             </li>
             <li Class="Genes40k.DefModExtension_Custodes" />
@@ -325,7 +323,18 @@
 
         <abilities>
             <li>BEWH_PsySensOff</li>
+            <li>BEWH_CatalepseanNodeUnsleeping</li>
+            <li>BEWH_OmophageaCorpseEat</li>
+            <li>BEWH_Sus_anMembraneStasis</li>
+            <li>BEWH_BetchersSpit</li>
         </abilities>
+
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
+            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
+            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
+            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
+        </descriptionHyperlinks>
 
         <statFactors>
             <Fertility>0</Fertility>

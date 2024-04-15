@@ -17,11 +17,6 @@
             <IncomingDamageFactor>0.95</IncomingDamageFactor>
             <StaggerDurationFactor>0</StaggerDurationFactor>
         </statFactors>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <caravanCarryingFactor>2</caravanCarryingFactor>
-            </li>
-        </modExtensions>
         <suppressedTraits>
             <li>
                 <def>Beauty</def>
@@ -57,13 +52,8 @@
             <LeatherAmount>1.15</LeatherAmount>
             <MeatAmount>1.15</MeatAmount>
             <Mass>1.15</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.05</VEF_CosmeticBodySize_Multiplier>
         </statFactors>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <bodyScaleFactor>(1.05, 1.05)</bodyScaleFactor>
-                <headScaleFactor>(1.05, 1.05)</headScaleFactor>
-            </li>
-        </modExtensions>
         <minAgeActive>13</minAgeActive>
         <exclusionTags>
             <li>PM2</li>

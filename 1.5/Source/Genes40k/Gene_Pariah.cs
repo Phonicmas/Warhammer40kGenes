@@ -1,6 +1,5 @@
 ﻿using RimWorld.Planet;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
 
@@ -19,8 +18,8 @@ namespace Genes40k
             }
             if (pawn.Spawned)
             {
-                List<Pawn> pawns = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
-                List<Pawn> pawns2 = pawns.FindAll(x => pawn.Position.DistanceTo(x.Position) <= def.GetModExtension<DefModExtension_Pariah>().radius);
+                List<Pawn> pawnsT = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
+                List<Pawn> pawns = pawnsT.FindAll(x => pawn.Position.DistanceTo(x.Position) <= def.GetModExtension<DefModExtension_Pariah>().radius);
                 AffectPawns(pawn, pawns);
                 return;
             }

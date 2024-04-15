@@ -42,11 +42,22 @@
             <Shooting>3</Shooting>
             <Melee>3</Melee>
         </aptitudes>
-        <graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</texPath>
+                <parentTagDef>Body</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                        <offset>(0, 0, -0.18)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
         <exclusionTags>
             <li>ChaosMark</li>
         </exclusionTags>
@@ -80,11 +91,22 @@
             <Plants>3</Plants>
             <Cooking>3</Cooking>
         </aptitudes>
-        <graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/NurgleMark/NurgleMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/NurgleMark/NurgleMark</texPath>
+                <parentTagDef>Body</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                        <offset>(0, 0, -0.18)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
         <exclusionTags>
             <li>ChaosMark</li>
         </exclusionTags>
@@ -124,11 +146,22 @@
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Tzeentch</backgroundPathXenogenes>
             </li>
         </modExtensions>
-        <graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/TzeentchMark/TzeentchMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/TzeentchMark/TzeentchMark</texPath>
+                <parentTagDef>Body</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                        <offset>(0, 0, -0.18)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
         <exclusionTags>
             <li>ChaosMark</li>
         </exclusionTags>
@@ -160,11 +193,22 @@
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Slaanesh</backgroundPathXenogenes>
             </li>
         </modExtensions>
-        <graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/SlaaneshMark/SlaaneshMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SlaaneshMark/SlaaneshMark</texPath>
+                <parentTagDef>Body</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                        <offset>(0, 0, -0.18)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
         <exclusionTags>
             <li>ChaosMark</li>
         </exclusionTags>
@@ -212,11 +256,22 @@
             <Plants>1</Plants>
             <Cooking>1</Cooking>
         </aptitudes>
-        <graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/ChaosMark/ChaosMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/ChaosMark/ChaosMark</texPath>
+                <parentTagDef>Body</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                        <offset>(0, 0, -0.18)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
         <exclusionTags>
             <li>ChaosMark</li>
         </exclusionTags>

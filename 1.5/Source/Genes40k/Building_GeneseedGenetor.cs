@@ -566,7 +566,7 @@ namespace Genes40k
         public override void DrawExtraSelectionOverlays()
         {
             base.DrawExtraSelectionOverlays();
-            if (Working && selectedPawn != null && innerContainer.Contains(selectedPawn))
+            if (base.Working && selectedPawn != null && innerContainer.Contains(selectedPawn))
             {
                 selectedPawn.Drawer.renderer.RenderPawnAt(DrawPos, null, neverAimWeapon: true);
             }

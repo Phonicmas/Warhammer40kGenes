@@ -61,11 +61,7 @@ namespace Genes40k
 
                         DaemonDoStrike(pair.Key.Corpse.Position, pair.Key.Corpse.Map, ref boltMesh);
                         Graphics.DrawMesh(boltMesh, pair.Key.Corpse.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Weather), Quaternion.identity, FadedMaterialPool.FadedVersionOf(LightningMat, 1), 0);
-                        ResurrectionParams resurrectionParams = new ResurrectionParams
-                        {
-                            removeDiedThoughts = false
-                        };
-                        ResurrectionUtility.TryResurrect(pair.Key.Corpse.InnerPawn, resurrectionParams);
+                        ResurrectionUtility.TryResurrect(pair.Key.Corpse.InnerPawn);
                         resurrectedPawns.Add(pair.Key);
                     }
                 }

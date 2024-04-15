@@ -59,6 +59,7 @@
             <MeatAmount>1.25</MeatAmount>
             <Mass>1.25</Mass>
             <IncomingDamageFactor>0.95</IncomingDamageFactor>
+            <VEF_CosmeticBodySize_Multiplier>1.15</VEF_CosmeticBodySize_Multiplier>
         </statFactors>
         <suppressedTraits>
             <li>
@@ -68,12 +69,6 @@
                 <def>Wimp</def>
             </li>
         </suppressedTraits>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <bodyScaleFactor>(1.15, 1.15)</bodyScaleFactor>
-                <headScaleFactor>(1.15, 1.15)</headScaleFactor>
-            </li>
-        </modExtensions>
         <minAgeActive>12</minAgeActive>
         <exclusionTags>
             <li>SM2</li>
@@ -114,7 +109,6 @@
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <caravanCarryingFactor>1.3</caravanCarryingFactor>
                 <noSkillLoss>Melee</noSkillLoss>
             </li>
         </modExtensions>

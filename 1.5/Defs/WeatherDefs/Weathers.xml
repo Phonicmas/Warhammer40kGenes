@@ -9,7 +9,7 @@
         <windSpeedFactor>0</windSpeedFactor>
         <favorability>Bad</favorability>
         <perceivePriority>1</perceivePriority>
-        <exposedThought>BEWH_BloodSoaked</exposedThought>
+        <weatherThought>BEWH_BloodSoaked</weatherThought>
         <rainRate>1</rainRate>
         <accuracyMultiplier>0.65</accuracyMultiplier>
         <moveSpeedMultiplier>0.85</moveSpeedMultiplier>

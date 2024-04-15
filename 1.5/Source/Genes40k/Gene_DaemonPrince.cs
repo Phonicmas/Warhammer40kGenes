@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using Verse;
-
+using Verse.AI.Group;
 
 namespace Genes40k
 {
@@ -37,7 +37,7 @@ namespace Genes40k
             pawn.Corpse.Strip();
             gameComp.pawns.Add(pawn, pawn.Corpse.Map);
             pawn.Corpse.DeSpawn();
-            base.Notify_PawnDied(dinfo, culprit);
+            base.Notify_PawnDied(dinfo, null);
         }
     }
 }

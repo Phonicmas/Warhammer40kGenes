@@ -7,7 +7,7 @@
     <description>The automated genetor is the lastest invention of the imperium on the rim, which allows them to slowly turn normal pawns into space marines.</description>
     <thingClass>Genes40k.Building_GeneseedGenetor</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
-    <passability>Impassable</passability>
+    <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
     <castEdgeShadows>true</castEdgeShadows>
     <drawerType>MapMeshAndRealTime</drawerType>

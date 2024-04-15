@@ -11,7 +11,7 @@
             <operations>
 
                 <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                    <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors</xpath>
@@ -22,7 +22,7 @@
 
 
                 <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                    <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statFactors</xpath>
@@ -33,7 +33,7 @@
 
 
                 <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                    <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/statFactors</xpath>
@@ -44,7 +44,7 @@
 
 
                 <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                    <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/statFactors</xpath>
@@ -55,10 +55,7 @@
 
 
                 <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]/bodyScaleFactor</xpath>
-                </li>
-                <li Class="PatchOperationRemove">
-                    <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]/headScaleFactor</xpath>
+                    <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/statFactors</xpath>
@@ -120,30 +117,27 @@
                     <operations>
 
                         <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                            <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                         </li>
 
 
                         <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                            <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                         </li>
 
 
                         <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                            <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                         </li>
 
 
                         <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+                            <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                         </li>
 
 
                         <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]/bodyScaleFactor</xpath>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]/headScaleFactor</xpath>
+                            <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
                         </li>
 
                     </operations>
