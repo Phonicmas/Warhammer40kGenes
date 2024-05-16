@@ -36,11 +36,6 @@
                 <li>Production</li>
             </buildingTags>
         </building>
-        <comps>
-            <li>
-                <compClass>CompReportWorkSpeed</compClass>
-            </li>
-        </comps>
         <designationHotKey>Misc1</designationHotKey>
         <placeWorkers>
             <li>PlaceWorker_ReportWorkSpeedPenalties</li>

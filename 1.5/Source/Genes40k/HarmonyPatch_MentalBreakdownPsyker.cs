@@ -1,14 +1,12 @@
 ﻿using Core40k;
-using Genes40k;
 using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 using Verse.AI;
 
-namespace Mutations40k
+namespace Genes40k
 {
     [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
     public class MentalBreakdownPsyker
